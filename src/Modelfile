@@ -1,0 +1,1 @@
+FROM hf.co/unsloth/medgemma-27b-text-it-GGUF:Q3_K_S

@@ -1,0 +1,11 @@
+patient_id,patient_name,age,gender,ethnicity,drug_id,medication_name,condition,diagnosis_date,start_date,duration,end_date,trigger
+P601,Tan Kok Leong,64,Male,Chinese,37,Metformin 500mg BD,T2DM,14/1/2025,14/1/2025,180,12/7/2025,polyuria
+P602,Aisyah Bte Kassim,52,Female,Malay,12,Amlodipine 5mg OD,Hypertension,3/2/2025,3/2/2025,365,2/2/2026,headache
+P603,Rajesh Subramaniam,59,Male,Indian,56,Aspirin 100mg OM,CAD,22/3/2025,22/3/2025,180,18/9/2025,chest tightness
+P604,Lim Shi Hui,35,Female,Chinese,78,Salbutamol inhaler 100mcg PRN,Asthma,5/4/2025,5/4/2025,90,3/7/2025,wheezing
+P605,Muhammad Hafiz Bin Noor,47,Male,Malay,91,Losartan 50mg OD,CKD Stage 2,11/5/2025,11/5/2025,365,10/5/2026,edema
+P606,Priya Menon,29,Female,Indian,22,Ferrous Sulphate 200mg TDS,Iron Deficiency Anaemia,18/6/2025,18/6/2025,120,15/10/2025,fatigue
+P607,Ong Jia Wei,70,Male,Chinese,45,Atorvastatin 20mg nocte,Hyperlipidemia,2/7/2025,2/7/2025,365,1/7/2026,hyperlipidemia
+P608,Siti Mariam Bte Rahim,44,Female,Malay,37,Metformin XR 750mg OM,T2DM,16/7/2025,16/7/2025,90,13/10/2025,hyperglycemia
+P609,Gopal Rajan,56,Male,Indian,88,Sumatriptan 50mg PRN,Migraine,25/7/2025,25/7/2025,30,23/8/2025,headache
+P610,Ng Mei Lin,41,Female,Chinese,12,Amlodipine 10mg OD,Hypertension,1/8/2025,1/8/2025,180,28/1/2026,dizziness
