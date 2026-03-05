@@ -1,10 +1,15 @@
-import langextract as lx
+import os
 import textwrap
 from pathlib import Path
 
-# -----------------------------------
-# Prompt
-# -----------------------------------
+import langextract as lx
+from dotenv import load_dotenv
+
+load_dotenv()
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+if not GOOGLE_API_KEY:
+    raise RuntimeError("GOOGLE_API_KEY not found. Put it in a .env file or set it as an env var.")
+
 prompt = textwrap.dedent("""
 You must extract the following information from the given Clinical Notes provided.
     1. Patient ID
@@ -22,11 +27,9 @@ You must extract the following information from the given Clinical Notes provide
 
 Use exact text spans from the original text. Do not paraphrase.
 Return entities in the order they appear.
-""")
+""").strip()
 
-# -----------------------------------
-#Few-shot Example
-# -----------------------------------
+
 examples = [
     lx.data.ExampleData(
         text=(
@@ -90,63 +93,33 @@ examples = [
     )
 ]
 
-def load_synopsis_texts(data_dir: Path) -> list[str]:
-    """Load Clinical Text from 'Synopsis 1.txt' to 'Synopsis 10.txt' in the given folder."""
-    texts: list[str] = []
-    for i in range(1, 11):
-        file_path = data_dir / f"Synopsis {i}.txt"
-        if not file_path.is_file():
-            # Skip missing files but continue with the rest
-            continue
-        texts.append(file_path.read_text(encoding="utf-8"))
-    return texts
 
+DATA_DIR = Path("Data")  # <-- matches your folder name
 
-def main() -> None:
-    # -----------------------------------
-    # Input Texts from Data folder
-    # -----------------------------------
-    project_root = Path(__file__).resolve().parent.parent
-    data_dir = project_root / "Data"
+for i in range(1, 11):
+    fp = DATA_DIR / f"Synopsis {i}.txt"
+    if not fp.is_file():
+        print(f"Missing: {fp}")
+        continue
 
-    synopsis_texts = load_synopsis_texts(data_dir)
+    input_text = fp.read_text(encoding="utf-8")
 
+    result = lx.extract(
+        text_or_documents=input_text,      # <-- key: use this, not `texts=`
+        prompt_description=prompt,         # <-- match your example
+        examples=examples,
+        model_id="gemini-2.5-flash",
+        api_key=GOOGLE_API_KEY,            # include if your setup needs it
+    )
 
-    # -------------------------------
-    # Run LangExtract for each synopsis
-    # -----------------------------------
-    for idx, input_text in enumerate(synopsis_texts, start=1):
-        print("=" * 80)
-        print(f"Synopsis {idx}")
-        print("=" * 80)
+    print(f"\n=== Synopsis {i} ===")
+    # result might be list-like depending on version; handle both:
+    extractions = getattr(result, "extractions", None)
+    if extractions is None and isinstance(result, list) and len(result) > 0:
+        extractions = result[0].extractions
 
-        result = lx.extract(
-            text_or_documents=input_text,
-            prompt_description=prompt,
-            examples=examples,
-            model_id="gemma-medgemma",
-            model_url="http://localhost:11434", 
-            fence_output=False,
-            use_schema_constraints=False,
-        )
-
-        print(f"\nInput:\n{input_text}\n")
-        print("Extracted entities:\n")
-
-        for entity in result.extractions:
-            position_info = ""
-            if entity.char_interval:
-                start = entity.char_interval.start_pos
-                end = entity.char_interval.end_pos
-                position_info = f" (pos: {start}-{end})"
-
-            print(
-                f"• {entity.extraction_class}: {entity.extraction_text}{position_info}"
-            )
-
-            if entity.attributes:
-                print(f"   Attributes: {entity.attributes}")
-
-
-if __name__ == "__main__":
-    main()
+    for ent in (extractions or []):
+        span = ""
+        if getattr(ent, "char_interval", None):
+            span = f" ({ent.char_interval.start_pos}-{ent.char_interval.end_pos})"
+        print(f"• {ent.extraction_class}: {ent.extraction_text}{span}")
