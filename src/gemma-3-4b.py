@@ -124,8 +124,7 @@ def main() -> None:
             text_or_documents=input_text,
             prompt_description=prompt,
             examples=examples,
-            model_id="gemma-medgemma",
-            model_url="http://localhost:11434", 
+            model_id="gemma-3-4b-it-Q4_K_M:latest",
             fence_output=False,
             use_schema_constraints=False,
         )
