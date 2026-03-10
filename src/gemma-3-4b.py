@@ -13,7 +13,7 @@ You must extract the following information from the given Clinical Notes provide
     4. Patient Gender
     5. Patient Ethnicity
     6. Medication ID prescribed to patient
-    7. Medication prescribed to patient, including dosage (if mentioned)
+    7. Medication prescribed to patient, including dosage and frequency (if mentioned)
     8. Start Date of medication course (if mentioned)
     9. End Date of medication course (if mentioned)
     10. Length of medication course (if mentioned)
