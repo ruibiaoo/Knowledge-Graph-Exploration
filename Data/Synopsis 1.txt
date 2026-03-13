@@ -1,1 +1,89 @@
-admission date 14/01/2025 discharge date 20/01/2025 hospital: Singapore General Hospital service medicine patient id: P601 name: Tan Kok Leong dob 12 May 1961 age 64 sex male ethnicity Chinese allergies: none known chief complaint increased urination history of present illness: this is a 64-year-old chinese gentleman, P601 Tan Kok Leong, who presented to SGH A&E with approximately 4 weeks of worsening thirst and polyuria, waking up 5–6 times at night to void, reports dry mouth and unintentional 3–4kg weight loss over past month, denies fever or dysuria, random glucose 19.2 mmol/L in ED, hba1c 9.8%, renal function normal, no ketonuria, diagnosed T2DM on 14/01/2025 with trigger symptom polyuria. commenced Drug ID 37 Metformin 500mg BD starting 14/01/2025 for duration 180 days, expected end date 12/07/2025. diabetic counselling provided, dietician review done, discharged stable.
+Patient P84271, S1234560L, K9876543H, Abdul Rahman Bin Salleh, 72 yo, Malay Male lives with his daughter and grandson in Tampines, Singapore.
+**Past Medical History**
+1. Type 2 Diabetes Mellitus (T2DM) diagnosed in 2019, previously managed with oral hypoglycemic agents
+    - Medication ID: M228 - Metformin 850mg
+    - Start Date: 21/06/2019
+    - End Date: 10/03/2023
+    - Duration: 1360 days
+    - Medication ID: M409 - Sitagliptin 100mg
+    - Start Date: 11/03/2023
+    - End Date: 11/03/2026
+    - Duration: 1095 days
+2. Hypertension (HTN) diagnosed in 2024 with long-term treatment
+    - Medication ID: M315 - Lisinopril 20mg 
+    - Start Date: 14/11/2024
+    - End Date: 14/11/2025
+    - Duration: 365 days
+    - Medication ID: M516 - Losartan 25mg
+    - Start Date: 15/11/2025
+    - End Date: 15/02/2026
+    - Duration: 90 days
+    - Medication ID: M791 - Enalapril 5mg
+    - Start Date: 16/02/2026
+    - End Date: 16/08/2026
+    - Duration: 180 days
+3. Chronic Kidney Disease (CKD) Stage 3, under regular monitoring by the nephrology clinic
+    - Medication ID: M888 - Losartan 50mg
+    - Start Date: 05/05/2022
+    - End Date: 05/05/2026
+    - Duration: 1460 days
+4. Hyperlipidemia, treated with lifestyle modifications and pharmacotherapy
+    - Medication ID: M622 - Atorvastatin 20mg
+    - Start Date: 18/08/2017
+    - End Date: 18/08/2027
+    - Duration: 3650 days
+
+**Current Admission**
+1. Progressive confusion and generalized weakness over 2 days
+2. Increasing lethargy and reduced responsiveness compared to baseline
+3. Difficulty recalling familiar surroundings and disorientation to time
+4. Burning sensation during urination for 3 days
+5. One episode of urinary incontinence overnight prior to admission
+6. Poor appetite and fatigue reported over the past week
+7. No history of chest pain, dyspnea, hematuria, or recent trauma
+
+**On Examination**
+- **HR:** 108, **SpO2:** 93% (2 L/min), **RR:** 20, **BP:** 100/65
+- **Alertness:** Alert but disoriented to time and place, respond to name
+- **Irregular heart beat:** No JVP elevation
+- **Heart:** S1, S2, no murmurs
+- **Lungs:** Mild bilateral wheezing
+- **Abdomen:** Soft, non-tender, no palpable masses
+- **Neurological:** No focal neurological deficits identified
+
+**Initial Investigations**
+- **Urea:** 28.4, **Na:** 132, **K:** 5.1, **Bicarb:** 18, **Cr:** 210
+- **Hb:** 10.8, **TW:** 7.5, **Plt:** 120
+- **Blood Glucose:** 18.3 mmol/L
+- **Urinalysis:** Positive for leukocytes, nitrites, and blood
+- **CRP:** 120 mg/L
+- **Chest X-ray:** Mild bilateral perihilar infiltrates, no consolidation
+- **CT Head:** Mild cerebral atrophy consistent with age; no acute hemorrhage or infarction
+
+**Issues/Progress**
+1. **Nutritional Decline and Deconditioning**
+   - Patient reported poor appetite and reduced oral intake during illness
+   - Dietitian referral made for nutritional assessment and high-protein diet plan
+   - Physiotherapy initiated to improve mobility and prevent functional decline
+
+2. **Mild Electrolyte Disturbance**
+   - Hyponatremia (Na 132) and mild hyperkalemia (K 5.1) noted on admission
+   - Likely secondary to renal impairment and infection
+   - Electrolytes monitored closely during hospitalization
+
+3. **Functional Decline with Increased Care Needs**
+   - Family reports increasing dependence over the past year
+   - Recent illness contributed to reduced mobility and lethargy
+   - Physiotherapy and occupational therapy consulted to support recovery
+
+**Goals of Care**
+- Focusing on pain management, symptom relief
+- Engaging in meaningful conservations
+
+**Care Plan:**
+- Continuation of intravenous antibiotics for treatment of UTI
+- Adequate hydration therapy and monitoring of renal function
+- Oxygen therapy as required for COPD symptoms
+- Blood glucose control using insulin therapy
+- Monitoring for resolution of delirium
+- Follow-up with primary care and specialist clinics after discharge

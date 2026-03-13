@@ -1,11 +1,48 @@
-patient_id,patient_name,age,gender,ethnicity,drug_id,medication_name,condition,diagnosis_date,start_date,duration,end_date,trigger
-P601,Tan Kok Leong,64,Male,Chinese,37,Metformin 500mg BD,T2DM,14/1/2025,14/1/2025,180,12/7/2025,polyuria
-P602,Aisyah Bte Kassim,52,Female,Malay,12,Amlodipine 5mg OD,Hypertension,3/2/2025,3/2/2025,365,2/2/2026,headache
-P603,Rajesh Subramaniam,59,Male,Indian,56,Aspirin 100mg OM,CAD,22/3/2025,22/3/2025,180,18/9/2025,chest tightness
-P604,Lim Shi Hui,35,Female,Chinese,78,Salbutamol inhaler 100mcg PRN,Asthma,5/4/2025,5/4/2025,90,3/7/2025,wheezing
-P605,Muhammad Hafiz Bin Noor,47,Male,Malay,91,Losartan 50mg OD,CKD Stage 2,11/5/2025,11/5/2025,365,10/5/2026,edema
-P606,Priya Menon,29,Female,Indian,22,Ferrous Sulphate 200mg TDS,Iron Deficiency Anaemia,18/6/2025,18/6/2025,120,15/10/2025,fatigue
-P607,Ong Jia Wei,70,Male,Chinese,45,Atorvastatin 20mg nocte,Hyperlipidemia,2/7/2025,2/7/2025,365,1/7/2026,hyperlipidemia
-P608,Siti Mariam Bte Rahim,44,Female,Malay,37,Metformin XR 750mg OM,T2DM,16/7/2025,16/7/2025,90,13/10/2025,hyperglycemia
-P609,Gopal Rajan,56,Male,Indian,88,Sumatriptan 50mg PRN,Migraine,25/7/2025,25/7/2025,30,23/8/2025,headache
-P610,Ng Mei Lin,41,Female,Chinese,12,Amlodipine 10mg OD,Hypertension,1/8/2025,1/8/2025,180,28/1/2026,dizziness
+Patient ID,Patient Name,Age,Gender,Ethnicity,Medication ID,Medication Prescribed,Start Date,End Date,Length of Course (Days),Condition
+P84271,Abdul Rahman Bin Salleh,72,Male,Malay,M228,Metformin 850mg,21/6/2019,10/3/2023,1360,Type 2 Diabetes Mellitus
+P84271,Abdul Rahman Bin Salleh,72,Male,Malay,M409,Sitagliptin 100mg,11/3/2023,11/3/2026,1095,Type 2 Diabetes Mellitus
+P84271,Abdul Rahman Bin Salleh,72,Male,Malay,M315,Lisinopril 20mg,14/11/2024,14/11/2025,365,Hypertension
+P84271,Abdul Rahman Bin Salleh,72,Male,Malay,M516,Losartan 25mg,15/11/2025,15/2/2026,90,Hypertension
+P84271,Abdul Rahman Bin Salleh,72,Male,Malay,M791,Enalapril 5mg,16/2/2026,16/8/2026,180,Hypertension
+P84271,Abdul Rahman Bin Salleh,72,Male,Malay,M888,Losartan 50mg,5/5/2022,5/5/2026,1460,Chronic Kidney Disease Stage 3
+P84271,Abdul Rahman Bin Salleh,72,Male,Malay,M622,Atorvastatin 20mg,18/8/2017,18/8/2027,3650,Hyperlipidemia
+P76124,Lim Wei Jian,68,Male,Chinese,M184,Metformin 500mg,12/5/2018,20/4/2022,1439,Type 2 Diabetes Mellitus
+P76124,Lim Wei Jian,68,Male,Chinese,M402,Empagliflozin 10mg,21/4/2022,21/4/2026,1461,Type 2 Diabetes Mellitus
+P76124,Lim Wei Jian,68,Male,Chinese,M611,Amlodipine 5mg,2/3/2019,2/3/2023,1461,Hypertension
+P76124,Lim Wei Jian,68,Male,Chinese,M784,Perindopril 4mg,3/3/2023,3/3/2027,1461,Hypertension
+P76124,Lim Wei Jian,68,Male,Chinese,M622,Atorvastatin 20mg,10/9/2017,10/9/2027,3652,Hyperlipidemia
+P90347,Daniel Tan Kai Ming,70,Male,Chinese,M401,Salbutamol Inhaler 100mcg,12/5/2018,10/4/2020,1429,Chronic Obstructive Pulmonary Disease
+P90347,Daniel Tan Kai Ming,70,Male,Chinese,M403,Tiotropium Inhaler 18mcg,11/4/2020,11/4/2026,2192,Chronic Obstructive Pulmonary Disease
+P90347,Daniel Tan Kai Ming,70,Male,Chinese,M501,Aspirin 100mg,2/3/2018,2/3/2023,1826,Coronary Artery Disease
+P90347,Daniel Tan Kai Ming,70,Male,Chinese,M502,Clopidogrel 75mg,3/3/2023,3/3/2027,1461,Coronary Artery Disease
+P90347,Daniel Tan Kai Ming,70,Male,Chinese,M622,Atorvastatin 20mg,18/8/2017,18/8/2027,3652,Hyperlipidemia
+P71265,Rajesh Kumar Nair,66,Male,Indian,M701,Warfarin 3mg,14/2/2019,10/10/2022,1334,Atrial Fibrillation
+P71265,Rajesh Kumar Nair,66,Male,Indian,M702,Apixaban 5mg,11/10/2022,11/10/2026,1461,Atrial Fibrillation
+P71265,Rajesh Kumar Nair,66,Male,Indian,M703,Losartan 50mg,15/3/2020,15/3/2026,2191,Chronic Kidney Disease Stage 3
+P71265,Rajesh Kumar Nair,66,Male,Indian,M704,Rosuvastatin 10mg,2/8/2016,2/8/2026,3653,Hyperlipidemia
+P71265,Rajesh Kumar Nair,66,Male,Indian,M705,Omeprazole 20mg,12/5/2021,12/5/2024,1096,Gastroesophageal Reflux Disease
+P54819,Maria Gonzales De Silva,62,Female,Filipino,M803,Omeprazole 20mg,5/6/2019,5/6/2023,1461,Chronic Gastritis
+P54819,Maria Gonzales De Silva,62,Female,Filipino,M804,Esomeprazole 40mg,6/6/2023,6/6/2027,1461,Chronic Gastritis
+P54819,Maria Gonzales De Silva,62,Female,Filipino,M801,Methotrexate 10mg,18/4/2015,12/2/2021,2126,Rheumatoid Arthritis
+P54819,Maria Gonzales De Silva,62,Female,Filipino,M802,Leflunomide 20mg,13/2/2021,13/2/2026,1826,Rheumatoid Arthritis
+P54819,Maria Gonzales De Silva,62,Female,Filipino,M805,Alendronate 70mg,10/10/2018,10/10/2026,2921,Osteoporosis
+P66218,Ng Siew Ling,59,Female,Chinese,M901,Furosemide 20mg,14/3/2020,1/5/2023,1143,Congestive Heart Failure
+P66218,Ng Siew Ling,59,Female,Chinese,M902,Furosemide 40mg,2/5/2023,2/5/2027,1461,Congestive Heart Failure
+P66218,Ng Siew Ling,59,Female,Chinese,M903,Levothyroxine 50mcg,10/7/2016,15/9/2022,2259,Hypothyroidism
+P66218,Ng Siew Ling,59,Female,Chinese,M904,Levothyroxine 75mcg,16/9/2022,16/9/2026,1461,Hypothyroidism
+P66218,Ng Siew Ling,59,Female,Chinese,M905,Rosuvastatin 10mg,12/2/2026,12/3/2026,30,Hyperlipidemia
+P78439,Siti Nur Aisyah Binte Rahman,63,Female,Malay,M914,Alendronate 70mg,11/10/2022,11/10/2026,1461,Osteoporosis
+P78439,Siti Nur Aisyah Binte Rahman,63,Female,Malay,M912,Omeprazole 20mg,8/3/2019,8/3/2026,2555,Gastroesophageal Reflux Disease
+P78439,Siti Nur Aisyah Binte Rahman,63,Female,Malay,M913,Esomeprazole 20mg,9/3/2026,9/4/2026,30,Gastroesophageal Reflux Disease
+P78439,Siti Nur Aisyah Binte Rahman,63,Female,Malay,M910,Methotrexate 10mg,12/2/2026,12/3/2026,30,Rheumatoid Arthritis
+P52864,Srihari Rangan,66,Male,Indian,M228,Metformin 850mg,11/10/2024,11/10/2026,730,Type 2 Diabetes Mellitus
+P52864,Srihari Rangan,66,Male,Indian,M784,Perindopril 4mg,8/3/2022,8/3/2026,1461,Hypertension
+P52864,Srihari Rangan,66,Male,Indian,M622,Atorvastatin 20mg,12/1/2026,12/7/2026,180,Hyperlipidemia
+P63918,Tan Ah Beng,71,Male,Chinese,M228,Metformin 850mg,18/4/2022,18/4/2024,730,Type 2 Diabetes Mellitus
+P63918,Tan Ah Beng,71,Male,Chinese,M409,Sitagliptin 100mg,19/4/2024,19/4/2025,365,Type 2 Diabetes Mellitus
+P63918,Tan Ah Beng,71,Male,Chinese,M1,Pioglitazone 30mg,19/4/2025,19/4/2026,365,Type 2 Diabetes Mellitus
+P63918,Tan Ah Beng,71,Male,Chinese,M702,Losartan 50mg,8/3/2026,8/6/2026,90,Chronic Kidney Disease Stage 3
+P63918,Tan Ah Beng,71,Male,Chinese,M622,Atorvastatin 20mg,12/1/2025,12/7/2026,545,Hyperlipidemia
+P90216,Lee Hock Seng,69,Male,Chinese,M953,Clopidogrel 75mg,14/11/2023,14/11/2026,1096,Transient Ischemic Attack
+P90216,Lee Hock Seng,69,Male,Chinese,M951,Warfarin 3mg,15/4/2021,15/4/2026,1825,Atrial Fibrillation
+P90216,Lee Hock Seng,69,Male,Chinese,M2,Atorvastatin 80mg,12/1/2019,12/1/2026,2555,Hyperlipidemia

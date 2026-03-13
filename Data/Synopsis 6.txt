@@ -1,1 +1,81 @@
-SGH admission date 18/06/25 discharge date 22/06/25 patient id P606 patient: Priya Menon dob 04/08/1996 age 29 gender Female ethnicity Indian allergies none chief complaint persistent fatigue history of present illness: 29yo indian female P606 with increasing fatigue over 3 months; reports heavy menses; Hb 8.9 g/dL, ferritin 8; diagnosed Iron Deficiency Anaemia on 18/06/2025; trigger fatigue. commenced Drug ID 22 Ferrous Sulphate 200mg TDS start 18/06/2025 duration 120 days end 15/10/2025; gynaecology referral made.
+Patient P66218, S1234565L, K9876538H, Ng Siew Ling, 59 yo, Chinese Female, lives with her husband and elderly mother in Ang Mo Kio, Singapore.
+**Past Medical History**
+1. Congestive Heart Failure (CHF) diagnosed in 2020 after evaluation for progressive shortness of breath and bilateral lower limb swelling. At that time, echocardiography revealed mild left ventricular dysfunction consistent with early-stage heart failure
+    - Medication ID: M901 – Furosemide 20mg
+    - Start Date: 14/03/2020
+    - End Date: 01/05/2023
+    - Duration: 1143 days
+    - Medication ID: M902 – Furosemide 40mg
+    - Start Date: 02/05/2023
+    - End Date: 02/05/2027
+    - Duration: 1461 days
+2. Hypothyroidism diagnosed in 2016 following investigation for persistent fatigue, mild weight gain, and cold intolerance
+    - Medication ID: M903 – Levothyroxine 50mcg
+    - Start Date: 10/07/2016
+    - End Date: 15/09/2022
+    - Duration: 2259 days
+    - Medication ID: M904 – Levothyroxine 75mcg
+    - Start Date: 16/09/2022
+    - End Date: 16/09/2026
+    - Duration: 1461 days
+3. Hyperlipidemia diagnosed in 2026 following abnormal lipid profile during cardiovascular screening
+    - Medication ID: M905 – Rosuvastatin 10mg
+    - Start Date: 12/02/2026
+    - End Date: 12/03/2026
+    - Duration: 30 days
+
+**Current Admission**
+1. Increasing shortness of breath for the past 4 days, particularly noticeable when walking short distances within the home environment
+2. Swelling of both ankles and lower legs
+3. Fatigue and reduced ability to perform routine activities such as cooking and household chores
+4. Difficulty lying flat while sleeping due to breathlessness at night
+5. Mild dry cough without sputum production
+6. No chest trauma, fever, or recent travel history reported
+
+**On Examination**
+**HR**: 98, **SpO₂**: 94% (room air), **RR**: 20, **BP**: 138/84
+**Alertness**: : Alert and cooperative but appears mildly breathless during conversation
+**Heart**: S1, S2 normal, no murmurs detected
+**Lungs**: Bibasal crackles present, suggesting fluid accumulation
+**Abdomen**: Soft and non-tender with no palpable masses
+**Extremities**: Bilateral pitting edema noted at the ankles
+**Neurological**: No focal neurological deficits observed
+
+**Initial Investigations**
+**Urea**: 23.6, **Na**: 136, **K**: 4.5, **Cr**: 120
+**Hb**: 11.9, **TW**: 9.6, **Plt**: 205
+**CRP**: 8 mg/L
+**Blood Glucose**: 11.2 mmol/L
+**Chest X-ray**: Cardiomegaly with mild pulmonary congestion
+**ECG**: Normal sinus rhythm without acute ischemic changes
+
+**Issues/Progress**
+1. **Congestive Heart Failure Exacerbation**
+   - Patient presenting with worsening breathlessness and lower limb edema
+   - Evidence of pulmonary congestion on chest imaging
+   - Diuretic therapy intensified to facilitate removal of excess fluid and relieve symptoms
+
+2. **Reduced Functional Capacity**
+   - Patient reports fatigue and difficulty performing daily activities
+   - Gradual mobilization encouraged as symptoms improve
+
+3. **Fluid Retention**
+   - Peripheral edema noted during examination
+   - Monitoring daily weight and urine output
+
+4. **Chronic Thyroid Disease Monitoring**
+   - Continue thyroid hormone replacement therapy
+   - Thyroid function tests to be reviewed during follow-up
+
+**Goals of Care**
+- Relieve symptoms of fluid overload and improve breathing
+- Prevent further cardiac decompensation
+- Support gradual recovery of physical endurance and independence
+
+**Care Plan:**
+- Increase diuretic therapy to control fluid overload
+- Monitor fluid balance and daily weight
+- Continue thyroid hormone replacement therapy
+- Monitor renal function and electrolyte levels
+- Provide patient education regarding salt restriction and medication adherence
+- Arrange cardiology follow-up after discharge

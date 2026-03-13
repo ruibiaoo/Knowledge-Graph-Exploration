@@ -1,1 +1,83 @@
-Hospital: Changi General Hospital admission date 22.03.2025 discharge date 27.03.2025 patient id: P603 Rajesh Subramaniam age 59 sex Male ethnicity Indian dob 02 Jul 1966 allergies none chief complaint exertional chest discomfort history of present illness: 59-year-old indian male P603 with no prior cardiac history presents with 2 weeks exertional central chest tightness relieved with rest; no diaphoresis, no syncope, vitals stable, troponin negative x2, treadmill stress test positive for inducible ischemia; diagnosed CAD on 22.03.2025; trigger symptom chest tightness. initiated Drug ID 56 Aspirin 100mg OM start 22.03.2025 for duration 180 days end 18.09.2025. cardiology follow-up arranged.
+Patient P90347, S1234562L, K9876541H, Daniel Tan Kai Ming, 70 yo, Chinese Male, lives with his wife in Clementi, Singapore. 
+**Past Medical History**
+1. Chronic Obstructive Pulmonary Disease (COPD) diagnosed in 2016 after evaluation for chronic cough and smoking history
+    - Medication ID: M401 – Salbutamol Inhaler 100mcg
+    - Start Date: 12/05/2018
+    - End Date: 10/04/2020
+    - Duration: 1429 days
+    - Medication ID: M403 – Tiotropium Inhaler 18mcg
+    - Start Date: 11/04/2020
+    - End Date: 11/04/2026
+    - Duration: 2192 days
+2. Coronary Artery Disease (CAD) diagnosed in 2018 following evaluation for exertional chest discomfort
+    - Medication ID: M501 – Aspirin 100mg
+    - Start Date: 02/03/2018
+    - End Date: 02/03/2023
+    - Duration: 1826 days
+    - Medication ID: M502 - Clopidogrel 75mg
+    - Start Date: 03/03/2023
+    - End Date: 03/03/2027
+    - Duration: 1461 days
+3. Hyperlipidemia diagnosed in 2017 during cardiovascular risk assessment
+    - Medication ID: M622 – Atorvastatin 20mg
+    - Start Date: 18/08/2017
+    - End Date: 18/08/2027
+    - Duration: 3652 days
+
+**Current Admission**
+1. Increasing shortness of breath for the past 3 days
+2. Productive cough with yellowish sputum
+3. Low-grade fever and generalized fatigue
+4. Reduced exercise tolerance with mild chest tightness
+5. Poor appetite for the past several days
+6. No hemoptysis, chest trauma, or recent travel
+
+**On Examination**
+**HR**: 102, **SpO₂**: 92% (room air), **RR**: 22, **BP**: 130/82
+**Alertness**: Alert but appears mildly breathless
+**Heart**: S1, S2 audible with regular rhythm
+**Lungs**: Diffuse expiratory wheezing with reduced air entry bilaterally
+**Abdomen**: Soft, non-tender
+**Neurological**: No focal neurological deficits observed
+
+**Initial Investigations**
+**Urea**: 19.4, **Na**: 136, **K**: 4.5, **Cr**: 118
+**Hb**: 12.1, **TW**: 12.3, **Plt**: 210
+**Blood Glucose**: 10.7 mmol/L
+**Chest X-ray**: Hyperinflated lungs with patchy lower lobe infiltrates
+**CRP**: 112 mg/L
+
+**Issues/Progress**
+1. **COPD Exacerbation**
+   - Worsening breathlessness and productive cough reported over several days
+   - Likely triggered by respiratory infection
+   - Nebulized bronchodilator therapy initiated in the ward
+   - Close monitoring of oxygen saturation and respiratory effort
+
+2. **Lower Respiratory Tract Infection**
+   - Elevated inflammatory markers and productive sputum, suggestive bacterial infection
+   - Empiric intravenous antibiotics commenced
+   - Monitoring for clinical improvement and resolution of fever
+
+3. **Reduced Functional Capacity**
+   - Patient reports fatigue and decreased endurance
+   - Likely multifactorial due to infection and chronic lung disease
+   - Physiotherapy consulted to assist with breathing exercises and gradual mobilization
+
+4. **Nutrition Decline**
+   - Reduced appetite noted during the current illness
+   - Encouraged oral nutritional intake and hydration
+   - Monitoring weight and nutritional status during admission
+
+**Goals of Care**
+- Stabilize respiratory status and treat underlying infection
+- Maintain adequate oxygenation and prevent further COPD exacerbations
+- Support recovery of baseline functional capacity and independence
+
+**Care Plan:**
+- Continue bronchodilator therapy and inhaled medications
+- Administer intravenous antibiotics for suspected respiratory infection
+- Monitor respiratory status, oxygen saturation and inflammatory markers
+- Encourage pulmonary rehabilitation exercises and early mobilization
+- Arrange outpatient respiratory clinic follow-up after discharge for ongoing disease management
+

@@ -1,1 +1,79 @@
-Admission: 3 Feb 2025 | Discharge: 6 Feb 2025 | NUH Medicine Ward | patient id P602 | patient name Aisyah Bte Kassim | DOB 22/03/1973 | Age 52 | Gender Female | Ethnicity Malay | Allergies NKDA. Chief complaint persistent headache. HPI: 52yo malay female P602 presented with 10 days throbbing occipital headache associated with lightheadedness; bp in clinic 192/104, repeat 188/100; no focal neurology, no visual changes; electrolytes wnl, urinalysis negative. diagnosed Hypertension on 03-02-2025. trigger: headache. started on Drug ID 12 Amlodipine 5mg OD start_date 03-02-2025 duration 365 days end_date 02-02-2026. lifestyle advice given, arranged polyclinic follow-up.
+Patient P76124, S1234561L, K9876542H, Lim Wei Jian, 68 yo, Chinese Male, lives with his wife in Bishan, Singapore. 
+**Past Medical History**
+1. Type 2 Diabetes Mellitus (T2DM) diagnosed in 2018 during routine health screening
+    - Medication ID: M184 – Metformin 500mg
+    - Start Date: 12/05/2018
+    - End Date: 20/04/2022
+    - Duration: 1439 days
+    - Medication ID: M402 – Empagliflozin 10mg
+    - Start Date: 21/04/2022
+    - End Date: 21/04/2026
+    - Duration: 1461 days
+2. Hypertension (HTN) diagnosed in 2019 following repeated elevated blood pressure readings during outpatient visits
+    - Medication ID: M611 – Amlodipine 5mg
+    - Start Date: 02/03/2019
+    - End Date: 02/03/2023
+    - Duration: 1461 days
+    - Medication ID: M784 – Perindopril 4mg
+    - Start Date: 03/03/2023
+    - End Date: 03/03/2027
+    - Duration: 1461 days
+3. Hyperlipidemia diagnosed in 2017 following abnormal lipid profile during cardiovascular risk assessment
+    - Medication ID: M622 – Atorvastatin 20mg
+    - Start Date: 10/09/2017
+    - End Date: 10/09/2027
+    - Duration: 3652 days
+
+**Current Admission**
+1. Increasing urinary frequency and dysuria over 4 days
+2. Intermittent Fever with chills and generalized malaise
+3. Mild lower abdominal discomfort, particularly in the suprapubic region
+4. Reduced appetite and fatigue for approximately one week
+5. No history of chest pain, hematuria, flank pain, or recent trauma
+6. Occasional lightheadedness when standing from a seated position
+
+**On Examination**
+**HR**: 104, **SpO₂**: 96% (room air), **RR**: 18, **BP**: 128/78
+**Alertness**: Alert but fatigued
+**Heart**: S1, S2, no murmurs
+**Lungs**: Clear breath sounds bilaterally
+**Abdomen**: Mild suprapubic tenderness on palpation, no guarding or rebound tenderness
+**Neurological**: No focal neurological deficits observed
+
+**Initial Investigations**
+**Urea**: 21.6, **Na**: 135, **K**: 4.6, **Cr**: 132
+**Hb**: 12.4, **WBC**: 10.5, **Plt**: 190
+**Blood Glucose**: 11.9 mmol/L
+**Urinalysis**: Positive leukocytes and nitrites
+**CRP**: 98 mg/L
+
+**Issues/Progress**
+1. **Urinary Tract Infection**
+   - Urinalysis findings strongly suggest bacterial urinary tract infection
+   - Patient presenting with dysuria, urinary frequency, and suprapubic tenderness
+   - Empiric intravenous antibiotics initiated pending urine culture results
+   - Close monitoring for potential progression to systemic infection
+
+2. **Mild Dehydration**
+   - Reduced oral intake over the past week
+   - Managed with intravenous fluid resuscitation and electrolyte monitoring
+
+3. **Glycemic Instability**
+   - Blood glucose elevated on admission likely due to infection and physiological stress
+   - Blood glucose monitoring performed regularly during admission
+   - Oral diabetic medications temporarily withheld until patient stabilizes
+
+**Goals of Care**
+- Focus on infection treatment and symptom relief
+- Maintain hydration and metabolic stability
+- Support gradual recovery and safe discharge planning
+- Prevent complications related to diabetes and hypertension
+
+**Care Plan:**
+- Continue intravenous antibiotics for suspected urinary tract infection
+- Monitor renal function and inflammatory markers
+- Resume oral diabetic medications once infection improves
+- Arrange outpatient follow-up with primary care physician and endocrinology clinic
+- Provide patient education regarding infection prevention and medication adherence
+
+

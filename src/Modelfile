@@ -1,1 +1,1 @@
-FROM ./medgemma-27b-text-it-GGUF:Q4_K_S:gguf
+FROM ./medgemma-27b-text-it-Q4_K_S:gguf

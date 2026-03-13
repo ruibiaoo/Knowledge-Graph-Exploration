@@ -1,1 +1,73 @@
-Tan Tock Seng Hospital admission 16/07/2025 discharge 19/07/2025 patient id P608 patient name Siti Mariam Bte Rahim DOB 09-09-1981 age 44 gender female ethnicity Malay allergies nil chief complaint high glucose reading history of present illness: P608 44yo malay lady with fasting glucose 10.1 mmol/L and hba1c 8.2%; mild fatigue; diagnosed T2DM on 16/07/2025; trigger hyperglycemia. commenced Drug ID 37 Metformin XR 750mg OM start 16/07/2025 duration 90 days end 13/10/2025; diabetic nurse counselling arranged.
+Patient P52864,  S1234567L, K9876536H, Srihari Rangan, 66 yo, Indian Male, lives with his wife and two adult sons in Toa Payoh, Singapore.
+
+**Past Medical History**
+1. Type 2 Diabetes Mellitus (T2DM) diagnosed in 2024 during routine health screening when elevated fasting blood glucose levels were detected.
+    - Medication ID: M228 - Metformin 850mg
+    - Start Date: 11/10/2024
+    - End Date: 11/10/2026
+    - Duration: 730 days
+2. Hypertension (HTN) diagnosed in 2022 after repeated elevated blood pressure readings during routine clinic visits.
+    - Medication ID: M784 – Perindopril 4mg
+    - Start Date: 08/03/2022
+    - End Date: 08/03/2026
+    - Duration: 1461 days
+3. Hyperlipidemia diagnosed in 2026 during cardiovascular risk screening.
+    - Medication ID: M622 – Atorvastatin 20mg
+    - Start Date: 12/01/2026
+    - End Date: 12/07/2026
+    - Duration: 180 days
+
+**Current Admission**
+1. Intermittent dizziness experienced over the past three days, particularly when standing up from a seated position
+2. Mild headache occurring mainly in the evening
+3. Reduced appetite over the past several days
+4. Generalized weakness while walking longer distances
+5. One episode of near-fainting reported while standing in the kitchen earlier in the day
+6. No chest pain, trauma, fever, or recent infections reported
+
+**On Examination**
+**HR**: 96, **SpO₂**: 97% (room air), **RR**: 18, **BP**: 158/90
+**Alertness**: : Patient is alert and oriented to time, place, and person. Speech is coherent and appropriate.
+**Heart**: S1, S2 normal with regular rhythm, no murmurs detected
+**Lungs**: Breath sounds clear bilaterally without wheezing or crackles.
+**Abdomen**: Soft and non-tender with no palpable masses.
+**Extremities**: No peripheral edema observed. Peripheral pulses palpable bilaterally.
+**Neurological**: No focal neurological deficits observed. Motor strength preserved in both upper and lower limbs.
+
+**Initial Investigations**
+**Urea**: 18.9, **Na**: 136, **K**: 4.4, **Cr**: 108
+**Hb**: 12.5, **TW**: 8.2, **Plt**: 210
+**CRP**: 9 mg/L
+**Blood Glucose**: 13.2 mmol/L
+
+**Issues/Progress**
+1. **Poor Glycemic Control**
+   - Elevated blood glucose noted on admission.
+   - Likely related to inconsistent home monitoring and dietary factors.
+   - Oral hypoglycemic therapy continued with glucose monitoring.
+
+2. **Hypertensive Episodes**
+   - Blood pressure elevated during admission.
+   - Possible contributor to reported dizziness and headache.
+   - Antihypertensive therapy reviewed and monitoring initiated.
+
+3. **Postural Dizziness**
+   - Symptoms most noticeable when standing from seated position.
+   - Orthostatic blood pressure monitoring performed.
+
+4. **Reduced Oral Intake**
+   - Patient reported decreased appetite during the past several days.
+   - Monitoring hydration and nutritional intake during admission.
+
+**Goals of Care**
+- Stabilize blood glucose and blood pressure levels
+- Prevent falls associated with dizziness
+- Maintain adequate hydration and nutrition
+- Ensure safe discharge with stable vital signs
+
+**Care Plan**
+- Continue oral diabetic medication and monitor blood glucose levels
+- Maintain antihypertensive therapy with blood pressure monitoring
+- Encourage adequate oral hydration and balanced meals
+- Provide education regarding medication adherence and glucose monitoring
+- Arrange follow-up at the polyclinic after discharge for continued monitoring of chronic medical conditions
