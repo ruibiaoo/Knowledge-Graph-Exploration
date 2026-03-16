@@ -6,9 +6,6 @@ from pathlib import Path
 from schema import *
 from validator import load_and_validate
 
-
-# ── Helpers ───────────────────────────────────────────────────────────────────
-
 def make_condition_id(condition_name: str) -> str:
     """
     Derive a short stable ID from a condition name.

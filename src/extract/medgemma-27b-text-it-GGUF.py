@@ -1,7 +1,7 @@
 import langextract as lx
 import textwrap
 from pathlib import Path
-
+import json
 
 prompt = textwrap.dedent("""
 You are a precise clinical data extraction engine. Your task is to extract specific information **ONLY** from the provided Clinical Notes.
@@ -22,16 +22,16 @@ You must extract *ALL* of the following information **ONLY** from the given Clin
 **Extraction Guidelines:**
 - **Completeness**: Extract ALL medications present. Do not skip any entry.
 - **Dates**: Standardize all dates to the format DD/MM/YYYY. 
-- **Map medication to condition**: 
                          
 **Output Format:** 
-- Return a JSON file where each element represents one medication record.
+- Extract entities as labeled spans according to the schema.
+- Each entity should correspond to one of the extraction classes listed above.
 """)
 
 examples = [
     lx.data.ExampleData(
         text=(
-        "Patient P12345, S9876543A, Lim Boon Keng, 65 yo, Chinese Male lives with "
+        "Patient P12345, S9876543A, K9876541H, Lim Boon Keng, 65 yo, Chinese Male lives with "
         "his wife in Bedok, Singapore.\n"
         "**Past Medical History**\n"
         "1. Hypertension diagnosed in 2018\n"
@@ -61,7 +61,6 @@ examples = [
             lx.data.Extraction(extraction_class="Prescribed Medication Name and Dosage",extraction_text="Amlodipine 5mg"),
             lx.data.Extraction(extraction_class="Prescribed Medication Start Date",extraction_text="01/03/2018"),
             lx.data.Extraction(extraction_class="Prescribed Medication End Date",extraction_text="01/03/2019"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Duration",extraction_text="365 days"),
             lx.data.Extraction(extraction_class="Condition",extraction_text="Hypertension")
 
             # Medication 2
@@ -69,15 +68,13 @@ examples = [
             lx.data.Extraction(extraction_class="Prescribed Medication Name and Dosage",extraction_text="Lisinopril 10mg"),
             lx.data.Extraction(extraction_class="Prescribed Medication Start Date",extraction_text="02/03/2019"),
             lx.data.Extraction(extraction_class="Prescribed Medication End Date",extraction_text="02/03/2021"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Duration",extraction_text="730 days"),
             lx.data.Extraction(extraction_class="Condition",extraction_text="Hypertension"),
 
             # Medication 3
-            lx.data.Extraction(extraction_class="Prescribed Medication ID",extraction_text="M103"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Name and Dosage",extraction_text="Atenolol 25mg"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Start Date",extraction_text="01/04/2021"),
-            lx.data.Extraction(extraction_class="Prescribed Medication End Date",extraction_text="01/04/2022"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Duration",extraction_text="365 days"),
+            lx.data.Extraction(extraction_class="Prescribed Medication ID",extraction_text="M205"),
+            lx.data.Extraction(extraction_class="Prescribed Medication Name and Dosage",extraction_text="Atorvastatin 10mg"),
+            lx.data.Extraction(extraction_class="Prescribed Medication Start Date",extraction_text="15/06/2020"),
+            lx.data.Extraction(extraction_class="Prescribed Medication End Date",extraction_text="15/06/2025"),
             lx.data.Extraction(extraction_class="Condition",extraction_text="Hyperlipidemia"),
         ],
     )
@@ -89,6 +86,23 @@ def load_synopsis_texts(data_dir: Path) -> list[str]:
         file_path = data_dir / f"Synopsis {i}.txt"
         texts.append(file_path.read_text(encoding="utf-8"))
     return texts
+
+
+def convert_to_json(result):
+    structured = []
+
+    for result in result.extractions:
+        item = {
+            "class": e.extraction_class,
+            "text": e.extraction_text,
+        }
+
+        if e.attributes:
+            item["attributes"] = e.attributes
+
+        structured.append(item)
+
+    return structured
 
 
 def main():
@@ -113,6 +127,16 @@ def main():
 
         print("Extracted entities:\n")
         print(result.extractions)
+
+        structured_output = convert_to_json(result)
+        output_dir = project_root / "outputs"
+        output_dir.mkdir(exist_ok=True)
+        output_file = output_dir / f"synopsis_{idx}.json"
+
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump(structured_output, f, indent=2)
+
+        print(f"Saved JSON to {output_file}")
 
 
 if __name__ == "__main__":
