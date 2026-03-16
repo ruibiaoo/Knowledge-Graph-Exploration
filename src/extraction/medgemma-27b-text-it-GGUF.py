@@ -6,22 +6,30 @@ from pathlib import Path
 # Prompt
 # -----------------------------------
 prompt = textwrap.dedent("""
-You must extract the following information from the given Clinical Notes provided.
-    1. Patient ID
-    2. Patient name
-    3. Patient Age
-    4. Patient Gender
-    5. Patient Ethnicity
-    6. Medication ID prescribed to patient
-    7. Medication prescribed to patient, including dosage and frequency(if mentioned)
-    8. Start Date of medication course (if mentioned)
-    9. End Date of medication course (if mentioned)
-    10. Length of medication course (if mentioned)
-    11. Condition patient suffered from
-    12. Symptoms patient experienced
+You are a precise clinical data extraction engine. Your task is to extract specific information **ONLY** from the provided Clinical Notes.
+                         
+**Task:**
+You must extract *ALL* of the following information **ONLY** from the given Clinical Notes provided.
+    1. Patient ID - Unique Patient Identifier (e.g., P700)
+    2. Patient Name - Full name of the patient
+    3. Patient Age - Age of the patient in years
+    4. Patient Gender - Gender of the patient (Male/Female)
+    5. Patient Ethnicity - Ethnicity of the patient 
+    6. Medication ID prescribed to patient - Unique Identifier for the medication (e.g., M228)
+    7. Medication Name prescribed to patient - Full medication name, including the dosage (e.g., Amlodipine 5mg)
+    8. Start Date of medication course - Start date for the medication (DD/MM/YYYY)
+    9. End Date of medication course - End date for the medication (DD/MM/YYYY)
+    10. Medical Condition(s) patient suffered from - The specific condition this medication was prescribed for (e.g., Hypertension)
 
-Use exact text spans from the original text. Do not paraphrase.
-Return entities in the order they appear.
+**Extraction Guidelines:**
+- **Completeness**: Extract ALL medications present. Do not skip any entry.
+- **Dates**: Standardize all dates to the format DD/MM/YYYY. 
+- **Map medication to condition**: 
+                         
+**Output Format:** 
+- Return a JSON array where each element
+                         
+
 """)
 
 # -----------------------------------
@@ -102,13 +110,9 @@ def load_synopsis_texts(data_dir: Path) -> list[str]:
     return texts
 
 
-def main() -> None:
-    # -----------------------------------
-    # Input Texts from Data folder
-    # -----------------------------------
+def main():
     project_root = Path(__file__).resolve().parent.parent
     data_dir = project_root / "Data"
-
     synopsis_texts = load_synopsis_texts(data_dir)
 
 
@@ -130,22 +134,7 @@ def main() -> None:
             use_schema_constraints=False,
         )
 
-        print(f"\nInput:\n{input_text}\n")
         print("Extracted entities:\n")
-
-        for entity in result.extractions:
-            position_info = ""
-            if entity.char_interval:
-                start = entity.char_interval.start_pos
-                end = entity.char_interval.end_pos
-                position_info = f" (pos: {start}-{end})"
-
-            print(
-                f"• {entity.extraction_class}: {entity.extraction_text}{position_info}"
-            )
-
-            if entity.attributes:
-                print(f"   Attributes: {entity.attributes}")
 
 
 if __name__ == "__main__":
