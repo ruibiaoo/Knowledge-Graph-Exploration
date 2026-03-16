@@ -2,17 +2,17 @@ from pathlib import Path
 import json
 import logging
 
-from langchain_community.llms import Ollama
+from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.messages import SystemMessage, HumanMessage
 
 
 logger = logging.getLogger(__name__)
 
-model = Ollama(model="gemma-local", temperature = 0)
+model = OllamaLLM(model="gemma-local", 
+               temperature = 0)
 
-template = 
-"""
+template = """
 You are a precise clinical data extraction engine. Your task is to extract specific information **ONLY** from the provided Clinical Notes.
                          
 **Task:**
@@ -118,21 +118,22 @@ def run_extraction(data_dir: Path) -> list[dict]:
     all_results: list[dict] = []
 
     for idx, clinical_note in enumerate(synopsis_texts, start=1):
-        logger.info(f"  Processing Synopsis {idx} ...")
+        logger.info(f"Processing Synopsis {idx} ...")
         result = chain.invoke({"clinical_note": clinical_note})
-        parsed = json.loads(result)
+        clean = result.replace("```json", "").replace("```", "").strip()
+        parsed = json.loads(clean)
         all_results.extend(parsed)
-        logger.info(f"  ✓ Synopsis {idx}: {len(parsed)} records extracted")
+        logger.info(f"✓ Synopsis {idx}: {len(parsed)} records extracted")
+
     return all_results
 
 
 def main():
     logging.basicConfig(level=logging.INFO, format="%(asctime)s  %(message)s")
 
-    project_root = Path(__file__).resolve().parent.parent
+    project_root = Path(__file__).resolve().parent.parent.parent
     data_dir     = project_root / "Data"
     output_path  = project_root / "output_extractions.json"
-
     all_results = run_extraction(data_dir)
 
     with open(output_path, "w", encoding="utf-8") as f:

@@ -61,7 +61,7 @@ examples = [
             lx.data.Extraction(extraction_class="Prescribed Medication Name and Dosage",extraction_text="Amlodipine 5mg"),
             lx.data.Extraction(extraction_class="Prescribed Medication Start Date",extraction_text="01/03/2018"),
             lx.data.Extraction(extraction_class="Prescribed Medication End Date",extraction_text="01/03/2019"),
-            lx.data.Extraction(extraction_class="Condition",extraction_text="Hypertension")
+            lx.data.Extraction(extraction_class="Condition",extraction_text="Hypertension"),
 
             # Medication 2
             lx.data.Extraction(extraction_class="Prescribed Medication ID",extraction_text="M102"),
@@ -93,20 +93,19 @@ def convert_to_json(result):
 
     for result in result.extractions:
         item = {
-            "class": e.extraction_class,
-            "text": e.extraction_text,
+            "class": result.extraction_class,
+            "text": result.extraction_text,
         }
 
-        if e.attributes:
-            item["attributes"] = e.attributes
+        if result.attributes:
+            item["attributes"] = result.attributes
 
         structured.append(item)
-
     return structured
 
 
 def main():
-    project_root = Path(__file__).resolve().parent.parent
+    project_root = Path(__file__).resolve().parent.parent.parent
     data_dir = project_root / "Data"
     synopsis_texts = load_synopsis_texts(data_dir)
 
