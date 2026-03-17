@@ -1,0 +1,162 @@
+[
+  {
+    "class": "Patient ID",
+    "text": "P66218"
+  },
+  {
+    "class": "Patient Name",
+    "text": "Ng Siew Ling"
+  },
+  {
+    "class": "Age",
+    "text": "59"
+  },
+  {
+    "class": "Gender",
+    "text": "Female"
+  },
+  {
+    "class": "Ethnicity",
+    "text": "Chinese"
+  },
+  {
+    "class": "Prescribed Medication ID",
+    "text": "M901"
+  },
+  {
+    "class": "Prescribed Medication Name and Dosage",
+    "text": "Furosemide 20mg"
+  },
+  {
+    "class": "Prescribed Medication Start Date",
+    "text": "14/03/2020"
+  },
+  {
+    "class": "Prescribed Medication End Date",
+    "text": "01/05/2023"
+  },
+  {
+    "class": "Condition",
+    "text": "Congestive Heart Failure (CHF)"
+  },
+  {
+    "class": "Prescribed Medication ID",
+    "text": "M902"
+  },
+  {
+    "class": "Prescribed Medication Name and Dosage",
+    "text": "Furosemide 40mg"
+  },
+  {
+    "class": "Prescribed Medication Start Date",
+    "text": "02/05/2023"
+  },
+  {
+    "class": "Prescribed Medication End Date",
+    "text": "02/05/2027"
+  },
+  {
+    "class": "Condition",
+    "text": "Congestive Heart Failure (CHF)"
+  },
+  {
+    "class": "Prescribed Medication ID",
+    "text": "M903"
+  },
+  {
+    "class": "Prescribed Medication Name and Dosage",
+    "text": "Levothyroxine 50mcg"
+  },
+  {
+    "class": "Prescribed Medication Start Date",
+    "text": "10/07/2016"
+  },
+  {
+    "class": "Prescribed Medication End Date",
+    "text": "15/09/2022"
+  },
+  {
+    "class": "Condition",
+    "text": "Hypothyroidism"
+  },
+  {
+    "class": "Prescribed Medication ID",
+    "text": "M904"
+  },
+  {
+    "class": "Prescribed Medication Name and Dosage",
+    "text": "Levothyroxine 75mcg"
+  },
+  {
+    "class": "Patient ID",
+    "text": "P700"
+  },
+  {
+    "class": "Patient Name",
+    "text": "Lim Boon Keng"
+  },
+  {
+    "class": "Age",
+    "text": "65"
+  },
+  {
+    "class": "Gender",
+    "text": "Male"
+  },
+  {
+    "class": "Ethnicity",
+    "text": "Chinese"
+  },
+  {
+    "class": "Prescribed Medication ID",
+    "text": "M101"
+  },
+  {
+    "class": "Prescribed Medication Name and Dosage",
+    "text": "Amlodipine 5mg"
+  },
+  {
+    "class": "Prescribed Medication Start Date",
+    "text": "01/03/2018"
+  },
+  {
+    "class": "Prescribed Medication End Date",
+    "text": "01/03/2019"
+  },
+  {
+    "class": "Condition",
+    "text": "Hypertension"
+  },
+  {
+    "class": "Prescribed Medication ID",
+    "text": "M102"
+  },
+  {
+    "class": "Prescribed Medication Name and Dosage",
+    "text": "Lisinopril 10mg"
+  },
+  {
+    "class": "-- Start Date: 16/09/2022\n  - End Date: 16/09/2026\n  - Duration: 1461 days\n3. Hyperlipidemia diagnosed in 2026 following abnormal lipid profile during cardiovascular screening\n  - Medication ID: M905 \u2013 Rosuvastatin 10mg\n  - Start Date: 12/02/2026\n  - End Date: 12/03/2026\n  - Duration: 30 days\n**Current Admission**\n1. Increasing shortness of breath for the past 4 days, particularly noticeable when walking short distances within the home environment\n2. Swelling of both ankles and lower legs\n3. Fatigue and reduced ability to perform routine activities such as cooking and household chores\n4. Difficulty lying flat while sleeping due to breathlessness at night\n5. Mild dry cough without sputum production\n6. No chest trauma, fever, or recent travel history reported\n**On Examination**\n**HR**: 98, **SpO\u2082**: 94% (room air), **RR**: 20, **BP**: 138/84\n**Alertness**: : Alert and cooperative but appears mildly breathless during conversation\n**Heart**: S1, S2 normal, no murmurs detected",
+    "text": "No"
+  },
+  {
+    "class": "Prescribed Medication ID",
+    "text": "M905"
+  },
+  {
+    "class": "Prescribed Medication Name and Dosage",
+    "text": "Rosuvastatin 10mg"
+  },
+  {
+    "class": "Prescribed Medication Start Date",
+    "text": "12/02/2026"
+  },
+  {
+    "class": "Prescribed Medication End Date",
+    "text": "12/03/2026"
+  },
+  {
+    "class": "Condition",
+    "text": "Hyperlipidemia"
+  }
+]

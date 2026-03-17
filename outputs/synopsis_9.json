@@ -1,0 +1,202 @@
+[
+  {
+    "class": "Patient ID",
+    "text": "P63918"
+  },
+  {
+    "class": "Patient Name",
+    "text": "Tan Ah Beng"
+  },
+  {
+    "class": "Age",
+    "text": "71"
+  },
+  {
+    "class": "Gender",
+    "text": "Male"
+  },
+  {
+    "class": "Ethnicity",
+    "text": "Chinese"
+  },
+  {
+    "class": "Prescribed Medication ID",
+    "text": "M228"
+  },
+  {
+    "class": "Prescribed Medication Name and Dosage",
+    "text": "Metformin 850mg"
+  },
+  {
+    "class": "Prescribed Medication Start Date",
+    "text": "18/04/2022"
+  },
+  {
+    "class": "Prescribed Medication End Date",
+    "text": "18/04/2024"
+  },
+  {
+    "class": "Condition",
+    "text": "Type 2 Diabetes Mellitus (T2DM)"
+  },
+  {
+    "class": "Prescribed Medication ID",
+    "text": "M409"
+  },
+  {
+    "class": "Prescribed Medication Name and Dosage",
+    "text": "Sitagliptin 100mg"
+  },
+  {
+    "class": "Prescribed Medication Start Date",
+    "text": "19/04/2024"
+  },
+  {
+    "class": "Prescribed Medication End Date",
+    "text": "19/04/2025"
+  },
+  {
+    "class": "Condition",
+    "text": "Type 2 Diabetes Mellitus (T2DM)"
+  },
+  {
+    "class": "Prescribed Medication ID",
+    "text": "M1"
+  },
+  {
+    "class": "Prescribed Medication Name and Dosage",
+    "text": "Pioglitazone 30mg"
+  },
+  {
+    "class": "Prescribed Medication Start Date",
+    "text": "19/04/2025"
+  },
+  {
+    "class": "Prescribed Medication End Date",
+    "text": "19/04/2026"
+  },
+  {
+    "class": "Condition",
+    "text": "Type 2 Diabetes Mellitus (T2DM)"
+  },
+  {
+    "class": "Prescribed Medication ID",
+    "text": "M702"
+  },
+  {
+    "class": "Prescribed Medication Name and Dosage",
+    "text": "Losartan 50mg"
+  },
+  {
+    "class": "Prescribed Medication Start Date",
+    "text": "08/03/2026"
+  },
+  {
+    "class": "Prescribed Medication End Date",
+    "text": "08/06/2026"
+  },
+  {
+    "class": "Condition",
+    "text": "Chronic Kidney Disease (CKD) Stage 3"
+  },
+  {
+    "class": "Patient ID",
+    "text": "P700"
+  },
+  {
+    "class": "Patient Name",
+    "text": "Lim Boon Keng"
+  },
+  {
+    "class": "Age",
+    "text": "65"
+  },
+  {
+    "class": "Gender",
+    "text": "Male"
+  },
+  {
+    "class": "Ethnicity",
+    "text": "Chinese"
+  },
+  {
+    "class": "Prescribed Medication ID",
+    "text": "M101"
+  },
+  {
+    "class": "Prescribed Medication Name and Dosage",
+    "text": "Amlodipine 5mg"
+  },
+  {
+    "class": "Prescribed Medication Start Date",
+    "text": "01/03/2018"
+  },
+  {
+    "class": "Prescribed Medication End Date",
+    "text": "01/03/2019"
+  },
+  {
+    "class": "Condition",
+    "text": "Hypertension"
+  },
+  {
+    "class": "Prescribed Medication ID",
+    "text": "M102"
+  },
+  {
+    "class": "Prescribed Medication Name and Dosage",
+    "text": "Lisinopril 10mg"
+  },
+  {
+    "class": "Prescribed Medication Start Date",
+    "text": "02/03/2019\u55cc"
+  },
+  {
+    "class": "Prescribed Medication End Date",
+    "text": "02/03/2021"
+  },
+  {
+    "class": "Condition",
+    "text": "Hypertension"
+  },
+  {
+    "class": "Prescribed Medication ID",
+    "text": "M205"
+  },
+  {
+    "class": "Prescribed Medication Name and Dosage",
+    "text": "Atorvastatin 10mg"
+  },
+  {
+    "class": "Prescribed Medication Start Date",
+    "text": "15/06/2020"
+  },
+  {
+    "class": "Prescribed Medication End Date",
+    "text": "15/06/2025"
+  },
+  {
+    "class": "Condition",
+    "text": "Hyperlipidemia"
+  },
+  {
+    "class": "Prescribed Medication ID",
+    "text": "M622"
+  },
+  {
+    "class": "Prescribed Medication Name and Dosage",
+    "text": "Atorvastatin 20mg"
+  },
+  {
+    "class": "Prescribed Medication Start Date",
+    "text": "12/01/2025"
+  },
+  {
+    "class": "Prescribed Medication End Date",
+    "text": "12/07/2026"
+  },
+  {
+    "class": "Condition",
+    "text": "Hyperlipidemia"
+  }
+]

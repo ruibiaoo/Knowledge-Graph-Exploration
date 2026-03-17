@@ -4,83 +4,96 @@ from pathlib import Path
 import json
 
 # ── Prompt ────────────────────────────────────────────────────────────────────
-# Shorter prompt = fewer tokens = faster inference on a 27B model
+# CRITICAL: Do NOT instruct output format — langextract handles that internally
 
 prompt = textwrap.dedent("""
-You are a clinical data extraction engine. Extract ONLY from the Clinical Notes below.
+You are a precise clinical data extraction engine. Extract information ONLY
+from the Clinical Notes provided. Do NOT extract from the example.
 
-Extract these fields for EACH medication:
-1. Patient ID
-2. Patient Full Name
-3. Patient Age (number only)
-4. Patient Gender (Male/Female)
-5. Patient Ethnicity
-6. Medication ID (e.g. M228)
-7. Medication Name and Dosage (e.g. Metformin 850mg)
-8. Medication Start Date (DD/MM/YYYY)
-9. Medication End Date (DD/MM/YYYY)
-10. Condition (the condition this medication treats)
+Extract the following fields for EACH medication found:
+    1. Patient ID               - (e.g., P700)
+    2. Patient Full Name         - Full name of the patient
+    3. Age                  
+    4. Gender             
+    5. Ethnicity            
+    6. Prescribed Medication ID           - (e.g., M228)
+    7. Prescribed Medication Name and Dosage - (e.g., Metformin 850mg)
+    8. Prescribed Medication Start Date   - In DD/MM/YYYY format
+    9. Prescribed Medication End Date     - In DD/MM/YYYY format
+    10. Condition           - The condition this medication was prescribed for
 
 Rules:
 - Extract ALL medications. Do not skip any.
-- Dates must be DD/MM/YYYY.
-- Only extract what is explicitly stated.
+- Every medication entry must include the patient fields.
+- Map each medication to the condition in the section heading above it.
+- Dates must be in DD/MM/YYYY format.
+- Only extract text explicitly present. Do not infer or guess.
 """)
 
 # ── Examples ──────────────────────────────────────────────────────────────────
-# Keep ONE clear example — enough to show structure without bloating token count
+# CRITICAL: extraction_text values must appear EXACTLY in the text string
+# Do NOT add [EXAMPLE] prefix — it shifts char positions and breaks alignment
 
 examples = [
     lx.data.ExampleData(
         text=(
-            "[EXAMPLE — learn format only, do NOT extract this]\n"
-            "Patient P12345, Lim Boon Keng, 65 yo, Chinese Male.\n"
+            "Patient P12345, S9876543A, K9876541H, Lim Boon Keng, 65 yo, Chinese Male lives with "
+            "his wife in Bedok, Singapore.\n"
             "**Past Medical History**\n"
             "1. Hypertension diagnosed in 2018\n"
             "    - Medication ID: M101 - Amlodipine 5mg\n"
             "    - Start Date: 01/03/2018\n"
             "    - End Date: 01/03/2019\n"
+            "    - Duration: 365 days\n"
             "    - Medication ID: M102 - Lisinopril 10mg\n"
             "    - Start Date: 02/03/2019\n"
             "    - End Date: 02/03/2021\n"
+            "    - Duration: 730 days\n"
             "2. Hyperlipidemia diagnosed in 2020\n"
             "    - Medication ID: M205 - Atorvastatin 10mg\n"
             "    - Start Date: 15/06/2020\n"
             "    - End Date: 15/06/2025\n"
-            "[END EXAMPLE]\n"
+            "    - Duration: 1825 days\n"
         ),
         extractions=[
-            lx.data.Extraction(extraction_class="Patient ID",                       extraction_text="P12345"),
-            lx.data.Extraction(extraction_class="Patient Name",                     extraction_text="Lim Boon Keng"),
-            lx.data.Extraction(extraction_class="Age",                              extraction_text="65"),
-            lx.data.Extraction(extraction_class="Gender",                           extraction_text="Male"),
-            lx.data.Extraction(extraction_class="Ethnicity",                        extraction_text="Chinese"),
-            lx.data.Extraction(extraction_class="Prescribed Medication ID",         extraction_text="M101"),
+            # Patient fields
+            lx.data.Extraction(extraction_class="Patient ID",    extraction_text="P12345"),
+            lx.data.Extraction(extraction_class="Patient Name",  extraction_text="Lim Boon Keng"),
+            lx.data.Extraction(extraction_class="Age",           extraction_text="65"),
+            lx.data.Extraction(extraction_class="Gender",        extraction_text="Male"),
+            lx.data.Extraction(extraction_class="Ethnicity",     extraction_text="Chinese"),
+            # Medication 1
+            lx.data.Extraction(extraction_class="Prescribed Medication ID",              extraction_text="M101"),
             lx.data.Extraction(extraction_class="Prescribed Medication Name and Dosage", extraction_text="Amlodipine 5mg"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Start Date", extraction_text="01/03/2018"),
-            lx.data.Extraction(extraction_class="Prescribed Medication End Date",   extraction_text="01/03/2019"),
-            lx.data.Extraction(extraction_class="Condition",                        extraction_text="Hypertension"),
-            lx.data.Extraction(extraction_class="Prescribed Medication ID",         extraction_text="M102"),
+            lx.data.Extraction(extraction_class="Prescribed Medication Start Date",      extraction_text="01/03/2018"),
+            lx.data.Extraction(extraction_class="Prescribed Medication End Date",        extraction_text="01/03/2019"),
+            lx.data.Extraction(extraction_class="Condition",                             extraction_text="Hypertension"),
+            # Medication 2
+            lx.data.Extraction(extraction_class="Prescribed Medication ID",              extraction_text="M102"),
             lx.data.Extraction(extraction_class="Prescribed Medication Name and Dosage", extraction_text="Lisinopril 10mg"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Start Date", extraction_text="02/03/2019"),
-            lx.data.Extraction(extraction_class="Prescribed Medication End Date",   extraction_text="02/03/2021"),
-            lx.data.Extraction(extraction_class="Condition",                        extraction_text="Hypertension"),
-            lx.data.Extraction(extraction_class="Prescribed Medication ID",         extraction_text="M205"),
+            lx.data.Extraction(extraction_class="Prescribed Medication Start Date",      extraction_text="02/03/2019"),
+            lx.data.Extraction(extraction_class="Prescribed Medication End Date",        extraction_text="02/03/2021"),
+            lx.data.Extraction(extraction_class="Condition",                             extraction_text="Hypertension"),
+            # Medication 3
+            lx.data.Extraction(extraction_class="Prescribed Medication ID",              extraction_text="M205"),
             lx.data.Extraction(extraction_class="Prescribed Medication Name and Dosage", extraction_text="Atorvastatin 10mg"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Start Date", extraction_text="15/06/2020"),
-            lx.data.Extraction(extraction_class="Prescribed Medication End Date",   extraction_text="15/06/2025"),
-            lx.data.Extraction(extraction_class="Condition",                        extraction_text="Hyperlipidemia"),
+            lx.data.Extraction(extraction_class="Prescribed Medication Start Date",      extraction_text="15/06/2020"),
+            lx.data.Extraction(extraction_class="Prescribed Medication End Date",        extraction_text="15/06/2025"),
+            lx.data.Extraction(extraction_class="Condition",                             extraction_text="Hyperlipidemia"),
         ],
     )
 ]
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
-def load_synopsis_texts(data_dir: Path) -> list[str]:
-    texts: list[str] = []
+def load_synopsis_texts(data_dir: Path) -> list[tuple[int, str]]:
+    texts = []
     for i in range(1, 11):
         file_path = data_dir / f"Synopsis {i}.txt"
-        texts.append(file_path.read_text(encoding="utf-8"))
+        if not file_path.is_file():
+            print(f"  ⚠️ Synopsis {i}.txt not found, skipping.")
+            continue
+        texts.append((i, file_path.read_text(encoding="utf-8")))
     return texts
 
 
@@ -104,28 +117,33 @@ def main():
 
     synopsis_texts = load_synopsis_texts(data_dir)
 
-    for idx, input_text in enumerate(synopsis_texts, start=1):
+    for idx, input_text in synopsis_texts:
         print("=" * 80)
         print(f"Synopsis {idx}  ({len(input_text)} chars)")
         print("=" * 80)
 
-        result = lx.extract(
-            text_or_documents=input_text,
-            prompt_description=prompt,
-            examples=examples,
-            model_id="gemma-local",
-            model_url="http://localhost:11434",
-            fence_output=False,
-            use_schema_constraints=False,  # True adds overhead, off is faster
-        )
+        try:
+            result = lx.extract(
+                text_or_documents=input_text,
+                prompt_description=prompt,
+                examples=examples,
+                model_id="gemma-local",
+                model_url="http://localhost:11434",
+                fence_output=False,
+                use_schema_constraints=False,
+            )
 
-        structured_output = convert_to_json(result.extractions)
+            structured_output = convert_to_json(result.extractions)
+            output_file = output_dir / f"synopsis_{idx}.json"
 
-        output_file = output_dir / f"synopsis_{idx}.json"
-        with open(output_file, "w", encoding="utf-8") as f:
-            json.dump(structured_output, f, indent=2)
+            with open(output_file, "w", encoding="utf-8") as f:
+                json.dump(structured_output, f, indent=2)
 
-        print(f"  ✓ {len(result.extractions)} entities → {output_file}\n")
+            print(f"  ✓ {len(result.extractions)} entities → {output_file}\n")
+
+        except Exception as e:
+            print(f"  ✗ Synopsis {idx} failed: {e}\n")
+            continue
 
 
 if __name__ == "__main__":
