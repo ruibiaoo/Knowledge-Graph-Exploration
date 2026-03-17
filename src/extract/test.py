@@ -7,20 +7,21 @@ import json
 # CRITICAL: Do NOT instruct output format — langextract handles that internally
 
 prompt = textwrap.dedent("""
-You are a precise clinical data extraction engine. Extract information ONLY
-from the Clinical Notes provided. Do NOT extract from the example.
+You are a precise clinical data extraction engine. 
+Your task is to extract information from the text block enclosed by --- CLINICAL NOTE START --- and --- CLINICAL NOTE END ---.
+The section enclosed by --- EXAMPLE START --- and --- EXAMPLE END --- is a formatting example. Do NOT extract any information from it.
 
 Extract the following fields for EACH medication found:
-    1. Patient ID               - (e.g., P700)
-    2. Patient Full Name         - Full name of the patient
+    1. Patient ID               
+    2. Patient Full Name         
     3. Age                  
     4. Gender             
     5. Ethnicity            
-    6. Prescribed Medication ID           - (e.g., M228)
-    7. Prescribed Medication Name and Dosage - (e.g., Metformin 850mg)
+    6. Prescribed Medication ID           
+    7. Prescribed Medication Name and Dosage (e.g., Amlodipine 5mg)
     8. Prescribed Medication Start Date   - In DD/MM/YYYY format
     9. Prescribed Medication End Date     - In DD/MM/YYYY format
-    10. Condition           - The condition this medication was prescribed for
+    10. Condition       
 
 Rules:
 - Extract ALL medications. Do not skip any.
@@ -28,6 +29,14 @@ Rules:
 - Map each medication to the condition in the section heading above it.
 - Dates must be in DD/MM/YYYY format.
 - Only extract text explicitly present. Do not infer or guess.
+
+--- EXAMPLE START ---
+{{example.text}}
+--- EXAMPLE END ---
+
+--- CLINICAL NOTE START ---
+{{text}}
+--- CLINICAL NOTE END ---
 """)
 
 # ── Examples ──────────────────────────────────────────────────────────────────
