@@ -120,8 +120,10 @@ def main():
             model_url="http://localhost:11434",
             fence_output=False,
             use_schema_constraints=False,
-            max_workers=20,
-            batch_length = 20
+            max_workers=2,
+            batch_length=2,
+            show_progress=True,
+            resolver_params={"format_handler": ollama.OLLAMA_FORMAT_HANDLER}
         )
 
         print("Extracted entities:\n")
