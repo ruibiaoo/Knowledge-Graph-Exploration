@@ -24,6 +24,9 @@ Rules:
 - Map each medication to the condition in the section heading above it.
 - Dates must be in DD/MM/YYYY format.
 - Only extract text explicitly present. Do NOT infer or guess.
+                         
+You MUST respond with valid JSON in this exact format and nothing else:
+                 {"extractions": [{"extraction_class": "...", "extraction_text": "..."}, ...]}        
 """)
 
 examples = [
@@ -121,7 +124,7 @@ def main():
                 examples=examples,
                 model_id="gemma-local",
                 model_url="http://localhost:11434",
-                fence_output=True,
+                fence_output=False,
                 use_schema_constraints=True,
             )
 
