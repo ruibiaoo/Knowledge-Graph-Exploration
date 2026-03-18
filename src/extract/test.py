@@ -22,6 +22,7 @@ You must extract *ALL* of the following information **ONLY** from the given Clin
 **Extraction Guidelines:**
 - **Completeness**: Extract ALL medications present. Do not skip any entry.
 - **Dates**: Standardize all dates to the format DD/MM/YYYY. 
+- **Extract only spans that appear exactly in the current input clinical note. Never copy values from examples. Examples are only to illustrate the output format. **
                          
 **Output Format:** 
 - Extract entities as labeled spans according to the schema.
@@ -31,8 +32,6 @@ You must extract *ALL* of the following information **ONLY** from the given Clin
 examples = [
     lx.data.ExampleData(
         text=(
-        "**THIS IS AN EXAMPLE CLINICAL NOTE FOR DEMONSTRATION PURPOSES ONLY**\n"
-        "DO NOT EXTRACT ANY INFORMATION FROM THIS EXAMPLE CLINICAL NOTE. ONLY EXTRACT FROM THE PROVIDED CLINICAL NOTES.\n\n"
         "Patient P12345, S9876543A, K9876541H, Lim Boon Keng, 65 yo, Chinese Male lives with "
         "his wife in Bedok, Singapore.\n"
         "**Past Medical History**\n"
@@ -57,21 +56,21 @@ examples = [
 
             # Medication 1
             lx.data.Extraction(extraction_class="Prescribed Medication ID",extraction_text="M101"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Name and Dosage",extraction_text="Amlodipine 5mg"),
+            lx.data.Extraction(extraction_class="Prescribed Medication Name",extraction_text="Amlodipine"),
             lx.data.Extraction(extraction_class="Prescribed Medication Start Date",extraction_text="01/03/2018"),
             lx.data.Extraction(extraction_class="Prescribed Medication End Date",extraction_text="01/03/2019"),
             lx.data.Extraction(extraction_class="Condition",extraction_text="Hypertension"),
 
             # Medication 2
             lx.data.Extraction(extraction_class="Prescribed Medication ID",extraction_text="M102"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Name and Dosage",extraction_text="Lisinopril 10mg"),
+            lx.data.Extraction(extraction_class="Prescribed Medication Name",extraction_text="Lisinopril"),
             lx.data.Extraction(extraction_class="Prescribed Medication Start Date",extraction_text="02/03/2019"),
             lx.data.Extraction(extraction_class="Prescribed Medication End Date",extraction_text="02/03/2021"),
             lx.data.Extraction(extraction_class="Condition",extraction_text="Hypertension"),
 
             # Medication 3
             lx.data.Extraction(extraction_class="Prescribed Medication ID",extraction_text="M205"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Name and Dosage",extraction_text="Atorvastatin 10mg"),
+            lx.data.Extraction(extraction_class="Prescribed Medication Name",extraction_text="Atorvastatin"),
             lx.data.Extraction(extraction_class="Prescribed Medication Start Date",extraction_text="15/06/2020"),
             lx.data.Extraction(extraction_class="Prescribed Medication End Date",extraction_text="15/06/2025"),
             lx.data.Extraction(extraction_class="Condition",extraction_text="Hyperlipidemia"),
@@ -121,7 +120,8 @@ def main():
             model_url="http://localhost:11434",
             fence_output=False,
             use_schema_constraints=False,
-            max_workers=20
+            max_workers=20,
+            batch_length = 20
         )
 
         print("Extracted entities:\n")
