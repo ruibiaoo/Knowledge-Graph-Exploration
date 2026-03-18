@@ -4,29 +4,34 @@ from pathlib import Path
 import json
 
 prompt = textwrap.dedent("""
-You are a precise clinical data extraction engine. Extract information ONLY from the Clinical Notes provided. Do NOT extract from the example.
+You are a precise clinical data extraction engine.
+Extract information ONLY from the Clinical Notes provided. Do NOT extract from the example.
 
-    Extract the following fields for EACH medication found:
-    1. Patient ID               
-    2. Patient Full Name         
-    3. Age                  
-    4. Gender             
-    5. Ethnicity            
-    6. Prescribed Medication ID (Found under Section 'Past Medical History')       
-    7. Prescribed Medication Name and Dosage (Found under Section 'Past Medical History')   
-    8. Prescribed Medication Start Date (Found under Section 'Past Medical History')     
-    9. Prescribed Medication End Date   (Found under Section 'Past Medical History')
-    10. Condition       
+For EACH medication found, output one record containing ALL of the following fields:
 
-Rules:
+PATIENT-LEVEL FIELDS (same value repeated for every medication belonging to this patient):
+- Patient ID               : Starts with 'P' followed by digits (e.g., P700)
+- Patient Full Name        : Full name as written
+- Age                      : Numeric value only (e.g., 65)
+- Gender                   : Infer from pronouns (he/his → Male, she/her → Female) if not stated explicitly
+- Ethnicity                : Extract if stated; otherwise use "Not stated"
+
+MEDICATION-LEVEL FIELDS (found under 'Past Medical History' section):
+- Prescribed Medication ID             : Starts with 'M' followed by digits (e.g., M101)
+- Prescribed Medication Name and Dosage: e.g., Amlodipine 5mg
+- Prescribed Medication Start Date     : DD/MM/YYYY format
+- Prescribed Medication End Date       : DD/MM/YYYY format
+- Condition                            : The condition heading above this medication
+
+RULES:
 - Extract ALL medications. Do not skip any.
-- Every medication entry must include the patient fields.
-- Map each medication to the condition in the section heading above it.
-- Dates must be in DD/MM/YYYY format.
-- Only extract text explicitly present. Do NOT infer or guess.
-                         
+- If Age, Gender, or Ethnicity are truly absent with no clues, use "Not stated".
+- Never return null or omit a field. Every field must have a value.
+- Dates must strictly be in DD/MM/YYYY format.
+- Do NOT infer medication details. Extract only what is explicitly written.
+
 You MUST respond with valid JSON in this exact format and nothing else:
-                 {"extractions": [{"extraction_class": "...", "extraction_text": "..."}, ...]}        
+{"extractions": [{"extraction_class": "...", "extraction_text": "..."}, ...]}
 """)
 
 examples = [
