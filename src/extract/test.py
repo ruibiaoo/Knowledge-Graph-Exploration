@@ -3,24 +3,19 @@ import textwrap
 from pathlib import Path
 import json
 
-# ── Prompt ────────────────────────────────────────────────────────────────────
-# CRITICAL: Do NOT instruct output format — langextract handles that internally
-
 prompt = textwrap.dedent("""
-You are a precise clinical data extraction engine. 
-Your task is to extract information from the text block enclosed by --- CLINICAL NOTE START --- and --- CLINICAL NOTE END ---.
-The section enclosed by --- EXAMPLE START --- and --- EXAMPLE END --- is a formatting example. Do NOT extract any information from it.
+You are a precise clinical data extraction engine. Extract information ONLY from the Clinical Notes provided. Do NOT extract from the example.
 
-Extract the following fields for EACH medication found:
+    Extract the following fields for EACH medication found:
     1. Patient ID               
     2. Patient Full Name         
     3. Age                  
     4. Gender             
     5. Ethnicity            
-    6. Prescribed Medication ID           
-    7. Prescribed Medication Name and Dosage (e.g., Amlodipine 5mg)
-    8. Prescribed Medication Start Date   - In DD/MM/YYYY format
-    9. Prescribed Medication End Date     - In DD/MM/YYYY format
+    6. Prescribed Medication ID (Found under Section 'Past Medical History')       
+    7. Prescribed Medication Name and Dosage (Found under Section 'Past Medical History')   
+    8. Prescribed Medication Start Date (Found under Section 'Past Medical History')     
+    9. Prescribed Medication End Date   (Found under Section 'Past Medical History')
     10. Condition       
 
 Rules:
@@ -28,26 +23,14 @@ Rules:
 - Every medication entry must include the patient fields.
 - Map each medication to the condition in the section heading above it.
 - Dates must be in DD/MM/YYYY format.
-- Only extract text explicitly present. Do not infer or guess.
-
---- EXAMPLE START ---
-{{example.text}}
---- EXAMPLE END ---
-
---- CLINICAL NOTE START ---
-{{text}}
---- CLINICAL NOTE END ---
+- Only extract text explicitly present. Do NOT infer or guess.
 """)
-
-# ── Examples ──────────────────────────────────────────────────────────────────
-# CRITICAL: extraction_text values must appear EXACTLY in the text string
-# Do NOT add [EXAMPLE] prefix — it shifts char positions and breaks alignment
 
 examples = [
     lx.data.ExampleData(
         text=(
-            "Patient P12345, S9876543A, K9876541H, Lim Boon Keng, 65 yo, Chinese Male lives with "
-            "his wife in Bedok, Singapore.\n"
+            "THIS IS AN EXAMPLE. DO NOT EXTRACT FROM THIS.\n"
+            "Patient P12345, Lim Boon Keng, 65 yo\n"
             "**Past Medical History**\n"
             "1. Hypertension diagnosed in 2018\n"
             "    - Medication ID: M101 - Amlodipine 5mg\n"
