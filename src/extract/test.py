@@ -121,8 +121,8 @@ def main():
                 examples=examples,
                 model_id="gemma-local",
                 model_url="http://localhost:11434",
-                fence_output=False,
-                use_schema_constraints=False,
+                fence_output=True,
+                use_schema_constraints=True,
             )
 
             structured_output = convert_to_json(result.extractions)
