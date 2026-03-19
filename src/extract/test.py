@@ -33,13 +33,16 @@ You must extract *ALL* of the following information **ONLY** from the given Clin
 examples = [
     lx.data.ExampleData(
         text=(
-        "Patient P12345, Lim Boon Keng, 65 yo, Chinese Male lives with "
+        "Patient P12345, S9876543A, K9876541H, Lim Boon Keng, 65 yo, Chinese Male lives with "
         "his wife in Bedok, Singapore.\n"
         "**Past Medical History**\n"
         "1. Hypertension diagnosed in 2018\n"
         "    - Medication ID: M101 - Amlodipine 5mg\n"
         "    - Start Date: 01/03/2018\n"
         "    - End Date: 01/03/2019\n"
+        "    - Medication ID: M102 - Lisinopril 10mg\n"
+        "    - Start Date: 02/03/2019\n"
+        "    - End Date: 02/03/2021\n"
         ),
         extractions=[
             lx.data.Extraction(extraction_class="Patient ID", extraction_text="P12345"),
@@ -53,6 +56,13 @@ examples = [
             lx.data.Extraction(extraction_class="Prescribed Medication Name",extraction_text="Amlodipine"),
             lx.data.Extraction(extraction_class="Prescribed Medication Start Date",extraction_text="01/03/2018"),
             lx.data.Extraction(extraction_class="Prescribed Medication End Date",extraction_text="01/03/2019"),
+            lx.data.Extraction(extraction_class="Condition",extraction_text="Hypertension"),
+
+            # Medication 2
+            lx.data.Extraction(extraction_class="Prescribed Medication ID",extraction_text="M102"),
+            lx.data.Extraction(extraction_class="Prescribed Medication Name",extraction_text="Lisinopril"),
+            lx.data.Extraction(extraction_class="Prescribed Medication Start Date",extraction_text="02/03/2019"),
+            lx.data.Extraction(extraction_class="Prescribed Medication End Date",extraction_text="02/03/2021"),
             lx.data.Extraction(extraction_class="Condition",extraction_text="Hypertension")
         ],
     )
@@ -98,6 +108,8 @@ def main():
             examples=examples,
             model_id="gemma-local",
             model_url="http://localhost:11434",
+            temperature = 0,
+            language_model_params={"top_p": 0.2, "num_ctx": 4096},
             fence_output=False,
             use_schema_constraints=False,
             max_workers=2,
@@ -106,6 +118,13 @@ def main():
             resolver_params={"format_handler": ollama.OLLAMA_FORMAT_HANDLER}
         )
 
+        valid_extractions = [
+            e for e in result.extractions
+            if str(e.extraction_text) in input_text
+        ]
+
+        result.extractions = valid_extractions
+        
         print("Extracted entities:\n")
         print(result.extractions)
 
