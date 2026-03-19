@@ -2,57 +2,44 @@ import langextract as lx
 import textwrap
 from pathlib import Path
 import json
+from langextract.providers import ollama
 
 prompt = textwrap.dedent("""
-    You are a precise clinical data extraction engine.
-    Your task is to extract information ONLY from the text block enclosed by --- CLINICAL NOTE START --- and --- CLINICAL NOTE END ---.
-    The section enclosed by --- EXAMPLE START --- and --- EXAMPLE END --- is a formatting example. Do NOT extract any information from it.
+You are a precise clinical data extraction engine. Your task is to extract specific information **ONLY** from the provided Clinical Notes.
+                         
+**Task:**
+You must extract *ALL* of the following information **ONLY** from the given Clinical Notes provided.
+    1. Patient ID - Unique Patient Identifier (e.g., P700)
+    2. Patient Name - Full name of the patient
+    3. Patient Age - Age of the patient in years
+    4. Patient Gender - Gender of the patient (Male/Female)
+    5. Patient Ethnicity - Ethnicity of the patient 
+    6. Medication ID prescribed to patient - Unique Identifier for the medication (e.g., M228)
+    7. Medication Name prescribed to patient - Full medication name, including the dosage (e.g., Amlodipine 5mg)
+    8. Start Date of medication course - Start date for the medication (DD/MM/YYYY)
+    9. End Date of medication course - End date for the medication (DD/MM/YYYY)
+    10. Medical Condition(s) patient suffered from - The specific condition this medication was prescribed for (e.g., Hypertension)
 
-    Extract the following fields for EACH medication found:
-        1. Patient ID
-        2. Patient Name
-        3. Age
-        4. Gender
-        5. Ethnicity
-        6. Prescribed Medication ID
-        7. Prescribed Medication Name and Dosage
-        8. Prescribed Medication Start Date
-        9. Prescribed Medication End Date
-        10. Condition
-
-    Rules:
-    - Rule 1: For every medication you find, you MUST associate it with the corresponding medical condition (e.g., Hypertension, Hyperlipidemia) mentioned in the section heading above it.
-    - Rule 2: Extract ALL medications. Do not skip any.
-    - Rule 3: Every medication entry must include the patient fields.
-    - Rule 4: Dates must be in DD/MM/YYYY format.
-    - Rule 5: Only extract text explicitly present in the clinical note. Do not infer or guess.
-
-    --- EXAMPLE START ---
-    {{example.text}}
-    --- EXAMPLE END ---
-
-    --- CLINICAL NOTE START ---
-    {{text}}
-    --- CLINICAL NOTE END ---
-    """)
+**Extraction Guidelines:**
+- **Completeness**: Extract ALL medications present. Do not skip any entry.
+- **Dates**: Standardize all dates to the format DD/MM/YYYY. 
+- **Extract only spans that appear exactly in the current input clinical note. Never copy values from examples. Examples are only to illustrate the output format. **
+                         
+**Output Format:** 
+- Extract entities as labeled spans according to the schema.
+- Each entity should correspond to one of the extraction classes listed above.
+""")
 
 examples = [
     lx.data.ExampleData(
         text=(
-        "Patient P12345, S9876543A, K9876541H, Lim Boon Keng, 65 yo, Chinese Male lives with "
+        "Patient P12345, Lim Boon Keng, 65 yo, Chinese Male lives with "
         "his wife in Bedok, Singapore.\n"
         "**Past Medical History**\n"
         "1. Hypertension diagnosed in 2018\n"
         "    - Medication ID: M101 - Amlodipine 5mg\n"
         "    - Start Date: 01/03/2018\n"
         "    - End Date: 01/03/2019\n"
-        "    - Medication ID: M102 - Lisinopril 10mg\n"
-        "    - Start Date: 02/03/2019\n"
-        "    - End Date: 02/03/2021\n"
-        "2. Hyperlipidemia diagnosed in 2020\n"
-        "    - Medication ID: M205 - Atorvastatin 10mg\n"
-        "    - Start Date: 15/06/2020\n"
-        "    - End Date: 15/06/2025\n"
         ),
         extractions=[
             lx.data.Extraction(extraction_class="Patient ID", extraction_text="P12345"),
@@ -66,21 +53,7 @@ examples = [
             lx.data.Extraction(extraction_class="Prescribed Medication Name",extraction_text="Amlodipine"),
             lx.data.Extraction(extraction_class="Prescribed Medication Start Date",extraction_text="01/03/2018"),
             lx.data.Extraction(extraction_class="Prescribed Medication End Date",extraction_text="01/03/2019"),
-            lx.data.Extraction(extraction_class="Condition",extraction_text="Hypertension"),
-
-            # Medication 2
-            lx.data.Extraction(extraction_class="Prescribed Medication ID",extraction_text="M102"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Name",extraction_text="Lisinopril"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Start Date",extraction_text="02/03/2019"),
-            lx.data.Extraction(extraction_class="Prescribed Medication End Date",extraction_text="02/03/2021"),
-            lx.data.Extraction(extraction_class="Condition",extraction_text="Hypertension"),
-
-            # Medication 3
-            lx.data.Extraction(extraction_class="Prescribed Medication ID",extraction_text="M205"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Name",extraction_text="Atorvastatin"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Start Date",extraction_text="15/06/2020"),
-            lx.data.Extraction(extraction_class="Prescribed Medication End Date",extraction_text="15/06/2025"),
-            lx.data.Extraction(extraction_class="Condition",extraction_text="Hyperlipidemia"),
+            lx.data.Extraction(extraction_class="Condition",extraction_text="Hypertension")
         ],
     )
 ]
