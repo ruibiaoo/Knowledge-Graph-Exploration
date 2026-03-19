@@ -47,23 +47,23 @@ examples = [
         extractions=[
             lx.data.Extraction(extraction_class="Patient ID", extraction_text="P12345"),
             lx.data.Extraction(extraction_class="Patient Name",extraction_text="Lim Boon Keng"),
-            lx.data.Extraction(extraction_class="Age",extraction_text="65"),
-            lx.data.Extraction(extraction_class="Gender",extraction_text="Male"),
-            lx.data.Extraction(extraction_class="Ethnicity",extraction_text="Chinese"),
+            lx.data.Extraction(extraction_class="Patient Age",extraction_text="65"),
+            lx.data.Extraction(extraction_class="Patient Gender",extraction_text="Male"),
+            lx.data.Extraction(extraction_class="Patient Ethnicity",extraction_text="Chinese"),
 
             # Medication 1
-            lx.data.Extraction(extraction_class="Prescribed Medication ID",extraction_text="M101"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Name",extraction_text="Amlodipine"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Start Date",extraction_text="01/03/2018"),
-            lx.data.Extraction(extraction_class="Prescribed Medication End Date",extraction_text="01/03/2019"),
-            lx.data.Extraction(extraction_class="Condition",extraction_text="Hypertension"),
+            lx.data.Extraction(extraction_class="Medication ID prescribed to patient",extraction_text="M101"),
+            lx.data.Extraction(extraction_class="Medication Name prescribed to patient",extraction_text="Amlodipine"),
+            lx.data.Extraction(extraction_class="Start Date of medication course",extraction_text="01/03/2018"),
+            lx.data.Extraction(extraction_class="End Date of medication course",extraction_text="01/03/2019"),
+            lx.data.Extraction(extraction_class="Medical Condition(s) patient suffered from",extraction_text="Hypertension"),
 
             # Medication 2
-            lx.data.Extraction(extraction_class="Prescribed Medication ID",extraction_text="M102"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Name",extraction_text="Lisinopril"),
-            lx.data.Extraction(extraction_class="Prescribed Medication Start Date",extraction_text="02/03/2019"),
-            lx.data.Extraction(extraction_class="Prescribed Medication End Date",extraction_text="02/03/2021"),
-            lx.data.Extraction(extraction_class="Condition",extraction_text="Hypertension")
+            lx.data.Extraction(extraction_class="Medication ID prescribed to patient",extraction_text="M102"),
+            lx.data.Extraction(extraction_class="Medication Name prescribed to patient",extraction_text="Lisinopril"),
+            lx.data.Extraction(extraction_class="Start Date of medication course",extraction_text="02/03/2019"),
+            lx.data.Extraction(extraction_class="End Date of medication course",extraction_text="02/03/2021"),
+            lx.data.Extraction(extraction_class="Medical Condition(s) patient suffered from",extraction_text="Hypertension")
         ],
     )
 ]
@@ -91,6 +91,18 @@ def convert_to_json(result):
         structured.append(item)
     return structured
 
+allowed_classes = {
+    "Patient ID",
+    "Patient Name",
+    "Patient Age",
+    "Patient Gender",
+    "Patient Ethnicity",
+    "Medication ID prescribed to patient",
+    "Medication Name prescribed to patient",
+    "Start Date of medication course",
+    "End Date of medication course",
+    "Medical Condition(s) patient suffered from",
+}
 
 def main():
     project_root = Path(__file__).resolve().parent.parent.parent
@@ -120,11 +132,11 @@ def main():
 
         valid_extractions = [
             e for e in result.extractions
-            if str(e.extraction_text) in input_text
+            if e.extraction_class in allowed_classes
+            and str(e.extraction_text) in input_text
         ]
-
         result.extractions = valid_extractions
-        
+
         print("Extracted entities:\n")
         print(result.extractions)
 
