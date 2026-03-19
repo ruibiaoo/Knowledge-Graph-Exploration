@@ -1,0 +1,118 @@
+[
+  {
+    "class": "Patient ID",
+    "text": "P76124"
+  },
+  {
+    "class": "Patient Name",
+    "text": "Lim Wei Jian"
+  },
+  {
+    "class": "Patient Age",
+    "text": "68"
+  },
+  {
+    "class": "Patient Gender",
+    "text": "Male"
+  },
+  {
+    "class": "Patient Ethnicity",
+    "text": "Chinese"
+  },
+  {
+    "class": "Medication ID prescribed to patient",
+    "text": "M184"
+  },
+  {
+    "class": "Medication Name prescribed to patient",
+    "text": "Metformin 500mg"
+  },
+  {
+    "class": "Start Date of medication course",
+    "text": "12/05/2018"
+  },
+  {
+    "class": "End Date of medication course",
+    "text": "20/04/2022"
+  },
+  {
+    "class": "Medical Condition(s) patient suffered from",
+    "text": "Type 2 Diabetes Mellitus (T2DM)"
+  },
+  {
+    "class": "Medication ID prescribed to patient",
+    "text": "M402"
+  },
+  {
+    "class": "Medication Name prescribed to patient",
+    "text": "Empagliflozin 10mg"
+  },
+  {
+    "class": "Start Date of medication course",
+    "text": "21/04/2022"
+  },
+  {
+    "class": "End Date of medication course",
+    "text": "21/04/2026"
+  },
+  {
+    "class": "Medical Condition(s) patient suffered from",
+    "text": "Type 2 Diabetes Mellitus (T2DM)"
+  },
+  {
+    "class": "Medication ID prescribed to patient",
+    "text": "M611"
+  },
+  {
+    "class": "Medication Name prescribed to patient",
+    "text": "Amlodipine 5mg"
+  },
+  {
+    "class": "Start Date of medication course",
+    "text": "02/03/2019"
+  },
+  {
+    "class": "End Date of medication course",
+    "text": "02/03/2023"
+  },
+  {
+    "class": "Medical Condition(s) patient suffered from",
+    "text": "Hypertension (HTN)"
+  },
+  {
+    "class": "Medication ID prescribed to patient",
+    "text": "M784"
+  },
+  {
+    "class": "Medication Name prescribed to patient",
+    "text": "Perindopril 4mg"
+  },
+  {
+    "class": "Start Date of medication course",
+    "text": "03/03/2023"
+  },
+  {
+    "class": "End Date of medication course",
+    "text": "03/03/2027"
+  },
+  {
+    "class": "Medical Condition(s) patient suffered from",
+    "text": "Hypertension (HTN)"
+  },
+  {
+    "class": "Medication ID prescribed to patient",
+    "text": "M622"
+  },
+  {
+    "class": "Medication Name prescribed to patient",
+    "text": "Atorvastatin 20mg"
+  },
+  {
+    "class": "Start Date of medication course",
+    "text": "10/09/2017"
+  },
+  {
+    "class": "End Date of medication course",
+    "text": "10/09/2027"
+  }
+]
