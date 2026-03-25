@@ -1,3 +1,5 @@
+# Increase Batch Length to 4, extraction pass to 2, max_character_buffer to 2500
+
 import langextract as lx
 import textwrap
 from pathlib import Path
@@ -121,14 +123,16 @@ def main():
             fence_output=False,
             use_schema_constraints=False,
             max_workers=2,
-            batch_length=2,
+            batch_length=4,
+            extraction_passes=2,
+            max_character_buffer=2500,
             show_progress=True,
             resolver_params={"format_handler": ollama.OLLAMA_FORMAT_HANDLER}
         )
-            
+
         except Exception as error:
             print(f"Error processing Synopsis {idx}: {error}")
-            continue  
+            continue    
 
         valid_extractions = [
             e for e in result.extractions

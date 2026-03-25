@@ -1,3 +1,5 @@
+# Increase Batch Length to 4
+
 import langextract as lx
 import textwrap
 from pathlib import Path
@@ -121,11 +123,11 @@ def main():
             fence_output=False,
             use_schema_constraints=False,
             max_workers=2,
-            batch_length=2,
+            batch_length=4,
             show_progress=True,
             resolver_params={"format_handler": ollama.OLLAMA_FORMAT_HANDLER}
         )
-            
+        
         except Exception as error:
             print(f"Error processing Synopsis {idx}: {error}")
             continue  

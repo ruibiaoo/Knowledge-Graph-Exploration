@@ -1,3 +1,4 @@
+# Allowed Class vs Strict Class
 import langextract as lx
 import textwrap
 from pathlib import Path
@@ -15,7 +16,7 @@ You must extract *ALL* of the following information **ONLY** from the given Clin
     4. Patient Gender - Gender of the patient (Male/Female)
     5. Patient Ethnicity - Ethnicity of the patient 
     6. Medication ID prescribed to patient - Unique Identifier for the medication (e.g., M228)
-    7. Medication Name prescribed to patient - Full medication name (e.g., Amlodipine)
+    7. Medication Name prescribed to patient - Full medication name (e.g., Amlodipine 5mg)
     8. Start Date of medication course - Start date for the medication (DD/MM/YYYY)
     9. End Date of medication course - End date for the medication (DD/MM/YYYY)
     10. Medical Condition(s) patient suffered from - The specific condition this medication was prescribed for (e.g., Hypertension)
@@ -96,7 +97,17 @@ allowed_classes = {
     "Medication Name prescribed to patient",
     "Start Date of medication course",
     "End Date of medication course",
-    "Medical Condition(s) patient suffered from",
+    "Medical Condition(s) patient suffered from"
+}
+
+strict_classes = {
+    "Patient ID",
+    "Patient Age",
+    "Patient Gender",
+    "Patient Ethnicity",
+    "Medication ID prescribed to patient",
+    "Start Date of medication course",
+    "End Date of medication course"
 }
 
 def main():
@@ -121,7 +132,7 @@ def main():
             fence_output=False,
             use_schema_constraints=False,
             max_workers=2,
-            batch_length=2,
+            batch_length=4,
             show_progress=True,
             resolver_params={"format_handler": ollama.OLLAMA_FORMAT_HANDLER}
         )
@@ -133,8 +144,14 @@ def main():
         valid_extractions = [
             e for e in result.extractions
             if e.extraction_class in allowed_classes
-            and str(e.extraction_text) in input_text
+            and str(e.extraction_text).strip() != ""
+            and (
+                (e.extraction_class in strict_classes and str(e.extraction_text) in input_text)
+                or
+                (e.extraction_class not in strict_classes)
+            )
         ]
+
         result.extractions = valid_extractions
 
         print("Extracted entities:\n")
