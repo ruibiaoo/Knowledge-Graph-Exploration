@@ -1,18 +1,79 @@
 from pathlib import Path
 import json
 import logging
+import textwrap
 
 from langchain_ollama import OllamaLLM
-from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.prompts import ChatPromptTemplate, FewShotChatMessagePromptTemplate
 from langchain_core.messages import SystemMessage, HumanMessage
 
 
 logger = logging.getLogger(__name__)
 
 model = OllamaLLM(model="gemma-local", 
-               temperature = 0)
+               temperature = 0,
+               num_ctx = 4096,
+               num_predict = 2048,
+               repeat_penalty = 1.1,
+               timeout = 1200,
+               seed = 42,
+               num_gpu = 1,
+               num_thread = 8,
+               format="json"
+               )
 
-template = """
+examples = [
+    {
+        "input": (
+            "Patient P12345, Lim Boon Keng, 65 yo, Chinese Male.\n"
+            "Past Medical History:\n"
+            "Hypertension diagnosed in 2018\n"
+            "- Medication ID: M101 - Amlodipine 5mg\n"
+            "- Start Date: 01/03/2018\n"
+            "- End Date: 01/03/2019\n"
+            "- Medication ID: M102 - Lisinopril 10mg\n"
+            "- Start Date: 02/03/2019\n"
+            "- End Date: 02/03/2021\n"
+        ),
+        "output": """{
+            "patient_id": "P12345",
+            "patient_name": "Lim Boon Keng",
+            "patient_age": 65,
+            "patient_gender": "Male",
+            "patient_ethnicity": "Chinese",
+            "medications": [
+                {
+                "medication_id": "M101",
+                "medication_name": "Amlodipine 5mg",
+                "start_date": "01/03/2018",
+                "end_date": "01/03/2019",
+                "condition": "Hypertension"
+                },
+                {
+                "medication_id": "M102",
+                "medication_name": "Lisinopril 10mg",
+                "start_date": "02/03/2019",
+                "end_date": "02/03/2021",
+                "condition": "Hypertension"
+            }
+        ]
+        }"""
+    }
+]
+
+
+example_prompt = ChatPromptTemplate.from_messages([
+    ("user", "{input}"),
+    ("assistant", "{output}")
+])
+
+few_shot = FewShotChatMessagePromptTemplate(
+    examples=examples,
+    example_prompt=example_prompt
+)
+
+prompt = ChatPromptTemplate.from_messages([
+    ("system", textwrap.dedent("""
 You are a precise clinical data extraction engine. Your task is to extract specific information **ONLY** from the provided Clinical Notes.
                          
 **Task:**
@@ -31,76 +92,13 @@ You must extract *ALL* of the following information **ONLY** from the given Clin
 **Extraction Guidelines:**
 - **Completeness**: Extract ALL medications present. Do not skip any entry.
 - **Dates**: Standardize all dates to the format DD/MM/YYYY. 
+- **Extract only spans that appear exactly in the current input clinical note. Never copy values from examples. Examples are only to illustrate the output format. **
                          
 **Output Format:** 
-- Extract entities as labeled spans according to the schema.
-- Each entity should correspond to one of the extraction classes listed above.
-
-**Few-Shot Examples:**
-
-Input:
-Patient P12345, S9876543A, K9876541H, Lim Boon Keng, 65 yo, Chinese Male lives with his wife in Bedok, Singapore.
-**Past Medical History**
-1. Hypertension diagnosed in 2018
-    - Medication ID: M101 - Amlodipine 5mg
-    - Start Date: 01/03/2018
-    - End Date: 01/03/2019
-    - Medication ID: M102 - Lisinopril 10mg
-    - Start Date: 02/03/2019
-    - End Date: 02/03/2021
-2. Hyperlipidemia diagnosed in 2020
-    - Medication ID: M205 - Atorvastatin 10mg
-    - Start Date: 15/06/2020
-    - End Date: 15/06/2025
-
-Output:
-[
-  {{
-    "patient_id": "P12345",
-    "patient_name": "Lim Boon Keng",
-    "age": 65,
-    "gender": "Male",
-    "ethnicity": "Chinese",
-    "medication_id": "M101",
-    "medication_name_dosage": "Amlodipine 5mg",
-    "start_date": "01/03/2018",
-    "end_date": "01/03/2019",
-    "condition": "Hypertension"
-  }},
-  {{
-    "patient_id": "P12345",
-    "patient_name": "Lim Boon Keng",
-    "age": 65,
-    "gender": "Male",
-    "ethnicity": "Chinese",
-    "medication_id": "M102",
-    "medication_name_dosage": "Lisinopril 10mg",
-    "start_date": "02/03/2019",
-    "end_date": "02/03/2021",
-    "condition": "Hypertension"
-  }},
-  {{
-    "patient_id": "P12345",
-    "patient_name": "Lim Boon Keng",
-    "age": 65,
-    "gender": "Male",
-    "ethnicity": "Chinese",
-    "medication_id": "M205",
-    "medication_name_dosage": "Atorvastatin 10mg",
-    "start_date": "15/06/2020",
-    "end_date": "15/06/2025",
-    "condition": "Hyperlipidemia"
-  }}
-]
-
-Return ONLY the JSON array. No explanation, no preamble, no markdown formatting.
-"""
-
-prompt = ChatPromptTemplate.from_messages([
-    SystemMessage(content=template), 
-    HumanMessage(content="{clinical_note}")
+- Each entity should correspond to one of the extraction classes listed above.""")),
+    few_shot,
+    ("user", "{clinical_note}")
 ])
-
 
 chain = prompt | model 
 
@@ -113,17 +111,26 @@ def load_synopsis_texts(data_dir: Path) -> list[str]:
     return texts
 
 
-def run_extraction(data_dir: Path) -> list[dict]:
+def run_extraction(data_dir: Path, output_path: Path) -> list[dict]:
     synopsis_texts = load_synopsis_texts(data_dir)
     all_results: list[dict] = []
 
     for idx, clinical_note in enumerate(synopsis_texts, start=1):
         logger.info(f"Processing Synopsis {idx} ...")
-        result = chain.invoke({"clinical_note": clinical_note})
-        clean = result.replace("```json", "").replace("```", "").strip()
-        parsed = json.loads(clean)
-        all_results.extend(parsed)
-        logger.info(f"✓ Synopsis {idx}: {len(parsed)} records extracted")
+        try:
+            result = chain.invoke({"clinical_note": clinical_note})
+            clean = result.replace("```json", "").replace("```", "").strip()
+            parsed = json.loads(clean)
+            all_results.append(parsed)
+        except json.JSONDecodeError as e:
+            logger.error(f"Synopsis {idx} failed: {e}\nRaw output: {result[:500]}")
+            continue
+        except Exception as e:
+            logger.error(f"Synopsis {idx} failed with unexpected error: {e}")
+            continue
+        finally:
+            with open(output_path, "w", encoding="utf-8") as f:
+                json.dump(all_results, f, indent=2)
 
     return all_results
 
@@ -134,11 +141,7 @@ def main():
     project_root = Path(__file__).resolve().parent.parent.parent
     data_dir     = project_root / "Data"
     output_path  = project_root / "output_extractions.json"
-    all_results = run_extraction(data_dir)
-
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(all_results, f, indent=2)
-
+    all_results = run_extraction(data_dir, output_path)
     logger.info(f"\n✓ {len(all_results)} total records saved to {output_path}")
 
 
