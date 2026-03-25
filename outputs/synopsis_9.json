@@ -25,7 +25,7 @@
   },
   {
     "class": "Medication Name prescribed to patient",
-    "text": "Metformin 850mg"
+    "text": "Metformin"
   },
   {
     "class": "Start Date of medication course",
@@ -37,7 +37,7 @@
   },
   {
     "class": "Medical Condition(s) patient suffered from",
-    "text": "Type 2 Diabetes Mellitus (T2DM)"
+    "text": "Type 2 Diabetes Mellitus"
   },
   {
     "class": "Medication ID prescribed to patient",
@@ -45,7 +45,7 @@
   },
   {
     "class": "Medication Name prescribed to patient",
-    "text": "Sitagliptin 100mg"
+    "text": "Sitagliptin"
   },
   {
     "class": "Start Date of medication course",
@@ -57,7 +57,7 @@
   },
   {
     "class": "Medical Condition(s) patient suffered from",
-    "text": "Type 2 Diabetes Mellitus (T2DM)"
+    "text": "Type 2 Diabetes Mellitus"
   },
   {
     "class": "Medication ID prescribed to patient",
@@ -65,7 +65,7 @@
   },
   {
     "class": "Medication Name prescribed to patient",
-    "text": "Pioglitazone 30mg"
+    "text": "Pioglitazone"
   },
   {
     "class": "Start Date of medication course",
@@ -77,7 +77,7 @@
   },
   {
     "class": "Medical Condition(s) patient suffered from",
-    "text": "Type 2 Diabetes Mellitus (T2DM)"
+    "text": "Type 2 Diabetes Mellitus"
   },
   {
     "class": "Medication ID prescribed to patient",
@@ -85,7 +85,7 @@
   },
   {
     "class": "Medication Name prescribed to patient",
-    "text": "Losartan 50mg"
+    "text": "Losartan"
   },
   {
     "class": "Start Date of medication course",
@@ -97,7 +97,7 @@
   },
   {
     "class": "Medical Condition(s) patient suffered from",
-    "text": "Chronic Kidney Disease (CKD) Stage 3"
+    "text": "Chronic Kidney Disease"
   },
   {
     "class": "Medication ID prescribed to patient",
@@ -105,7 +105,7 @@
   },
   {
     "class": "Medication Name prescribed to patient",
-    "text": "Atorvastatin 20mg"
+    "text": "Atorvastatin"
   },
   {
     "class": "Start Date of medication course",

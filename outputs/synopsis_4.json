@@ -25,7 +25,7 @@
   },
   {
     "class": "Medication Name prescribed to patient",
-    "text": "Warfarin 3mg"
+    "text": "Warfarin"
   },
   {
     "class": "Start Date of medication course",
@@ -45,7 +45,7 @@
   },
   {
     "class": "Medication Name prescribed to patient",
-    "text": "Apixaban 5mg"
+    "text": "Apixaban"
   },
   {
     "class": "Start Date of medication course",
@@ -65,7 +65,7 @@
   },
   {
     "class": "Medication Name prescribed to patient",
-    "text": "Losartan 50mg"
+    "text": "Losartan"
   },
   {
     "class": "Start Date of medication course",
@@ -77,7 +77,7 @@
   },
   {
     "class": "Medical Condition(s) patient suffered from",
-    "text": "Chronic Kidney Disease (CKD) Stage 3"
+    "text": "Chronic Kidney Disease (CKD)"
   },
   {
     "class": "Medication ID prescribed to patient",
@@ -85,7 +85,7 @@
   },
   {
     "class": "Medication Name prescribed to patient",
-    "text": "Rosuvastatin 10mg"
+    "text": "Rosuvastatin"
   },
   {
     "class": "Start Date of medication course",
@@ -105,7 +105,7 @@
   },
   {
     "class": "Medication Name prescribed to patient",
-    "text": "Omeprazole 20mg"
+    "text": "Omeprazole"
   },
   {
     "class": "Start Date of medication course",
@@ -118,5 +118,17 @@
   {
     "class": "Medical Condition(s) patient suffered from",
     "text": "Gastroesophageal Reflux Disease (GERD)"
+  },
+  {
+    "class": "Medication Name prescribed to patient",
+    "text": "Apixaban"
+  },
+  {
+    "class": "Medical Condition(s) patient suffered from",
+    "text": "Atrial Fibrillation"
+  },
+  {
+    "class": "Medical Condition(s) patient suffered from",
+    "text": "Gastroesophageal Reflux"
   }
 ]
