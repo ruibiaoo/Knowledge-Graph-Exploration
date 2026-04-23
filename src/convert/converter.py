@@ -1,246 +1,212 @@
+import json
 import csv
 import re
-import argparse
+
 from pathlib import Path
-
 from schema import *
-from validator import load_and_validate
-
-def make_condition_id(condition_name: str) -> str:
-    """
-    Derive a short stable ID from a condition name.
-    e.g. "Type 2 Diabetes Mellitus" → "TYPE_2_DIABETES_MELLITUS"
-    """
-    return re.sub(r"\s+", "_", condition_name.strip().upper())
 
 
-def split_medication(medication_name_dosage: str) -> tuple[str, str]:
-    """
-    Split "Metformin 850mg" → ("Metformin", "850mg")
-    Falls back to (full_string, "") if no dosage token found.
-    """
-    parts = medication_name_dosage.rsplit(" ", 1)
-    if len(parts) == 2:
-        return parts[0], parts[1]
-    return medication_name_dosage, ""
+def normalize_condition(name: str) -> str:
+    return re.sub(r"\s+", "_", name.strip().upper())
+
+# Load post-processed JSON data
+def load_json_file(file_path: Path):
+    with open(file_path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 
-# ── Core converter ────────────────────────────────────────────────────────────
+# Conversion to graph format
+def convert(data: list[dict]):
 
-def convert(records: list[ExtractionRecord]) -> tuple[
-    dict[str, PatientNode],
-    dict[str, ConditionNode],
-    dict[str, MedicationNode],
-    list[PrescribedEdge],
-    list[HasConditionEdge],
-    list[TreatsEdge],
-]:
-    """
-    Deduplicate nodes and build edge lists from validated ExtractionRecords.
-    Returns dicts keyed by ID for nodes, and plain lists for edges.
-    """
-    patients:    dict[str, PatientNode]    = {}
-    conditions:  dict[str, ConditionNode]  = {}
-    medications: dict[str, MedicationNode] = {}
+    patients = {}
+    medications = {}
+    conditions = {}
+    ethnicities = {}
+    genders = {}
 
-    prescribed_edges:    list[PrescribedEdge]   = []
-    has_condition_edges: list[HasConditionEdge] = []
-    treats_edges:        list[TreatsEdge]       = []
+    prescribed_edges = []
+    diagnosed_edges = []
+    treats_edges = []
+    ethnicity_edges = []
+    gender_edges = []
 
-    # Track edges already added to avoid duplicates
-    seen_prescribed:    set[tuple] = set()
-    seen_has_condition: set[tuple] = set()
-    seen_treats:        set[tuple] = set()
+    seen_prescribed = set()
+    seen_diag = set()
+    seen_treats = set()
 
-    for rec in records:
+    for record in data:
 
-        # ── Patient node ──────────────────────────────────────────────────────
-        if rec.patient_id not in patients:
-            patients[rec.patient_id] = PatientNode(
-                patient_id=rec.patient_id,
-                name=rec.patient_name,
-                age=rec.age,
-                gender=rec.gender,
-                ethnicity=rec.ethnicity,
+        # Patient Node
+        p = PatientNode(
+            id=record["patient_id"],
+            name=record["patient_name"],
+            age=record["patient_age"],
+            gender=record["patient_gender"],
+            ethnicity=record["patient_ethnicity"]
+        )
+        patients[p.id] = p
+
+        # Ethnicity + Gender Nodes
+        ethnicities[p.ethnicity] = EthnicityNode(name=p.ethnicity)
+        genders[p.gender] = GenderNode(name=p.gender)
+
+        ethnicity_edges.append(HasEthnicityEdge(
+            patient_id=p.id,
+            ethnicity=p.ethnicity
+        ))
+
+        gender_edges.append(HasGenderEdge(
+            patient_id=p.id,
+            gender=p.gender
+        ))
+
+        # Medications + Conditions Nodes
+        for med in record["medications"]:
+
+            # Medication Node
+            m = MedicationNode(
+                id=med["medication_id"],
+                name=med["medication_name"]
             )
+            medications[m.id] = m
 
-        # ── Condition node ────────────────────────────────────────────────────
-        condition_id = make_condition_id(rec.condition)
-        if condition_id not in conditions:
-            conditions[condition_id] = ConditionNode(
-                condition_id=condition_id,
-                name=rec.condition,
-            )
+            # Condition Node
+            cond_name = med["condition"]
+            cond_id = normalize_condition(cond_name)
 
-        # ── Medication node ───────────────────────────────────────────────────
-        if rec.medication_id not in medications:
-            med_name, dosage = split_medication(rec.medication_name_dosage)
-            medications[rec.medication_id] = MedicationNode(
-                medication_id=rec.medication_id,
-                name=med_name,
-                dosage=dosage,
-            )
+            c = ConditionNode(name=cond_name)
+            conditions[cond_id] = c
 
-        # ── PRESCRIBED edge  (Patient → Medication) ───────────────────────────
-        prescribed_key = (rec.patient_id, rec.medication_id)
-        if prescribed_key not in seen_prescribed:
-            seen_prescribed.add(prescribed_key)
-            prescribed_edges.append(PrescribedEdge(
-                patient_id=rec.patient_id,
-                medication_id=rec.medication_id,
-                start_date=rec.start_date,
-                end_date=rec.end_date,
-            ))
+            # =========================
+            # Edges
+            # =========================
 
-        # ── HAS_CONDITION edge  (Patient → Condition) ─────────────────────────
-        hc_key = (rec.patient_id, condition_id)
-        if hc_key not in seen_has_condition:
-            seen_has_condition.add(hc_key)
-            has_condition_edges.append(HasConditionEdge(
-                patient_id=rec.patient_id,
-                condition_id=condition_id,
-            ))
+            # PRESCRIBED Edge
+            key = (p.id, m.id, med["start_date"], med["end_date"])
+            if key not in seen_prescribed:
+                seen_prescribed.add(key)
+                prescribed_edges.append(PrescribedEdge(
+                    patient_id=p.id,
+                    medication_id=m.id,
+                    start_date=med["start_date"],
+                    end_date=med["end_date"]
+                ))
 
-        # ── TREATS edge  (Medication → Condition) ─────────────────────────────
-        treats_key = (rec.medication_id, condition_id)
-        if treats_key not in seen_treats:
-            seen_treats.add(treats_key)
-            treats_edges.append(TreatsEdge(
-                medication_id=rec.medication_id,
-                condition_id=condition_id,
-            ))
+            # DIAGNOSED Edge
+            key = (p.id, cond_id)
+            if key not in seen_diag:
+                seen_diag.add(key)
+                diagnosed_edges.append(DiagnosedWithEdge(
+                    patient_id=p.id,
+                    condition_name=cond_name
+                ))
 
-    return patients, conditions, medications, prescribed_edges, has_condition_edges, treats_edges
+            # TREATS Edge
+            key = (m.id, cond_id)
+            if key not in seen_treats:
+                seen_treats.add(key)
+                treats_edges.append(TreatedWithEdge(
+                    medication_id=m.id,
+                    condition_name=cond_name
+                ))
+
+    return {
+        "patient_nodes": list(patients.values()),
+        "medication_nodes": list(medications.values()),
+        "condition_nodes": list(conditions.values()),
+        "ethnicity_nodes": list(ethnicities.values()),
+        "gender_nodes": list(genders.values()),
+        "prescribed_edges": prescribed_edges,
+        "diagnosed_edges": diagnosed_edges,
+        "treats_edges": treats_edges,
+        "ethnicity_edges": ethnicity_edges,
+        "gender_edges": gender_edges,
+    }
 
 
-# ── CSV writers ───────────────────────────────────────────────────────────────
 
-def write_nodes_csv(
-    output_path: Path,
-    patients:    dict[str, PatientNode],
-    conditions:  dict[str, ConditionNode],
-    medications: dict[str, MedicationNode],
-) -> None:
-    """
-    Neptune nodes CSV format:
-    ~id, ~label, property:Type, ...
-    """
-    with open(output_path, "w", newline="", encoding="utf-8") as f:
+# CSV Writers
+def write_nodes_csv(graph, output_file: Path):
+
+    with open(output_file, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
+        writer.writerow(["~id", "~label", "name", "age", "gender", "ethnicity"])
 
-        # Header
-        writer.writerow([
-            "~id", "~label",
-            "patient_id:String", "name:String", "age:Int", "gender:String", "ethnicity:String",
-            "condition_id:String",
-            "medication_id:String", "dosage:String",
-        ])
+        for n in graph["patient_nodes"]:
+            writer.writerow([n.id, "Patient", n.name, n.age, n.gender, n.ethnicity])
 
-        # Patient rows
-        for p in patients.values():
-            writer.writerow([
-                p.patient_id, "Patient",
-                p.patient_id, p.name, p.age, p.gender, p.ethnicity,
-                "", "", "",
-            ])
+        for n in graph["medication_nodes"]:
+            writer.writerow([n.id, "Medication", n.name, "", "", ""])
 
-        # Condition rows
-        for c in conditions.values():
-            writer.writerow([
-                c.condition_id, "Condition",
-                "", c.name, "", "", "",
-                c.condition_id,
-                "", "",
-            ])
+        for n in graph["condition_nodes"]:
+            writer.writerow([normalize_condition(n.name), "Condition", n.name, "", "", ""])
 
-        # Medication rows
-        for m in medications.values():
-            writer.writerow([
-                m.medication_id, "Medication",
-                "", m.name, "", "", "",
-                "",
-                m.medication_id, m.dosage,
-            ])
+        for n in graph["ethnicity_nodes"]:
+            writer.writerow([n.name.upper(), "Ethnicity", n.name, "", "", ""])
 
-    print(f"  ✓ nodes.csv  → {output_path}  "
-          f"({len(patients)} patients, {len(conditions)} conditions, {len(medications)} medications)")
+        for n in graph["gender_nodes"]:
+            writer.writerow([n.name.upper(), "Gender", n.name, "", "", ""])
 
 
-def write_edges_csv(
-    output_path:   Path,
-    prescribed:    list[PrescribedEdge],
-    has_condition: list[HasConditionEdge],
-    treats:        list[TreatsEdge],
-) -> None:
-    """
-    Neptune edges CSV format:
-    ~id, ~from, ~to, ~label, property:Type, ...
-    """
-    with open(output_path, "w", newline="", encoding="utf-8") as f:
+def write_edges_csv(graph, output_file: Path):
+
+    with open(output_file, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
+        writer.writerow(["~id", "~from", "~to", "~label", "start_date", "end_date"])
 
-        # Header
-        writer.writerow([
-            "~id", "~from", "~to", "~label",
-            "start_date:String", "end_date:String",
-        ])
+        eid = 1
 
-        edge_id = 1
+        for e in graph["prescribed_edges"]:
+            writer.writerow([f"e{eid}", e.patient_id, e.medication_id, "IS_PRESCRIBED", e.start_date, e.end_date])
+            eid += 1
 
-        # PRESCRIBED  (Patient → Medication)
-        for e in prescribed:
-            writer.writerow([
-                f"e{edge_id}", e.patient_id, e.medication_id, "PRESCRIBED",
-                e.start_date, e.end_date,
-            ])
-            edge_id += 1
+        for e in graph["diagnosed_edges"]:
+            writer.writerow([f"e{eid}", e.patient_id, normalize_condition(e.condition_name), "IS_DIAGNOSED_WITH", "", ""])
+            eid += 1
 
-        # HAS_CONDITION  (Patient → Condition)
-        for e in has_condition:
-            writer.writerow([
-                f"e{edge_id}", e.patient_id, e.condition_id, "HAS_CONDITION",
-                "", "",
-            ])
-            edge_id += 1
+        for e in graph["treats_edges"]:
+            writer.writerow([f"e{eid}", e.medication_id, normalize_condition(e.condition_name), "IS_TREATED_WITH", "", ""])
+            eid += 1
 
-        # TREATS  (Medication → Condition)
-        for e in treats:
-            writer.writerow([
-                f"e{edge_id}", e.medication_id, e.condition_id, "TREATS",
-                "", "",
-            ])
-            edge_id += 1
+        for e in graph["ethnicity_edges"]:
+            writer.writerow([f"e{eid}", e.patient_id, e.ethnicity.upper(), "HAS_ETHNICITY", "", ""])
+            eid += 1
 
-    print(f"  ✓ edges.csv  → {output_path}  "
-          f"({len(prescribed)} PRESCRIBED, {len(has_condition)} HAS_CONDITION, {len(treats)} TREATS)")
+        for e in graph["gender_edges"]:
+            writer.writerow([f"e{eid}", e.patient_id, e.gender.upper(), "HAS_GENDER", "", ""])
+            eid += 1
 
 
-# ── Entry point ───────────────────────────────────────────────────────────────
+def run_conversion(input_path: Path, output_dir: Path):
 
-def main():
-    parser = argparse.ArgumentParser(description="Convert extraction JSON to Neptune CSVs")
-    parser.add_argument("--input",  required=True, help="Path to output_extractions.json")
-    parser.add_argument("--outdir", default="./neptune_load", help="Output directory for CSVs")
-    args = parser.parse_args()
+    all_records = []
 
-    out_dir = Path(args.outdir)
-    out_dir.mkdir(parents=True, exist_ok=True)
+    if input_path.is_file():
+        data = load_json_file(input_path)
+        if isinstance(data, list):
+            all_records.extend(data)
+        elif isinstance(data, dict):
+            all_records.append(data)
 
-    # ── Step 1: Validate ──────────────────────────────────────────────────────
-    records = load_and_validate(args.input)
+    elif input_path.is_dir():
+        json_files = sorted(input_path.glob("*.json"))
+        for json_file in json_files:
+            data = load_json_file(json_file)
+            if isinstance(data, list):
+                all_records.extend(data)
+            elif isinstance(data, dict):
+                all_records.append(data)
 
-    if not records:
-        print("No valid records found. Exiting.")
-        return
+    graph = convert(all_records)
 
-    # ── Step 2: Convert ───────────────────────────────────────────────────────
-    patients, conditions, medications, prescribed, has_condition, treats = convert(records)
-
-    write_nodes_csv(out_dir / "nodes.csv", patients, conditions, medications)
-    write_edges_csv(out_dir / "edges.csv", prescribed, has_condition, treats)
-
-    print(f"\nDone. Files saved to: {out_dir.resolve()}")
+    write_nodes_csv(graph, output_dir / "nodes.csv")
+    write_edges_csv(graph, output_dir / "edges.csv")
 
 
 if __name__ == "__main__":
-    main()
+    run_conversion()
+    # project_root = Path(__file__).resolve().parents[2]
+    # run_conversion(
+    #     project_root / "outputs" / "postprocessed_entities",
+    #     project_root / "outputs" / "graph_csv"
+    # )

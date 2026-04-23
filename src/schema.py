@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
-from typing import List
-
+from typing import List, Optional
+from datetime import date
 
 # =========================
 # Node Models
@@ -62,11 +62,30 @@ class HasGenderEdge(BaseModel):
     gender: str = Field(description="Gender")
 
 
+# Medication Record Model
+class MedicationRecord(BaseModel):
+    medication_id: str
+    medication_name: str
+    condition: str
+    start_date: Optional[str] = None
+    end_date: Optional[str] = None
+
+# Patient Record Model 
+class PatientRecord(BaseModel):
+    patient_id: str
+    patient_name: str
+    patient_age: Optional[int] = None
+    patient_gender: Optional[str] = None
+    patient_ethnicity: Optional[str] = None
+    medications: List[MedicationRecord] = Field(default_factory=list)
+
+
+
 # =========================
 # Final Container Model
 # =========================
 
-class LLMOutput(BaseModel):
+class GraphSchema(BaseModel):
 
     # Nodes
     patient_nodes: List[PatientNode] = Field(description="Exactly one patient node")
@@ -82,6 +101,5 @@ class LLMOutput(BaseModel):
     ethnicity_edges: List[HasEthnicityEdge] = Field(description="Patient → Ethnicity")
     gender_edges: List[HasGenderEdge] = Field(description="Patient → Gender")
 
-    # Optional metadata
+    # Metadata
     confidence: int = Field(ge=1, le=7, description="Confidence score")
-    justification: str = Field(description="Reasoning for extraction")

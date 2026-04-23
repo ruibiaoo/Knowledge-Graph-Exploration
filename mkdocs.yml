@@ -1,0 +1,17 @@
+site_name: Clinical Notes Extraction and Knowledge Graph Construction
+site_description: A guide to using Clinical Notes Extraction and Knowledge Graph Construction.
+
+theme:
+  name: material
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+
+plugins:
+  - search
+  - mkdocstrings
+
+nav:
+  - Home: README.md
+  - Clinical Extraction: extraction.md
+  - Clinical Code Mapping: code_mapping.md

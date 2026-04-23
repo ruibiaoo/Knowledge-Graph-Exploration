@@ -57,7 +57,6 @@ The following entities are extracted from the clinical notes: \
 **Normalization**
 - Case Normalization: Apply consistent text formatting 
 - Data Type Standardization: Ensuring consistent data types (e.g., `Dates` to be formatted to 'DD/MM/YYYY', `age` as integer)
-- Normalize condition and medication names to a consistent representation via Clinical Code Canonicalization
 
 **Clinical Code Mapping (Canonicalization)**
 - Map normalized entities to standardized medical ontologies:

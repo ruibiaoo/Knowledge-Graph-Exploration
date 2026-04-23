@@ -1,4 +1,3 @@
-# Change prompt
 import langextract as lx
 import textwrap
 from pathlib import Path
@@ -20,15 +19,6 @@ You must extract *ALL* of the following information **ONLY** from the given Clin
     8. Start Date of medication course - Start date for the medication (DD/MM/YYYY)
     9. End Date of medication course - End date for the medication (DD/MM/YYYY)
     10. Medical Condition(s) patient suffered from - The specific condition this medication was prescribed for (e.g., Hypertension)
-                         
-For every medication mentioned in the clinical note:
-- Extract ALL associated fields that are present in the text:
-    - Medication ID prescribed to patient
-    - Medication Name prescribed to patient
-    - Start Date of medication course
-    - End Date of medication course
-    - Medical Condition(s) patient suffered from
-
 
 **Extraction Guidelines:**
 - **Completeness**: Extract ALL medications present. Do not skip any entry.
@@ -77,6 +67,16 @@ examples = [
         ],
     )
 ]
+
+def load_input(file_path: str) -> str:
+    path = Path(file_path)
+    if path.suffix.lower() == ".txt":
+        return load_txt(path)
+    elif path.suffix.lower() == ".json":
+        return load_json_note(path)
+    
+
+def convert_records_
 
 def load_synopsis_texts(data_dir: Path) -> list[str]:
     texts: list[str] = []
@@ -127,17 +127,19 @@ def main():
             model_id="gemma-local",
             model_url="http://localhost:11434",
             temperature = 0,
-            language_model_params={"top_p": 0.2, "num_ctx": 4096},
+            language_model_params={"top_p": 0.2, "num_ctx": 4096, "top_k": 10, "num_predict": -1},
+            max_char_buffer=2500,
             fence_output=False,
             use_schema_constraints=False,
             max_workers=2,
             batch_length=2,
             show_progress=True,
             resolver_params={"format_handler": ollama.OLLAMA_FORMAT_HANDLER}
-            )
+        )
+
         except Exception as error:
             print(f"Error processing Synopsis {idx}: {error}")
-            continue
+            continue    
 
         valid_extractions = [
             e for e in result.extractions
