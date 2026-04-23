@@ -1,0 +1,184 @@
+{
+    "ES_created_dtaetime": "2023-05-08",
+    "content": {
+        "contentEDSummary": {
+            "Consultation": {
+                "ConsultationNotes": [
+                    {
+                        "CreateBy": {
+                            "Mcr": "%Mcr%",
+                            "Name": "Person X"
+                        },
+                        "CreateDateTime": "2023-05-01T23:27:36",
+                        "Notes": "<br/>Additional HPI : PMH<br/>Autism- special needs school<br/><br/><br/>fever since yesterday- Tmax 89.1- D2<br/>today- Tmax 40<br/>last paracetamol 715pm<br/>last brufen 1pm<br/><br/>vomiting yesterday-1x<br/>no diarrhea<br/><br/>LOA but drinking still ok<br/>good activity<br/>good PU/BO<br/><br/>sick contact NIL<br/>travel nil<br/>no close contact with any suspected/conirm CoVid cases<br/>Physical Exam 1 : neck supple<br/>Alert, well perfused and hydrated<br/>fretful+++<br/>throat not injected<br/>no cervical lymphadenopathy<br/>biltaeral tympanic membrane intact<br/>no conjunctival injection<br/>no oral mucosal changes<br/>Heart sounds regular S1 S2, no murmur<br/>Lungs clear,<br/>Abdomen soft, non-distended<br/>no rashes<br/>no swelling of hands and feet<br/><br/>Plan<br/>symptomatic treatment<br/><br/>MC for 5 days issued. Advised to return if still with fever for 2-3days, temp > 41C, breathless, lethargy, vomiting, poor feeding<br/>advised on good personal hygiene, drink plenty of fluids, continue to monitor symptoms at home<br/><br/><div/><div/><div/><div/><div/><div/>"
+                    }
+                ],
+                "ConsultationPac": "P2 +"
+            },
+            "Disposition": {
+                "DischargeAdvice": [
+                    "<br/><br/>Provider - PFE given : Fever in children<div/><div/><div/><div/><div/><div/>"
+                ],
+                "GeneralCondition": "Stable"
+            },
+            "EventInformation": {
+                "AccidentType": {
+                    "Description": "<div/><div/><div/><div/><div/><div/>"
+                },
+                "CaseNumber": "removed",
+                "CauseOfInjury": {
+                    "Description": "<div/><div/><div/><div/><div/><div/>"
+                },
+                "ConsultationEndDateTime": "2023-05-01T23:27:00",
+                "ConsultationStartDateTime": "2023-05-01T20:30:00",
+                "DischargeDateTime": "2023-05-01T23:27:00",
+                "Emergency": "Emergency",
+                "EndCaseDateTime": "2023-05-01T23:27:00",
+                "PrincipalDiagnosis": {
+                    "Code": "54150009",
+                    "Description": "URTI - Infection of the upper respiratory tract"
+                },
+                "PrincipalDisposition": {
+                    "Description": "Treated and Discharged"
+                },
+                "PrincipalDoctor": {
+                    "Mcr": "%Mcr%",
+                    "Name": "Person X"
+                },
+                "ReferralSource": "<div/><div/><div/><div/><div/><div/>",
+                "RegistrationDateTime": "2023-05-01T19:38:27",
+                "SecondaryDeposition": [
+                    {
+                        "Description": "<div/><div/><div/><div/><div/><div/>",
+                        "ReferralLocation": {
+                            "Description": "<div/><div/><div/><div/><div/><div/>"
+                        }
+                    }
+                ],
+                "Trauma": "Non-Trauma",
+                "TriageStartDateTime": "2023-05-01T19:40:00"
+            },
+            "MedicationOrders": [
+                {
+                    "AdmisterLog": [
+                        {
+                            "AdminsterBy": {
+                                "Name": "Person Y"
+                            },
+                            "AdminsterDateTime": "2023-05-01T19:43:00"
+                        }
+                    ],
+                    "Dose": "264",
+                    "DoseUnit": "mg",
+                    "Frequency": "Once",
+                    "MedicationId": "9000006493500160",
+                    "MedicationName": "Paracetamol Suspension <br/>PO 264 mg, Once<br/>Dose by 15mg/kg with rounding.<div/><div/><div/><div/><div/><div/>",
+                    "OrderBy": {
+                        "Name": "Person Y"
+                    },
+                    "OrderDateTime": "2023-05-01T19:43:41",
+                    "OrderStatus": "Completed",
+                    "Route": "PO"
+                },
+                {
+                    "AdmisterLog": [
+                        {
+                            "AdminsterBy": {
+                                "Name": "Person Z"
+                            },
+                            "AdminsterDateTime": "2023-05-01T20:38:00"
+                        }
+                    ],
+                    "Dose": "150",
+                    "DoseUnit": "mg",
+                    "Frequency": "Once",
+                    "MedicationId": "9000006401700160",
+                    "MedicationName": "Ibuprofen Syrup <br/>PO 150 mg, Once -- For 1 Days<br/>5 mg/kg to 10mg/kg<div/><div/><div/><div/><div/><div/>",
+                    "OrderBy": {
+                        "Mcr": "%Mcr%",
+                        "Name": "Person X"
+                    },
+                    "OrderDateTime": "2023-05-01T21:33:38",
+                    "OrderStatus": "Completed",
+                    "Prn": "No",
+                    "Remarks": "<div/><div/><div/><div/><div/><div/>",
+                    "Route": "PO"
+                },
+                {
+                    "Dose": "240",
+                    "DoseUnit": "mg",
+                    "Duration": "5",
+                    "DurationUnit": "days",
+                    "Frequency": "Q6H",
+                    "MedicationId": "9000006493500160",
+                    "MedicationName": "Paracetamol Suspension",
+                    "OrderBy": {
+                        "Mcr": "%Mcr%",
+                        "Name": "Person X"
+                    },
+                    "OrderDateTime": "2023-05-01T21:33:38",
+                    "OrderStatus": "Completed",
+                    "Prn": "No",
+                    "Remarks": "<div/><div/><div/><div/><div/><div/>",
+                    "Route": "PO"
+                },
+                {
+                    "Dose": "5",
+                    "DoseUnit": "mg",
+                    "Duration": "5",
+                    "DurationUnit": "days",
+                    "Frequency": "TDS",
+                    "MedicationId": "9000006520000160",
+                    "MedicationName": "Promethazine HCl Syrup",
+                    "OrderBy": {
+                        "Mcr": "%Mcr%",
+                        "Name": "Person X"
+                    },
+                    "OrderDateTime": "2023-05-01T21:33:38",
+                    "OrderStatus": "Completed",
+                    "Prn": "No",
+                    "Remarks": "For Age : 2 - 6 years old<div/><div/><div/><div/><div/><div/>",
+                    "Route": "PO"
+                }
+            ],
+            "Triage": {
+                "HistoryFrom":"Father and Mother",
+                "MedicalHistory": [
+                    "<div/><div/><div/><div/><div/><div/>"
+                ],
+                "TriageLanguage": "English</div><div/><div/><div/><div/><div/>",
+                "TriageNotes": [
+                    {
+                        "CreateBy": {
+                            "Name": "Person Y"
+                        },
+                        "CreateDateTime": "2023-05-01T19:45:09.590",
+                        "Notes": "Reattendance : No<br/><br/>Have you travelled for the past 14 days? No<br/><br/>Mode of Arrival : Own / Public Transport<br/><br/>Chief Complaint : fever, 2/7 and vomit once yesterday<br/><br/>General Notes : No history of fits, Alert, Lungs clear and Fretful / crying<br/><br/>Isolation required? No<div/><div/><div/><div/><div/><div/>"
+                    }
+                ],
+                "TriagePac": "P2."
+            },
+            "VitalSigns": [
+                {
+                    "PainScore": "Faces : No Hurt 0",
+                    "PulseRate": "145 beats/min",
+                    "Remarks":"Weight : 18.10 kg<br/><br/>FIRST SIS SCORE (01-May-2023 19:40)<br/>Respiratory : No Distress<br/>Activity : Normal<br/>Color : Normal<br/>Play : Decreased<br/>Temperature Range : 38.4 deg. C to 40.3 deg. C<br/>SIS SCORE : 8<div/><div/><div/><div/><div/><div/>",
+                    "Stage":"Latest",
+                    "TakenDateTime": "2023-05-01T23:27:00"
+                }
+            ]
+        }
+    },
+    "data_extract_end": "2023-05-07",
+    "data_extract_start": "2023-05-07",
+    "documentExtn": "9017219402900270^EDNotes",
+    "documentRoot": "2.16.840.1.113883.2.31.1.2.1.2.3.7.1",
+    "eventExtn": "SiqXGeLnGJeNWyl9tF0/g==",
+    "eventRoot": "2.16.840.1.113883.2.31.1.2.1.2.5.8",
+    "institution": "KKH",
+    "patientExtn": "pukmOxUXPy6IJxnpPcLScw==",
+    "patientRoot": "2.16.840.1.113883.2.31.1.2.1.2.3.1",
+    "sourceApplication": "SHS-SCM",
+    "versionNumber": "3",
+    "xml_filename": "ED_20230508_CONTENT_1.xml"
+}

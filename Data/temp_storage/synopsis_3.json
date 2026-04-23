@@ -1,0 +1,44 @@
+{
+  "patient_id": "P90347",
+  "patient_name": "Daniel Tan Kai Ming",
+  "patient_age": "70",
+  "patient_gender": "Male",
+  "patient_ethnicity": "Chinese",
+  "medications": [
+    {
+      "medication_id": "M401",
+      "medication_name": "Salbutamol Inhaler",
+      "start_date": "12/05/2018",
+      "end_date": "10/04/2020",
+      "condition": "Chronic Obstructive Pulmonary Disease (COPD)"
+    },
+    {
+      "medication_id": "M403",
+      "medication_name": "Tiotropium Inhaler",
+      "start_date": "11/04/2020",
+      "end_date": "11/04/2026",
+      "condition": "Chronic Obstructive Pulmonary Disease (COPD)"
+    },
+    {
+      "medication_id": "M501",
+      "medication_name": "Aspirin",
+      "start_date": "02/03/2018",
+      "end_date": "02/03/2023",
+      "condition": "Coronary Artery Disease (CAD)"
+    },
+    {
+      "medication_id": "M502",
+      "medication_name": "Clopidogrel",
+      "start_date": "03/03/2023",
+      "end_date": "03/03/2027",
+      "condition": "Coronary Artery Disease (CAD)"
+    },
+    {
+      "medication_id": "M622",
+      "medication_name": "Atorvastatin",
+      "start_date": "18/08/2017",
+      "end_date": "18/08/2027",
+      "condition": "Hyperlipidemia"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+    "ES_created_dtaetime": "2023-10-26",
+    "content": {
+        "contentEDSummary": {
+            "Consultation": {
+                "ConsultationNotes": [
+                    {
+                        "CreateBy": {
+                            "Mcr": "%Mcr%",
+                            "Name": "Person X"
+                        },
+                        "CreateDateTime": "2023-10-24T23:00:39",
+                        "Notes": "ED Provider Notes<BR>Person C<BR>5 y.o.<BR>Patient has no known allergies. <BR> <BR>Past medical history: <BR>1. Constipation<BR>2) Inappropriate food textures<BR>3) Speech/social delay<BR>- lost to GI/ST followup since May-Jun 19<BR>Autism on private f/u<BR> <BR>Presenting complaint <BR>Attended with Mother & Father <BR><BR>1.Left gluteal abscess x3/7<BR>-Noticed as patient was requesting for panadol and pointing to bum <BR>-Progressively enlarging <BR>- tender, No overlying skin changes<BR>- Had some discharge minimal amounts yesterday <BR>- Not presented with abx <BR>- No other lumps in body <BR>- A/w Fever X 3/7, Tmax 39 once then subsequent 38.1-4<BR>- No constituional symptoms such as LOW LOA <BR>- Was constipated last week, given fleet<BR><BR>2. Discomfort over genital area x1/7<BR>Just noticed patient was complaining of some itch <BR>-parents did not note any complaint of Pain / dysuria throughout the day during PU <BR><BR>Functionality<BR>- Input At baseline <BR>- Output<BR> PU: at baseline <BR>> BO: at baseline<BR>Attends school - mother feels more tired than usual <BR> <BR>Physical examination <BR><BR>Vital signs: <BR> 24/10/23 21:53 <BR>Pulse: 132 <BR>Resp: 26<BR>Temp: 37.8 \u00c2\u00b0C <BR>TempSrc: Tympanic <BR>SpO2: 100% <BR>Weight: 17.3 kg <BR> <BR>Vital signs: <BR> 24/10/23 21:53 <BR>weight:17.3 kg <BR> <BR><BR>Alert, comfortable<BR>Non toxic<BR>Palpable 4x5cm lump<BR>not fixed to underlying muscle or tethered to overlying skin<BR>Hardened area of induration, well circumscribed, fluctuant with central punctum <BR>No discharge expressed<BR>Slip sign negative<BR>Penile area not swollen, no erythema<BR>Unable to fully retract foreskin as patient not compliant<BR>Scrotum non tender non erythematous, testes palpated <BR><BR>Investigations prior to visit <BR>Nil<BR> <BR>Impressions <BR><BR>1. Infected Sevaceous cyst Gluteal abscess<BR>  <BR>Plan <BR><BR>Screen urine - UC10 UFEME <BR>Augmentin x7/7<BR>TCU paeds surg in 1/52<BR>Return advice given <BR><BR>Communications <BR>Updatd parents of the above.<BR><BR><BR>"
+                    },
+                    {
+                        "CreateBy":{
+                            "Mcr":"%Mcr%",
+                            "Name":"Person C"
+                        },
+                        "CreateDateTime":"2023-10-25T00:31:08",
+                        "Notes":"ED Update Notes<BR>UC10 UFEME clean <BR><BR>Plan (d/w Dr D) <BR>Discharge with abx and TCU as planned<BR>Explained above to parents - agreeable, all questions answered<BR>Red flag advic given <BR>"
+                    }
+                ],
+                "ConsultationPac": "PAC3"
+            },
+            "Disposition": {
+                "CpssMedicalCertificate":[{
+                    "CreateBy":"Person C",
+                    "CreateOn":"2023-10-25T00:33:05",
+                    "LeaveType":"Outpatient Sick Leave",
+                    "McNo":"removed",
+                    "UnfitFrom":"2023-10-24T00:00:00",
+                    "UnFitTo":"2023-10-30T23:59:59"
+                }],
+                "GeneralCondition":null
+            },
+            "EventInformation": {
+                "CaseNumber": "removed",
+                "ConsultationEndDateTime": "2023-10-25T00:35:06",
+                "ConsultationStartDateTime": "2023-10-24T21:54:14",
+                "DischargeDateTime": "2023-10-25T00:38:00",
+                "PrincipalDiagnosis": {
+                    "Code": "64576003",
+                    "Description": "Abscess, gluteal, left"
+                },
+                "PrincipalDisposition": {
+                    "Code":"1",
+                    "Description": "Discharged"
+                },
+                "PrincipalDoctor": {
+                    "Mcr": "%Mcr%",
+                    "Name": "Person Y"
+                },
+                "ReferralSource": "Walk In",
+                "RegistrationDateTime": "2023-10-24T21:40:00",
+                "TriageEndDateTime": "2023-10-24T21:54:00",
+                "TriageStartDateTime": "2023-10-24T21:52:13"
+            },
+            "Patient":{
+                "DOB":"%DOB%",
+                "Gender":"%Gender%",
+                "MRNNumber":"MRNNumber%",
+                "Name":"%Name%",
+                "Race":"%Race%"
+            },
+            "PrescriptionOrders":[{
+                "Duration":"7",
+                "DurationUnit":"DAYS",
+                "Frequency":"Every 12 hours (scheduled)",
+                "FrequencyId":"Every 12 hours (scheduled)",
+                "MedicationId":"0002-69-23X-8",
+                "MedicationName":"Amoxicillin 200mg/5mL, Clavunlanic Acid 28.5mg/5mL (Co-amoxiclav 228mg/5mL (AUGMENTIN) Suspension",
+                "OrderBy":{
+                    "MCR":"%Mcr%",
+                    "Name":"Person X"
+                },
+                "OrderDateTime":"2023-10-25T00:33:05",
+                "OrderStatus":"New",
+                "Remarks":"Take 6 mL every 12 hours for 7 days.",
+                "Route":"Oral"
+            },
+            {
+                "Duration":"5",
+                "DurationUnit":"DAYS",
+                "Frequency":"3 times a day PRN",
+                "FrequencyId":"3 times a day PRN",
+                "MedicationId":"0000-23-39X-1",
+                "MedicationName":"Ibuprofen 100mg/5mL Suspension",
+                "OrderBy":{
+                    "MCR":"%Mcr%",
+                    "Name":"Person X"
+                },
+                "OrderDateTime":"2023-10-25T00:33:05",
+                "OrderStatus":"New",
+                "Remarks":"Take 173 mg 3 times a day when required for fever more than 38.5 deg Celsius or pain for up to 5 days. Administer at 5-10mg/kg per dose",
+                "Route":"Oral"
+            }],
+            "Triage":{
+                "HistoryFrom":"Family"
+            },
+            "VitalSigns":[{
+                "PainScore":"0",
+                "PulseRate":"132 (/Min)",
+                "RespiratoryRate":"26 (/Min)",
+                "Route":"Tympanic",
+                "SAO2":"100%",
+                "TakenDateTime":"2023-10-24T21:53:00",
+                "Temperature":"37.8 (\u00c2\u00b0C)"
+            }]
+        }
+    },
+    "data_extract_end": "2023-10-25",
+    "data_extract_start": "2023-10-25",
+    "documentExtn": "JHS100192444302EDS^EDNotes",
+    "documentRoot": "2.16.840.1.113883.2.31.1.2.1.2.13.7.1",
+    "eventExtn": "Igh5AlNb8Mkh4pcssM2KSg==",
+    "eventRoot": "2.16.840.1.113883.2.31.1.2.1.2.11.8",
+    "institution": "0500000",
+    "patientExtn": "HBHYjv8pkQaiyrKwbcif4g==",
+    "patientRoot": "2.16.840.1.113883.2.31.1.2.1.2.13.1",
+    "sourceApplication": "JHS-EPIC",
+    "versionNumber": "1",
+    "xml_filename": "ED_20231026_CONTENT_1.xml"
+}

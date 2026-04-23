@@ -1,0 +1,120 @@
+{
+    "ES_created_dtaetime": "2023-10-26",
+    "content": {
+        "contentEDSummary": {
+            "Consultation": {
+                "ConsultationNotes": [
+                    {
+                        "CreateBy": {
+                            "Mcr": "%Mcr%",
+                            "Name": "Person X"
+                        },
+                        "CreateDateTime": "2023-11-28T22:10:13",
+                        "Notes": "ED Provider Notes<BR>ED INITIAL CONSULT NOTE<BR>S/b: Person X<BR><BR>Demographics <BR>PATIENT NAME<BR>21 y.o. male <BR>No Known Allergies<BR>Premorbid ADL-I, Comm-Amb<BR><BR>Past Medical/Surgical History <BR><BR>1. Asthma<BR>2. Previously seen at NUH EMD (30/7/18): Noted Dx of autism<BR>- defaultd REACH and psych TCU<BR>3. Chest keloids<BR>4. Myopia, vitreous syneresis <BR><BR>Last admitted in NTFGH in 2019<BR>1. Drug overdose (Paracetamol) 2' Acute stress reaction<BR>- SB Psy 4/1/18: <BR> > Impression: Acute Stress Reaction to stress of starting school Will require long-term monitoring for mood disorder<BR> Underlying Autistic traits diagnosed by NUH<BR> > Suggest: <BR> 1) Safe for discharge under care of mother from Psy point of view<BR> 2) No medications indicated at this time<BR> 3) Reschedule earlier NUH Psy TCU (currently on 29 Jan)<BR> 4) Memo to NUH Psy with details of current admission<BR> 5) Mother may need a memo stating that patient is in hospital, so that she can register at ITE on his behalf - she will request from team if necessary, please provide <BR><BR>Significant chronic meds <BR>Adapalene 0.1% gel (Differin) ON<BR> <BR>Subjective <BR>History of Presenting Complaint:<BR>1. Felt faint today at 8.20pm<BR>- was attending a pre-trial taekwondo class at a hard court near his home; was doing squats when he felt his vision darkening; hearing became muffled <BR>- pt slowly walked over to the bench to sit down --> did not fall down or hit his head; this dark vision lasted for a few min; but by the time the SCDF staff came, his vision completely returned <BR>- did not experience headache, chest pain, dizziness or SOB before this darkening of vision occurred <BR>- denies any pain in the rest of his body <BR>- says that he was not in extreme stress --> recently felt a little stressed from school, but not especially increased today <BR>- recently recovered from COVID one week ago --> had 3 days of high fever and myalgia but recovered and only started returning to physical activity today<BR>- denies reduced oral intake or excessive losses (no diarrhea, no vomiting, no polyuria) <BR>- previously never had issues with exercise and physical activity<BR>- no fam hx of cardiac issues or sudden cardiac death <BR><BR>Corroborative hx from mother 81234567<BR>- her friend accompanying patient for the pre-trial class and saw that pt was not feeling well <BR>- he was roughly 20min into the class when he started feeling unwell <BR>- did not see patient LOC or fall down <BR>-no urinary or bowel incontinence or jerking of limbs <BR>- verified no previous history of exertional symptoms of chest pains <BR>- no fam hx cardiac conditions or SCD <BR>- mom asking if could be due to anxiety which patient previously had --> explained that it's possible but pt reported no sudden increase in anxiety recently <BR>- explained that will need to do some blood tests to rule out other causes of his condition<BR>- will keep her updated on the progress <BR><BR>Objective <BR>Vitals<BR>Vital signs: <BR> 28/11/23 21:00 28/11/23 21:06 <BR>BP: (S) (!) 98/68 (S) (!) 106/57 <BR>Pulse: (S) 75 (S) 78 <BR>Resp: 16 <BR>Temp: 37 \u00c2\u00b0C <BR>TempSrc: Tympanic <BR>SpO2: 99% <BR><BR><BR>BGM<BR>Results from last 7 days <BR> Lab Units 28/11/23<BR>21:21 <BR>GLUCOSE (POCT) mmol/L 9.2 <BR><BR><BR>O/E<BR>GCS 15<BR>Alert and conversant<BR>No facial droop<BR>PEARL 3mm, nil nystagmus, EOM full<BR>Tongue central, moist; no laceration or bleeding seen<BR>Heart S1S2 nil murmurs, regular<BR>Lungs clear, nil creps or reduced air entry <BR>Abdo soft, non-tender<BR>Calves supple, nil edema <BR><BR>Investigations <BR>ECG reviewed: sinus rhythm HR 86, nil acute ST-T changes. Nil delta waves. <BR><BR>Impression <BR>1. Near syncope <BR>- possible precipitants: recently recovered from COVID; stress from attending pre-trial class<BR>- however as symptoms occurred exertion/exercise, concerns of underlying cardiac cause <BR><BR>Plan <BR>Labs: FBC RP trop<BR>KIV admit for futher monitoring and workup<BR><BR>"
+                    },
+                    {
+                        "CreateBy":{
+                            "Mcr":"%Mcr%",
+                            "Name":"Person C"
+                        },
+                        "CreateDateTime":"2023-11-29T12:22:14",
+                        "Notes":"ED Notes<BR>Lunch bento served to patient. <BR>"
+                    },
+                    {
+                        "CreateBy":{
+                            "Mcr":"%Mcr%",
+                            "Name":"Person D"
+                        },
+                        "CreateDateTime":"2023-11-29T06:52:53",
+                        "Notes":"ED Notes<BR>Sandwich and milo served. <BR>"
+                    },
+                    {
+                        "CreateBy":{
+                            "Mcr":"%Mcr%",
+                            "Name":"Person e"
+                        },
+                        "CreateDateTime":"2023-11-29T02:20:55",
+                        "Notes":"ED Update Notes<BR>RV:<BR>Felt dizzy & darkening of vision at abt 20:10 hrs whilst doing squats. No chest pain or palpitations . Recalls being helped to the bench & ambulance arrived.<BR>No recent illness, except for COVID last week. Felt well enough to go to TKD class. No diarrhea.<BR>OE: Comfortable, alert, Ht S1S2, no murmurs or S3.<BR>Lungs clear<BR>No pedal oedema<BR>PEARL, EOM full, no nystagmus<BR>CNv IX, X, XII, VII inatct<BR>No pronator drift or dysmetria<BR>Gait N<BR><BR>ECG at 21:17 hrs sinus 86, no ac changes, QTc 424ms. No old ECGs<BR>CXR - no cardiomeg<BR>Trop at 23:04 hrs < 3.2<BR><BR>Imp: extertional syncope suspicious for cardiac cause<BR>"
+                    },
+                    {
+                        "CreateBy":{
+                            "Mcr":"%Mcr%",
+                            "Name":"Person C"
+                        },
+                        "CreateDateTime":"2023-11-29T02:09:47",
+                        "Notes":"ED Update Notes<BR>ED MO update<BR><BR>Noted labs<BR><BR>Results from last 7 days <BR>Lab Units 28/11/23<BR>23:04 <BR>WBC X10\u00cb\u00869/L 10.11 <BR>HAEMOGLOBIN g/dL 15.1 <BR>HAEMATOCRIT % 43.6 <BR>PLATELETS x10\u00cb\u00869/L 336 <BR><BR>Results from last 7 days <BR>Lab Units 28/11/23<BR>23:04 <BR>SODIUM, SERUM mmol/L 141 <BR>POTASSIUM, SERUM mmol/L 3.4* <BR>CHLORIDE, SERUM mmol/L 107 <BR>BICARBONATE, SERUM mmol/L 23 <BR>UREA, SERUM mmol/L 4.8 <BR>CREATININE, SERUM umol/L 78 <BR>EGFRCKDEPI mL/min/1.73m2 >120 <BR>ANION GAP mmol/L 14.4 <BR><BR>Trop < 3.2<BR><BR><BR>Plan (d/w Dr D)<BR>PO K replacement <BR>Admit gen med to workup exertional syncope TRO cardiogenic cause<BR><BR>"
+                    }
+                ],
+                "ConsultationPac": "PAC2"
+            },
+            "Disposition": {
+                "GeneralCondition":null
+            },
+            "EventInformation": {
+                "CaseNumber": "removed",
+                "ConsultationEndDateTime": "2023-11-29T17:14:16",
+                "ConsultationStartDateTime": "2023-11-28T22:04:05",
+                "DischargeDateTime": "2023-11-29T17:01:00",
+                "PrincipalDiagnosis": {
+                    "Code": "427461000",
+                    "Description": "Near syncope"
+                },
+                "PrincipalDisposition": {
+                    "Code":"1",
+                    "Description": "Discharged"
+                },
+                "PrincipalDoctor": {
+                    "Mcr": "%Mcr%",
+                    "Name": "Person Y"
+                },
+                "ReferralSource": "SCDF Ambulance",
+                "RegistrationDateTime": "2023-11-28T20:58:00",
+                "TriageEndDateTime": "2023-11-28T21:06:00",
+                "TriageStartDateTime": "2023-11-28T21:00:03"
+            },
+            "GCS":[{
+                "E":"4 - Spontatneously",
+                "M":"6 - Obeys commands",
+                "TakenDateTime":"2023-11-29T15:36:00",
+                "Total":"15",
+                "V":"5 - Oriented"
+            }],
+            "Patient":{
+                "DOB":"%DOB%",
+                "Gender":"%Gender%",
+                "MRNNumber":"MRNNumber%",
+                "Name":"%Name%",
+                "Race":"%Race%"
+            },
+            "Triage":{
+                "HistoryFrom":"Paramedic;Patient"
+            },
+            "VitalSigns":[
+                {
+                "Route":"Tympanic",
+                "TakenDateTime":"2023-11-28T21:00:00"
+            },
+            {
+                "BloodPressure":"106/56 (mmHg)",
+                "PainScore":"0",
+                "PulseRate":"73 (/Min)",
+                "RespiratoryRate":"18 (/Min)",
+                "SAO2":"99 (%)",
+                "TakenDateTime":"2023-11-29T15:36:00",
+                "Temperature":"36.5 (\u00c2\u00b0C)"
+            }]
+        }
+    },
+    "data_extract_end": "2023-11-29",
+    "data_extract_start": "2023-11-29",
+    "documentExtn": "JHS100195471462EDS^EDNotes",
+    "documentRoot": "2.16.840.1.113883.2.31.1.2.1.2.13.7.1",
+    "eventExtn": "f10+xXvDtYANCCrlfKgfaQ==",
+    "eventRoot": "2.16.840.1.113883.2.31.1.2.1.2.11.8",
+    "institution": "17H0226",
+    "patientExtn": "tuRVZaKxXxd39S4OaNsUcw==",
+    "patientRoot": "2.16.840.1.113883.2.31.1.2.1.2.13.1",
+    "sourceApplication": "JHS-EPIC",
+    "versionNumber": "1",
+    "xml_filename": "ED_20231130_CONTENT_1.xml"
+}

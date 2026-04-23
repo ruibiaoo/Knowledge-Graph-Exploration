@@ -1,0 +1,236 @@
+{"ES_created_dtaetime":"2024-01-10",
+    "content":{
+        "contentEDSummary":{
+            "Consultation":{
+                "ConsultationNotes":[{
+                    "CreateBy":{
+                        "Mcr":"%Mcr%",
+                        "Name":"Person X"
+                    },
+                    "CreateDateTime":"2024-01-04T16:03:14",
+                    "Notes":"ED Provider Notes<BR>PATIENT NAME<BR>PATIENT ID<BR>17 y.o. Chinese Female<BR>Patient has No Known Allergies.<BR>Trans-Masculine Individual<BR><BR>Past Medical History:<BR>1) ADPKD<BR>2) ? Irritable bowel syndrome<BR>3) Dysthymia with Major depressibe disorder wtih serious suicide attempt via overdose<BR>- Admitted 19/9/21 due to overdose on 45 tabs of paracetamol with suicidal intent associated with low mood and DSH. <BR>4) Obsessive Compulsive Disorder on the background multiple psychiatric comorbidites - Autism Spectrum Disorder, Borderline Personality Disorder with emotional dysregulation, ADHD<BR>Admitted twice for self-harm with lacerations on abdominal area April and May 2023.<BR><BR>Recurrent self harm<BR>- overdose on paracetamol Sept 2021<BR>- abdominal laceration Apr 23<BR>- abdominal laceration May 2023<BR> - leg laceration May 2023<BR>- leg laceration June 2023<BR> cx arterial involvement, required debridement and closure<BR>- thigh laceration in June 2023 under ortho <BR>- Large and deep laceration extending from RHC, posteriorly to right flank in Aug 2023<BR> (Admitted under General surgery department; Underwent Debridement and closure of abdominal wound on 12/8/23<BR> Reviewed by Psychiatry inpatient<BR> Serious non-suicidal self-injurious behaviour<BR> -b/g MDD, OCD, BPD, ASD, mild ADHD, possible AN-BP<BR>- Nil suicidal intent, but high risk of recurrence of DSH <BR> <BR> Chronic medications:<BR><BR>Current Outpatient Medication <BR>Medication Instructions <BR>-hydrOXYzine HCl 25 mg, Oral, 3 times a day PRN <BR>- Lithium Carbonate CR Tablet Take 200 mg every morning AND 400 mg every night. Do all this for 18 days. <BR>- Olanzapine 10 mg, Oral, Every night <BR>- Sertraline 200 mg, Oral, Once a day <BR><BR><BR>History of Presenting Complaint:<BR>1. DSH<BR>- Took razor blade 30-40 minutes ago and cut her forearm<BR>- Subsequently told her mother and was brought to Ed<BR>- No suicidal intention, no attempt to end her life<BR>- No auditory or visual hallucinations this episode<BR>- No messages written or sent to friends/family<BR>- Still unsure of exact circumstance surrounding DSH<BR>- No other sites of self harm<BR>- Has been compliant to her medications<BR>- No recent stressors<BR>- No recent issues with her relationship<BR>- Her replies generally \"i dont really care\" to most of my question<BR>- No syncopal smyptoms<BR>- Minimal pain 1/10<BR><BR>Objective<BR><BR>Vitals<BR><BR><BR>On Examination<BR>MSE<BR>Appearance: Wearing long <BR>Behavior: slightly anxious, speech normal. Poor eye contact<BR>Orientation: full oriented to Time, Place and Person <BR>Speech: Coherent<BR>Mood: euthymic <BR>Affect: Appropriate<BR>Thought Prcoesses: logical connections <BR>Thought Content: normal <BR>Insight: normal insight and judgement<BR><BR>PHQ-9: 6/10<BR>Moderate risk on Columbia suicide severity rating scale<BR>Suicidal risk assessment questionnaire<BR><BR>Vital signs: <BR> 04/01/24 16:11 <BR>BP: 123/82 <BR>Pulse: 79<BR>Resp: 20 <BR>Temp: (!) 37.6 \u00c2\u00b0C <BR>SpO2: 97% <BR><BR>Left forearm large 15-20cm laceration extending 2-3cm from wrist with extension to proximal elbow<BR>- Active bleeding/spurter noted over proximal part of laceration<BR>- All the way down to muscle<BR><BR>motor function<BR>- Median nerve > grossly intact<BR>- Ulnar nerve > grossly intact<BR>- Radial nerve > grossly intact<BR><BR>Sensation<BR>- Median nerve > partially affected (at baseline)<BR>- Ulnar nerve > partially affected (at baseline)<BR>- Radial Nerve > intact<BR><BR>Comms<BR>Updated mother by bedside<BR>Explained regarding [plans for ortho/psy review<BR>Explained will need admission with EOT<BR>Mother understands and is agreeable, will await ortho review for consent<BR>All questions answered<BR><BR>Issues and Progress:<BR>1. DSH over left forearm<BR><BR>Plan<BR>D/w Dr. Y<BR>Suicide precaution<BR>Refer Ortho - Accepted Case (Dr. Z agreeablee for review)<BR>Refer PSY - Accepted case (Dr. A agreeable for review)<BR>FBC + RP + GXM<BR>XR with UPT prior<BR>Admit Peads ortho<BR>Dressing to be reviewed in 15-20mins<BR><BR><BR>"
+                }],
+                "ConsultationPac":"PAC2"
+            },
+            "Disposition":{
+                "CpssMedicalCertificate":[{
+                    "CreatedBy":"Person A",
+                    "CreateOn":"2024-01-09T11:59:59",
+                    "LeaveType":"Hospitalisation Leave",
+                    "McNo":"removed",
+                    "UnfitFrom":"2024-01-04T00:00:00",
+                    "UnfitTo":"2024-01-14T23:59:59"
+                }],
+                "GeneralCondition":null
+            },
+            "EventInformation":{
+                "CaseNumber":"removed",
+                "ConsultationEndDateTime":"2024-01-09T16:41:51",
+                "ConsultationStartDateTime":"2024-01-04T16:02:54",
+                "DischargeDateTime":"2024-01-04T00:00:00",
+                "PrincipalDiagnosis":{
+                    "Code":"283371005",
+                    "Description":"Forearm Laceration"
+                },
+                "PrincipalDisposition":{
+                    "Code":"3",
+                    "Description":"Admit"
+                },
+                "PrincipalDoctor":{
+                    "Mcr":"%Mcr%",
+                    "Name":"Person X"
+                },
+                "ReferralSource":"Walk In<div/><div/><div/><div/><div/><div/>",
+                "RegistrationDateTime":"2024-01-04T15:51:00",
+                "Trauma":"Yes",
+                "TriageEndDateTime":"2024-01-04T16:11:00",
+                "TriageStartDateTime":"2024-01-04T16:08:58"
+            },
+            "InfusionOrders":[{
+                "Amount":"1.5",
+                "AmountUnit":"L/24 hours",
+                "AmountUnidId":"10153",
+                "FluidId":"6815-30-60X-4",
+                "FluidName":"Compound Sodium Lactate Infusion",
+                "Frequency":"Continuous",
+                "FrequencyId":"Continuous",
+                "InfusionLog":[{
+                    "PerformBy":{
+                        "Name":"Person B"
+                    },
+                    "PerformDateTime":"2024-01-04T18:59:00"
+                }],
+                "OrderBy":{
+                    "MCR":"%Mcr%",
+                    "Name":"Person C"
+                },
+                "OrderDateTime":"2024-01-04T18:47:17",
+                "OrderStatus":"New Bag",
+                "Rate":"62.5",
+                "RateUnit":"ml/hr",
+                "RateUnitId":"41"
+            }],
+            "Patient":{
+                "DOB":"%DOB%",
+                "Gender":"%Gender%",
+                "MRNNumber":"MRNNumber%",
+                "Name":"%Name%",
+                "Race":"%Race%"
+            },
+            "PrescriptionOrders":[{
+                "Duration":"84",
+                "DurationUnit":"DAYS",
+                "Frequency":"Every morning",
+                "FrequencyId":"Every morning",
+                "MedicationId":"0000-07-90X-8",
+                "MedicationName":"Lithium Carbonate CR Tablet",
+                "OrderBy":{
+                    "MCR":"%Mcr%",
+                    "Name":"Person X"
+                },
+                "OrderDateTime":"2024-01-09T11:57:20",
+                "OrderStatus":"New",
+                "Remarks":"Take 200 mg every morning for 84 days.",
+                "Route":"Oral"
+            },
+            {
+                "Duration":"84",
+                "DurationUnit":"DAYS",
+                "Frequency":"Every night",
+                "FrequencyId":"Every night",
+                "MedicationId":"0000-07-90X-8",
+                "MedicationName":"Lithium Carbonate CR Tablet",
+                "OrderBy":{
+                    "MCR":"%Mcr%",
+                    "Name":"Person X"
+                },
+                "OrderDateTime":"2024-01-09T11:57:20",
+                "OrderStatus":"New",
+                "Remarks":"Take 400 mg every night for 84 days.",
+                "Route":"Oral"
+            },
+            {
+                "Duration":"84",
+                "DurationUnit":"DAYS",
+                "Frequency":"Every night",
+                "FrequencyId":"Every night",
+                "MedicationId":"0000-09-34X-2",
+                "MedicationName":"Olanzapine Orodispersible Tablet",
+                "OrderBy":{
+                    "MCR":"%Mcr%",
+                    "Name":"Person X"
+                },
+                "OrderDateTime":"2024-01-09T11:57:20",
+                "OrderStatus":"New",
+                "Remarks":"Take 10 mg every night for 84 days.",
+                "Route":"Oral"
+            },
+            {
+                "Duration":"84",
+                "DurationUnit":"DAYS",
+                "Frequency":"Every morning",
+                "FrequencyId":"Every morning",
+                "MedicationId":"0000-11-08X-8",
+                "MedicationName":"Sertraline Tablet",
+                "OrderBy":{
+                    "MCR":"%Mcr%",
+                    "Name":"Person X"
+                },
+                "OrderDateTime":"2024-01-09T11:57:20",
+                "OrderStatus":"New",
+                "Remarks":"Take 200 mg every morning for 84 days.",
+                "Route":"Oral"
+            },
+            {
+                "Duration":"5",
+                "DurationUnit":"DAYS",
+                "Frequency":"Every 8 hours (scheduled)",
+                "FrequencyId":"Every 8 hours (scheduled)",
+                "MedicationId":"0000-14-27X-3",
+                "MedicationName":"Amoxicillin 500mg, Clavulanic Acid 125mg (Co-amoxiclav 625mg) Tablet",
+                "OrderBy":{
+                    "MCR":"%Mcr%",
+                    "Name":"Person X"
+                },
+                "OrderDateTime":"2024-01-09T11:57:20",
+                "OrderStatus":"New",
+                "Remarks":"Take 1 tablet every 8 hours for 5 days.",
+                "Route":"Oral"
+            },
+            {
+                "Duration":"14",
+                "DurationUnit":"DAYS",
+                "Frequency":"4 times a day PRN",
+                "FrequencyId":"4 times a day PRN",
+                "MedicationId":"0000-09-68X-1",
+                "MedicationName":"Paracetamol Tablet",
+                "OrderBy":{
+                    "MCR":"%Mcr%",
+                    "Name":"Person X"
+                },
+                "OrderDateTime":"2024-01-09T11:57:20",
+                "OrderStatus":"New",
+                "Remarks":"Take 500 mg 4 times a day when required for pain or fever for up to 14 days.",
+                "Route":"Oral"
+            },
+            {
+                "Duration":"7",
+                "DurationUnit":"DAYS",
+                "Frequency":"3 times a day PRN",
+                "FrequencyId":"3 times a day PRN",
+                "MedicationId":"0002-20-10X-8",
+                "MedicationName":"traMADol HCl Tablet",
+                "OrderBy":{
+                    "MCR":"%Mcr%",
+                    "Name":"Person X"
+                },
+                "OrderDateTime":"2024-01-09T11:57:20",
+                "OrderStatus":"New",
+                "Remarks":"Take 25 mg 3 times a day when required for pain for up to 7 days.",
+                "Route":"Oral"
+            },
+            {
+                "Duration":"28",
+                "DurationUnit":"DAYS",
+                "Frequency":"3 times a day",
+                "FrequencyId":"3 times a day",
+                "MedicationId":"0000-07-14X-8",
+                "MedicationName":"hydrOXYzine HCl Tablet",
+                "OrderBy":{
+                    "MCR":"%Mcr%",
+                    "Name":"Person X"
+                },
+                "OrderDateTime":"2024-01-09T11:57:20",
+                "OrderStatus":"New",
+                "Remarks":"Take 25 mg 3 times a day for 28 days.",
+                "Route":"Oral"
+            }],
+            "Triage":{
+                "HistoryFrom":["Patient"],
+                "Pregnancy":"Unknown"
+            },
+            "VitalSigns":[{
+                "BloodPressure":"123/82 (mmHg)",
+                "PainScore":"0",
+                "PulseRate":"79 (/Min)",
+                "RespiratoryRate":"20 (/Min)",
+                "Route":"Tympanic",
+                "SAO2":"97%",
+                "TakenDateTime":"2024-01-04T16:11:00",
+                "Temperature":"37.6 (\u00c2\u00b0C)"
+            }]
+        }
+    },
+    "data_extract_end":"2024-01-09",
+    "data_extract_start":"2024-01-09",
+    "documentExtn":"JHS100199061620EDS^EDNotes",
+    "documentRoot":"2.16.840.1.113883.2.31.1.2.1.2.13.7.1",
+    "eventExtn":"RsSwwqpXWQMRDIns+Mi6lA==",
+    "eventRoot":"2.16.840.1.113883.2.31.1.2.1.2.11.8",
+    "institution":"0500000",
+    "patientExtn":"1XqDT6/r+7TtIqu+iB/gqw==",
+    "patientRoot":"2.16.840.1.113883.2.31.1.2.1.2.13.1",
+    "sourceApplication":"JHS-EPIC",
+    "versionNumber":"11",
+    "xml_filename":"ED_20240110_CONTENT_1.xml"
+}
