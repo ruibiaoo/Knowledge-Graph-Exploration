@@ -1,0 +1,79 @@
+Patient P54819, S1234564L, K9876539H, Maria Gonzales De Silva, 62 yo, Filipino Female, lives with her husband in Hougang, Singapore.
+**Past Medical History**
+1. Chronic Gastritis diagnosed in 2019 following investigation for persistent epigastric discomfort
+ - Medication ID: M803 – Omeprazole 20mg
+ - Start Date: 05/06/2019
+ - End Date: 05/06/2023
+ - Duration: 1461 days
+ - Medication ID: M804 – Esomeprazole 40mg
+ - Start Date: 06/06/2023
+ - End Date: 06/06/2027
+ - Duration: 1461 days
+2. Rheumatoid Arthritis (RA) diagnosed in 2015 after presenting with persistent joint pain and swelling affecting the hands and wrists
+ - Medication ID: M801 – Methotrexate 10mg
+ - Start Date: 18/04/2015
+ - End Date: 12/02/2021
+ - Duration: 2126 days
+ - Medication ID: M802 – Leflunomide 20mg
+ - Start Date: 13/02/2021
+ - End Date: 13/02/2026
+ - Duration: 1826 days
+3. Osteoporosis diagnosed in 2018 after bone density testing
+ - Medication ID: M805 – Alendronate 70mg
+ - Start Date: 10/10/2018
+ - End Date: 10/10/2026
+ - Duration: 2921 days
+
+**Current Admission**
+1. Persistent upper abdominal discomfort for the past 5 days
+2. Nausea and reduced appetite
+3. Occasional vomiting after meals
+4. Generalized weakness and fatigue
+5. Mild dizziness when standing
+6. No history of gastrointestinal bleeding or recent trauma
+
+**On Examination**
+**HR**: 96, **SpO₂**: 98% (room air), **RR**: 18, **BP**: 118/74
+**Alertness**: Alert and oriented
+**Heart**: S1, S2 normal, no murmurs detected
+**Lungs**: Clear breath sounds bilaterally
+**Abdomen**: Mild epigastric tenderness on palpation without guarding or rebound tenderness
+**Neurological**: No focal neurological deficits observed
+
+**Initial Investigations**
+**Urea**: 17.8, **Na**: 136, **K**: 4.2, **Cr**: 104
+**Hb**: 11.7, **TW**: 8.9, **Plt**: 215
+**Blood Glucose**: 5.2 mmol/L
+**Liver Function Tests**: Within normal limits
+**Abdominal Ultrasound**: No gallstones or biliary obstruction detected
+
+**Issues/Progress**
+1. **Acute Gastritis Exacerbation**
+ - Patient presenting with epigastric discomfort and nausea
+ - Symptoms likely related to gastric inflammation
+ - Proton pump inhibitor therapy continued
+
+2. **Poor Oral Intake**
+ - Reduced appetite and intermittent vomiting noted
+ - Intravenous fluids initiated for hydration
+
+3. **Fatigue and Weakness**
+ - Likely secondary to reduced nutritional intake
+ - Monitoring of electrolyte levels and nutritional status
+
+4. **Chronic Rheumatoid Arthritis**
+ - No acute joint swelling observed during admission
+ - Continue disease-modifying therapy
+
+**Goals of Care**
+- Relieve gastrointestinal symptoms and restore adequate nutrition
+- Prevent complications related to chronic inflammatory disease
+- Maintain functional independence following recovery
+
+**Care Plan:**
+- Continue proton pump inhibitor therapy
+- Provide intravenous hydration until oral intake improves
+- Gradually reintroduce soft diet as tolerated
+- Continue rheumatoid arthritis medication regimen
+- Arrange gastroenterology follow-up after discharge
+- Provide patient education regarding dietary modification and medication adherence

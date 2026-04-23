@@ -1,0 +1,83 @@
+Patient P71265, S1234563L, K9876540H, Rajesh Kumar Nair, 66 yo, Indian Male, lives with his wife and adult son in Jurong West, Singapore.
+**Past Medical History**
+1. Atrial Fibrillation (AF) diagnosed in 2019 after an episode of palpitations and irregular pulse detected during a routine clinic visit
+ - Medication ID: M701 – Warfarin 3mg
+ - Start Date: 14/02/2019
+ - End Date: 10/10/2022
+ - Duration: 1334 days
+ - Medication ID: M702 – Apixaban 5mg
+ - Start Date: 11/10/2022
+ - End Date: 11/10/2026
+ - Duration: 1461 days
+2. Chronic Kidney Disease (CKD) Stage 3 diagnosed in 2020 following investigation for persistently elevated creatinine levels
+ - Medication ID: M703 – Losartan 50mg
+ - Start Date: 15/03/2020
+ - End Date: 15/03/2026
+ - Duration: 2191 days
+3. Hyperlipidemia diagnosed in 2016 during routine cardiovascular risk screening
+ - Medication ID: M704 – Rosuvastatin 10mg
+ - Start Date: 02/08/2016
+ - End Date: 02/08/2026
+ - Duration: 3653 days
+4. Gastroesophageal Reflux Disease (GERD) diagnosed in 2021 following complaints of persistent epigastric discomfort and acid reflux symptoms
+ - Medication ID: M705 – Omeprazole 20mg
+ - Start Date: 12/05/2021
+ - End Date: 12/05/2024
+ - Duration: 1096 days
+
+**Current Admission**
+1. Episodes of dizziness and lightheadedness for the past three days
+2. Intermittent palpitations associated with mild chest discomfort
+3. Generalized fatigue and reduced exercise tolerance
+4. Mild nausea and reduced appetite for several days
+5. No syncope, head trauma, or recent infection reported
+6. No shortness of breath or hemoptysis
+
+**On Examination**
+**HR**: 118 (irregular), **SpO₂**: 97% (room air), **RR**: 18, **BP**: 122/76
+**Alertness**: Alert and oriented
+**Heart**: Irregularly irregular rhythm consistent with atrial fibrillation, no murmurs detected
+**Lungs**: Clear breath sounds bilaterally with no wheezing or crackles
+**Abdomen**: Soft and non-tender with no palpable masses
+**Neurological**: No focal neurological deficits; normal motor strength in all extremities
+
+**Initial Investigations**
+**Urea**: 24.1, **Na**: 137, **K**: 4.3, **Cr**: 146
+**Hb**: 13.2, **TW**: 8.4, **Plt**: 215
+**Chest X-ray**: No acute cardiopulmonary abnormalities.
+**CRP**: 6 mg/L
+**ECG**: Atrial fibrillation with rapid ventricular response.
+
+**Issues/Progress**
+1. **Atrial Fibrillation with Rapid Ventricular Response**
+ - Patient presenting with palpitations and irregular heart rhythm
+ - Heart rate elevated on admission ECG
+ - Rate-control medication initiated
+ - Anticoagulation therapy reviewed to reduce stroke risk
+
+2. **Chronic Kidney Disease Monitoring**
+ - Creatinine mildly elevated compared with previous baseline
+ - Renal function monitored during admission
+ - Avoidance of nephrotoxic medications recommended
+
+3. **Fatigue and Reduced Functional Capacity**
+ - Likely secondary to arrhythmia and chronic disease burden
+ - Gradual mobilization encouraged once symptoms improve
+
+4. **Gastroesophageal Reflux Symptoms**
+ - Patient reported intermittent acid reflux during hospitalization
+ - Continued proton pump inhibitor therapy
+
+**Goals of Care**
+- Stabilize cardiac rhythm and control heart rate
+- Prevent thromboembolic complications associated with atrial fibrillation
+- Maintain renal function and metabolic stability
+- Support gradual return to baseline functional capacity
+
+**Care Plan:**
+- Initiate rate-control therapy for atrial fibrillation
+- Continue anticoagulation therapy with Apixaban
+- Monitor renal function and electrolyte levels
+- Encourage gradual physical activity and hydration
+- Arrange cardiology outpatient follow-up after discharge
+- Provide education regarding medication adherence and symptom monitoring

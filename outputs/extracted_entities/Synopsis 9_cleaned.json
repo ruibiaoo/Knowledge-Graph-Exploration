@@ -1,0 +1,44 @@
+{
+  "patient_id": "P63918",
+  "patient_name": "Tan Ah Beng",
+  "patient_age": "71",
+  "patient_gender": "Male",
+  "patient_ethnicity": "Chinese",
+  "medications": [
+    {
+      "medication_id": "M228",
+      "medication_name": "Metformin",
+      "start_date": "18/04/2022",
+      "end_date": "18/04/2024",
+      "condition": "Type 2 Diabetes Mellitus"
+    },
+    {
+      "medication_id": "M409",
+      "medication_name": "Sitagliptin",
+      "start_date": "19/04/2024",
+      "end_date": "19/04/2025",
+      "condition": "Type 2 Diabetes Mellitus"
+    },
+    {
+      "medication_id": "M1",
+      "medication_name": "Pioglitazone",
+      "start_date": "19/04/2025",
+      "end_date": "19/04/2026",
+      "condition": "Type 2 Diabetes Mellitus"
+    },
+    {
+      "medication_id": "M702",
+      "medication_name": "Losartan",
+      "start_date": "08/03/2026",
+      "end_date": "08/06/2026",
+      "condition": "Chronic Kidney Disease"
+    },
+    {
+      "medication_id": "M622",
+      "medication_name": "Atorvastatin",
+      "start_date": "12/01/2025",
+      "end_date": "12/07/2026",
+      "condition": "Hyperlipidemia"
+    }
+  ]
+}

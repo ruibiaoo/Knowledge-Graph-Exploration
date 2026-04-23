@@ -1,0 +1,75 @@
+Patient P90216, S1234569L, K9876534H, Lee Hock Seng, 69 yo, Chinese Male, lives with his wife and 4 children in Serangoon, Singapore.
+**Past Medical History**
+1. Transient Ischemic Attack (TIA) diagnosed in 2023 after a brief episode of slurred speech that resolved within several hours.
+ - Medication ID: M953 – Clopidogrel 75mg
+ - Start Date: 14/11/2023
+ - End Date: 14/11/2026
+ - Duration: 1096 days
+2. Atrial Fibrillation (AF) diagnosed in 2021 after evaluation for intermittent palpitations and irregular heart rhythm detected during an outpatient clinic visit
+ - Medication ID: M951 - Warfarin 3mg
+ - Start Date: 15/04/2021
+ - End Date: 15/04/2026
+ - Duration: 1825 days
+3. Hyperlipidemia diagnosed in 2019 during cardiovascular risk screening
+ - Medication ID: M2 – Atorvastatin 80mg
+ - Start Date: 12/01/2019
+ - End Date: 12/01/2026
+ - Duration: 2555 days
+
+**Current Admission**
+1. Sudden weakness affecting the left arm and leg earlier in the morning
+2. Difficulty speaking clearly noted by family members
+3. Slight drooping of the left side of the face
+4. Difficulty maintaining balance while walking
+5. Mild headache reported shortly before arrival at hospital
+6. No recent trauma or loss of consciousness reported
+
+**On Examination**
+**HR**: 104, **SpO₂**: 97% (room air), **RR**: 18, **BP**: 168/94
+**Alertness**: : Patient alert but speech slightly slurred
+**Heart**: Irregular rhythm consistent with atrial fibrillation
+**Lungs**: Breath sounds clear bilaterally
+**Abdomen**: Soft and non-tender with no palpable masses
+**Neurological Examination**: Mild left facial droop, reduced strength in left upper and lower limbs, slightly impaired coordination in left hand movements, sensation intact bilaterally
+
+**Initial Investigations**
+**Urea**: 19.2, **Na**: 140, **K**: 4.0, **Cr**: 100
+**Hb**: 12.1, **TW**: 8.2, **Plt**: 150
+**CRP**: 6 mg/L
+**Blood Glucose**: 7.2 mmol/L
+**CT Brain**: Small acute ischemic infarct detected in the right cerebral hemisphere
+**ECG**: Atrial fibrillation with irregular ventricular response
+
+**Issues/Progress**
+1. **Acute Ischemic Stroke**
+ - Sudden onset of neurological deficits affecting the left side
+ - Brain imaging confirms small ischemic infarction
+ - Neurology team consulted for stroke management
+
+2. **Underlying Atrial Fibrillation**
+ - Irregular heart rhythm increases risk of thromboembolic events
+
+3. **Impaired Motor Function**
+ - Weakness in left arm and leg affecting mobility
+
+4. **Secondary Stroke Prevention**
+ - Continue antiplatelet and lipid-lowering therapy
+ - Monitor cardiovascular risk factors
+
+**Goals of Care**
+- Stabilize neurological status
+- Prevent further stroke events
+- Improve motor recovery through rehabilitation
+- Maintain cardiovascular risk control
+
+**Patient Demised on 13/3/2026 at 01:59 h**
+**COD:**
+1. **Acute Ischemic Stroke involving the right cerebral hemisphere**
+2. **Atrial Fibrillation**
+3. **History of Transient Ischemic Attack**
+4. **Hyperlipidemia (HTN)**
+
+**Care Plan:**
+- Initiate physiotherapy and rehabilitation exercises
+- Monitor neurological status closely
+- Arrange follow-up with neurology and stroke clinic

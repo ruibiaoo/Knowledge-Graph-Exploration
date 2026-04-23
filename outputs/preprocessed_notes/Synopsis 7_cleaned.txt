@@ -1,0 +1,78 @@
+Patient P78439, S1234566L, K9876537H, Siti Nur Aisyah Binte Rahman, 63 yo, Malay Female, lives with her husband and youngest daughter in Jurong West, Singapore.
+**Past Medical History**
+1. Osteoporosis diagnosed in 2022 after bone mineral density screening revealed reduced bone density
+ - Medication ID: M914 – Alendronate 70mg weekly
+ - Start Date: 11/10/2022
+ - End Date: 11/10/2026
+ - Duration: 1461 days
+2. Gastroesophageal Reflux Disease (GERD) diagnosed in 2019 following recurrent episodes of heartburn and upper abdominal discomfort
+ - Medication ID: M912 – Omeprazole 20mg
+ - Start Date: 08/03/2019
+ - End Date: 08/03/2026
+ - Duration: 2555 days
+ - Medication ID: M913 – Esomeprazole 20mg
+ - Start Date: 09/03/2026
+ - End Date: 09/04/2026
+ - Duration: 30 days
+3. Rheumatoid Arthritis (RA) diagnosed in 2026 after evaluation for persistent joint swelling and morning stiffness affecting the small joints of both hands
+ - Medication ID: M910 – Methotrexate 10mg
+ - Start Date: 12/02/2026
+ - End Date: 12/03/2026
+ - Duration: 30 days
+
+**Current Admission**
+1. Increasing abdominal discomfort over the past five days, particularly after meals
+2. Persistent nausea with occasional episodes of vomiting
+3. Reduced appetite and early satiety
+4. Mild generalized fatigue and weakness
+5. Intermittent burning sensation in the upper abdomen and chest region
+6. No recent trauma, gastrointestinal bleeding, or significant weight loss reported
+
+**On Examination**
+**HR**: 96, **SpO₂**: 97% (room air), **RR**: 18, **BP**: 138/80
+**Alertness**: : Alert and oriented to time, place, and person. Appears mildly uncomfortable but able to communicate clearly
+**Heart**: S1, S2 normal with regular rhythm, no murmurs detected
+**Lungs**: Clear breath sounds bilaterally without wheezing or crackles
+**Abdomen**: Mild epigastric tenderness noted on palpation with no guarding or rebound tenderness
+**Extremities**: Mild joint deformities of both hands consistent with chronic rheumatoid arthritis
+**Neurological**: No focal neurological deficits observed
+
+**Initial Investigations**
+**Urea**: 18.5, **Na**: 138, **K**: 4.3, **Cr**: 98
+**Hb**: 11.7, **TW**: 7.9, **Plt**: 220
+**CRP**: 12 mg/L
+**Blood Glucose**: 6.4 mmol/L
+**Abdominal Ultrasound**: No gallstones or biliary obstruction detected
+**ECG**: ECG: Normal sinus rhythm without acute abnormalities
+
+**Issues/Progress**
+1. **Exacerbation of Gastroesophageal Reflux Disease**
+ - Patient reports worsening epigastric burning sensation and post-meal discomfort
+ - Symptoms may be related to dietary triggers and medication effects
+ - Proton pump inhibitor therapy continued with dietary advice provided
+
+2. **Reduced Oral Intake**
+ - Monitoring of hydration status and nutritional intake initiated
+
+3. **Chronic Rheumatoid Arthritis**
+ - Patient continues to report intermittent joint stiffness
+ - No evidence of acute inflammatory flare during current admission
+ - Continue disease-modifying therapy with monitoring for medication tolerance
+
+4. **Generalized Fatigue**
+ - Likely multifactorial due to reduced oral intake and chronic inflammatory disease
+ - Gradual activity encouraged with adequate rest
+
+**Goals of Care**
+- Relieve gastrointestinal discomfort and nausea
+- Maintain adequate nutritional intake and hydration
+- Continue long-term management of rheumatoid arthritis and osteoporosis
+- Prevent complications related to chronic musculoskeletal disease
+
+**Care Plan:**
+- Continue proton pump inhibitor therapy.
+- Provide antiemetic medication for nausea control.
+- Monitor oral intake and hydration status.
+- Continue disease-modifying therapy for rheumatoid arthritis.
+- Encourage small frequent meals and avoidance of reflux-triggering foods.
+- Arrange outpatient gastroenterology and rheumatology follow-up after discharge.
