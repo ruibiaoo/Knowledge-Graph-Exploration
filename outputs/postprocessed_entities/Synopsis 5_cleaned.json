@@ -1,0 +1,46 @@
+[
+  {
+    "patient_id": "P54819",
+    "patient_name": "Maria Gonzales De Silva",
+    "patient_age": 62,
+    "patient_gender": "Female",
+    "patient_ethnicity": "Filipino",
+    "medications": [
+      {
+        "medication_id": "M803",
+        "medication_name": "Omeprazole",
+        "condition": "Chronic Gastritis",
+        "start_date": "05/06/2019",
+        "end_date": "05/06/2023"
+      },
+      {
+        "medication_id": "M804",
+        "medication_name": "Esomeprazole",
+        "condition": "Chronic Gastritis",
+        "start_date": "06/06/2023",
+        "end_date": "06/06/2027"
+      },
+      {
+        "medication_id": "M801",
+        "medication_name": "Methotrexate",
+        "condition": "Rheumatoid Arthritis",
+        "start_date": "18/04/2015",
+        "end_date": "12/02/2021"
+      },
+      {
+        "medication_id": "M802",
+        "medication_name": "Leflunomide",
+        "condition": "Rheumatoid Arthritis",
+        "start_date": "13/02/2021",
+        "end_date": "13/02/2026"
+      },
+      {
+        "medication_id": "M805",
+        "medication_name": "Alendronate",
+        "condition": "Osteoporosis",
+        "start_date": "10/10/2018",
+        "end_date": "10/10/2026"
+      }
+    ]
+  }
+]

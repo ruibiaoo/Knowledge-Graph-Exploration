@@ -1,0 +1,46 @@
+[
+  {
+    "patient_id": "P71265",
+    "patient_name": "Rajesh Kumar Nair",
+    "patient_age": 65,
+    "patient_gender": "Male",
+    "patient_ethnicity": "Indian",
+    "medications": [
+      {
+        "medication_id": "M701",
+        "medication_name": "Warfarin",
+        "condition": "Atrial Fibrillation (AF)",
+        "start_date": "14/02/2019",
+        "end_date": "10/10/2022"
+      },
+      {
+        "medication_id": "M702",
+        "medication_name": "Apixaban",
+        "condition": "Atrial Fibrillation (AF)",
+        "start_date": "11/10/2022",
+        "end_date": "11/10/2026"
+      },
+      {
+        "medication_id": "M703",
+        "medication_name": "Losartan",
+        "condition": "Chronic Kidney Disease (CKD)",
+        "start_date": "15/03/2020",
+        "end_date": "15/03/2026"
+      },
+      {
+        "medication_id": "M704",
+        "medication_name": "Rosuvastatin",
+        "condition": "Hyperlipidemia",
+        "start_date": "02/08/2016",
+        "end_date": "02/08/2026"
+      },
+      {
+        "medication_id": "M705",
+        "medication_name": "Omeprazole",
+        "condition": "Gastroesophageal Reflux Disease (GERD)",
+        "start_date": "12/05/2021",
+        "end_date": "12/05/2024"
+      }
+    ]
+  }
+]

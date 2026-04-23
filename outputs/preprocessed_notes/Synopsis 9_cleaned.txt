@@ -1,0 +1,83 @@
+Patient P63918, S1234568L, K9876535H, Tan Ah Beng, 71 yo, Chinese Male, lives with his wife in Bedok, Singapore. He has no children.
+**Past Medical History**
+1. Type 2 Diabetes Mellitus (T2DM) diagnosed in 2022 during routine health screening when elevated fasting blood glucose levels were detected.
+ - Medication ID: M228 - Metformin 850mg
+ - Start Date: 18/04/2022
+ - End Date: 18/04/2024
+ - Duration: 730 days
+ - Medication ID: M409 - Sitagliptin 100mg
+ - Start Date: 19/04/2024
+ - End Date: 19/04/2025
+ - Duration: 365 days
+ - Medication ID: M1 - Pioglitazone 30mg
+ - Start Date: 19/04/2025
+ - End Date: 19/04/2026
+ - Duration: 365 days
+2. Chronic Kidney Disease (CKD) Stage 3 diagnosed in 2026 following abnormal renal function tests detected during routine laboratory screening.
+ - Medication ID: M702 – Losartan 50mg
+ - Start Date: 08/03/2026
+ - End Date: 08/06/2026
+ - Duration: 90 days
+3. Hyperlipidemia diagnosed in 2025 during cardiovascular risk screening.
+ - Medication ID: M622 – Atorvastatin 20mg
+ - Start Date: 12/01/2025
+ - End Date: 12/07/2026
+ - Duration: 545 days
+
+**Current Admission**
+1. Increasing ankle swelling over the past five days
+2. Reduced appetite for the past several days
+3. Mild dizziness when standing from a seated position
+4. Decreased urine output noted over the past two days
+5. Mild shortness of breath when walking longer distances
+6. No chest pain, fever, or recent trauma reported
+
+**On Examination**
+**HR**: 90, **SpO₂**: 97% (room air), **RR**: 18, **BP**: 131/75
+**Alertness**: : Patient is alert and oriented to time, place, and person. Speech is coherent and appropriate
+**Heart**: S1, S2 normal with regular rhythm, no murmurs detected
+**Lungs**: Breath sounds clear bilaterally without wheezing or crackles
+**Abdomen**: Soft and non-tender with no palpable masses. No hepatosplenomegaly detected
+**Extremities**: Mild bilateral ankle edema observed. Peripheral pulses present and symmetrical
+**Neurological**: Motor and sensory functions intact with no focal neurological deficits
+
+**Initial Investigations**
+**Urea**: 29.1, **Na**: 134, **K**: 4.8, **Cr**: 205
+**Hb**: 11.0, **TW**: 7.6, **Plt**: 202
+**CRP**: 12 mg/L
+**Blood Glucose**: 12.7 mmol/L
+**Urinalysis**: Proteinuria detected
+**Chest X-ray**: Mild cardiomegaly without evidence of pulmonary infection
+
+**Issues/Progress**
+1. **Worsening Chronic Kidney Disease**
+ - Laboratory tests show increased creatinine compared to previous baseline values
+ - Monitoring renal function closely during hospitalization
+
+2. **Peripheral Fluid Retention**
+ - Bilateral ankle swelling likely related to renal impairment and fluid imbalance
+
+3. **Elevated Blood Glucose**
+ - Hyperglycemia noted during admission testing
+ - Continue oral diabetic medications with glucose monitoring
+
+4. **Reduced Urinary Output**
+ - Patient reports decreased urine production
+ - Fluid balance monitoring initiated
+
+**Goals of Care**
+- Stabilize renal function and prevent further deterioration
+- Improve control of blood glucose levels
+- Reduce fluid retention and swelling
+- Ensure patient remains clinically stable prior to discharge
+
+**Care Plan**
+- Referral to social services for home-based care coordination
+- Provide dietary advice including salt restriction
+- Continue oral diabetic medications and monitor glucose levels
+
+**Patient Demised on 12/3/2026 at 08:17 h**
+**COD:**
+1. **Hyperlipidemia**
+2. **Chronic Kidney Disease (CKD) Stage 3**
+3. **Type 2 Diabetes Mellitus (T2DM)**

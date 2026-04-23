@@ -1,0 +1,58 @@
+{
+  "patient_id": "P84271",
+  "patient_name": "Abdul Rahman Bin Salleh",
+  "patient_age": "72",
+  "patient_gender": "Male",
+  "patient_ethnicity": "Malay",
+  "medications": [
+    {
+      "medication_id": "M228",
+      "medication_name": "Metformin",
+      "start_date": "21/06/2019",
+      "end_date": "10/03/2023",
+      "condition": "Type 2 Diabetes Mellitus (T2DM)"
+    },
+    {
+      "medication_id": "M409",
+      "medication_name": "Sitagliptin",
+      "start_date": "11/03/2023",
+      "end_date": "11/03/2026",
+      "condition": "Type 2 Diabetes Mellitus (T2DM)"
+    },
+    {
+      "medication_id": "M315",
+      "medication_name": "Lisinopril",
+      "start_date": "14/11/2024",
+      "end_date": "14/11/2025",
+      "condition": "Hypertension (HTN)"
+    },
+    {
+      "medication_id": "M516",
+      "medication_name": "Losartan",
+      "start_date": "15/11/2025",
+      "end_date": "15/02/2026",
+      "condition": "Hypertension (HTN)"
+    },
+    {
+      "medication_id": "M791",
+      "medication_name": "Enalapril",
+      "start_date": "16/02/2026",
+      "end_date": "16/08/2026",
+      "condition": "Hypertension (HTN)"
+    },
+    {
+      "medication_id": "M888",
+      "medication_name": "Losartan",
+      "start_date": "05/05/2022",
+      "end_date": "05/05/2026",
+      "condition": "Chronic Kidney Disease (CKD) Stage 3"
+    },
+    {
+      "medication_id": "M622",
+      "medication_name": "Atorvastatin",
+      "start_date": "18/08/2017",
+      "end_date": "18/08/2027",
+      "condition": "Hyperlipidemia"
+    }
+  ]
+}
