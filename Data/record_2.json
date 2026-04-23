@@ -1,0 +1,211 @@
+{"ES_created_dtaetime":"2024-04-02",
+    "content":{
+        "contentEDSummary":{
+            "Consultation":{
+                "ConsultationNotes":[{
+                    "CreateBy":{
+                        "Mcr":"%Mcr%",
+                        "Name":"Person X"
+                    },
+                    "CreateDateTime":"2024-03-24T06:16:09.567",
+                    "Notes":"<br/>Additional HPI : bb mother <br/><br/>Autism<br/><br/>Fever 3days <br/>tmax - 40<br/>Last paracetamol - triage <br/>Last ibuprofen - 7pm <br/><br/>Vomited once yesterday <br/>NB, NB <br/><br/>Activity - usual<br/>appetite normal<br/>drinking well<br/>PU- as usual<br/>BO - as usual<br/><br/>no sick contacts<br/>no recent travel<br/>No contact with Covid19 case/suspect<br/>Physical Exam 1 : Alert, active, <br/> CRT - &lt;2s<br/>Hydration good<br/>Skin - normal<br/><br/>Both ears \u00e2\u0080\u0093 normal<br/>Throat & oral cavity -normal<br/>Nose \u00e2\u0080\u0093 normal<br/><br/>Lungs - air entry B/L equal; no wheezel no crepts<br/>Heart - s1s2+<br/>Abdomen - soft, non-tender, nomass/organomegaly; BS+<br/>CNS - Neck supple, moving all 4 limbs well <br/><br/> IMP _ Fever ? cause <br/><br/>Urilux - no UTI <br/><br/>FBC - raised TW <br/><br/>CSR - hilar infiltrates <br/><br/>Discharge with appropriate meds.<br/>Danger signs explained to caregiver/s - cinluding Temp of 41C and above, fver >3 days, noisy/fast breathing, poor feeding, decreased urine output, decreased activity or any new/worsening symptoms. They understand and will return if any of these noted.<br/>To return if fever persists beyond 3 days after starting antibiotics. <br/>Caregiver/s agree with plan of management and are confident of care at home.<br/>All questions answered.<br/><br/>POCT RESULTS : <br/> URINE DIPSTICK (24-Mar-2024 01:56)<br/>Specimen Type : Mid-Stream<br/>SG : 1.020<br/>pH : 5<br/>LEU (Ley/uL) : Neg<br/>NIT : Neg<br/>PRO (g/L) : 0.25 <br/>GLU (mmol/L) : Norm<br/>KET (mmol/L) : 0.5<br/>UBG (umol/L) : Norm<br/>BIL (umol/L) : Neg<br/>ERY (Ery/uL) : 10<br/><br/><div/><div/><div/><div/><div/><div/>"
+                }],
+                "ConsultationPac":"P2."
+            },
+            "Disposition":{
+                "DischargeAdvice":["<br/><br/>Provider - PFE given : Others - Please write in Other PFE<br/>Provider - Other PFE given : Return advice given<div/><div/><div/><div/><div/><div/>"],
+                "GeneralCondition":"Stable"
+            },
+            "EventInformation":{
+                "AccidentType":{
+                    "Description":"<div/><div/><div/><div/><div/><div/>"
+                },
+                "CaseNumber":"removed",
+                "CauseOfInjury":{
+                    "Description":"<div/><div/><div/><div/><div/><div/>"
+                },
+                "ConsultationEndDateTime":"2024-03-24T03:52:00",
+                "ConsultationStartDateTime":"2024-03-24T02:29:00",
+                "DischargeDateTime":"2024-03-24T06:16:00",
+                "Emergency":"Emergency",
+                "EndCaseDateTime":"2024-03-24T06:16:00",
+                "PrincipalDiagnosis":{
+                    "Code":"50417007",
+                    "Description":"LTRI - Lower respiratory tract infection"
+                },
+                "PrincipalDisposition":{
+                    "Description":"Treated and Discharged"
+                },
+                "PrincipalDoctor":{
+                    "Mcr":"%Mcr%",
+                    "Name":"Person X"
+                },
+                "ReferralSource":"Home<div/><div/><div/><div/><div/><div/>",
+                "RegistrationDateTime":"2024-03-24T00:47:44",
+                "SecondaryDeposition":[{
+                    "Description":"<div/><div/><div/><div/><div/><div/>",
+                    "ReferralLocation":{
+                        "Description":"<div/><div/><div/><div/><div/><div/>"
+                    }
+                }],
+                "Trauma":"Non-Trauma",
+                "TriageStartDateTime":"2024-03-24T00:48:00"
+            },
+            "MedicationOrders":[{
+                "AdmisterLog":[{
+                    "AdminsterBy":{
+                        "Name":"Person Y"
+                    },
+                    "AdminsterDateTime":"2024-03-24T01:04:00"
+                }],
+                "Dose":"504",
+                "DoseUnit":"mg",
+                "Frequency":"Once",
+                "MedicationId":"9000006493500160",
+                "MedicationName":"Paracetamol Suspension <br/>PO 504 mg, Once<br/>Dose by 15mg/kg with rounding.<div/><div/><div/><div/><div/><div/>",
+                "OrderBy":{
+                    "Name":"Person Z"
+                },
+                "OrderDateTime":"2024-03-24T00:58:39",
+                "OrderStatus":"Order",
+                "Prn":"No",
+                "Remarks":"<div/><div/><div/><div/><div/><div/>",
+                "Route":"PO"
+            }],
+            
+            "Patient":{
+                "DOB":"%DOB%",
+                "Gender":"%Gender%",
+                "MRNNumber":"MRNNumber%",
+                "Name":"%Name%",
+                "Race":"%Race%"
+            },
+            "PrescriptionOrders":[{
+                "Dose":"1000",
+                "DoseUnit":"mg",
+                "Duration":"10",
+                "DurationUnit":"days",
+                "Frequency":"Q8H",
+                "MedicationId":"9000006236700160",
+                "MedicationName":"Amoxicillin Suspension",
+                "OrderBy":{
+                    "Name":"Person X"
+                },
+                "OrderDateTime":"2024-03-24T03:46:59",
+                "OrderStatus":"Ordered",
+                "Prn":"No",
+                "Remarks":"<div/><div/><div/><div/><div/><div/>",
+                "Route":"PO"
+            },
+            {
+                "Dose":"1",
+                "DoseUnit":"capsule",
+                "Duration":"10",
+                "DurationUnit":"days",
+                "Frequency":"Once daily",
+                "MedicationId":"2000005047016001",
+                "MedicationName":"Lacto GG Capsule",
+                "OrderBy":{
+                    "MCR":"%Mcr%",
+                    "Name":"Person X"
+                },
+                "OrderDateTime":"2024-03-24T03:46:59",
+                "OrderStatus":"Ordered",
+                "Prn":"Yes",
+                "Remarks":"<br/>PRN For Diarrhea<div/><div/><div/><div/><div/><div/>",
+                "Route":"PO"
+            },
+            {
+                "Dose":"360",
+                "DoseUnit":"ml",
+                "Duration":"1",
+                "DurationUnit":"weeks",
+                "Frequency":"Q6H",
+                "MedicationId":"9000006493500160",
+                "MedicationName":"Paracetamol Suspension",
+                "OrderBy":{
+                    "MCR":"%Mcr%",
+                    "Name":"Person X"
+                },
+                "OrderDateTime":"2024-03-24T03:46:59",
+                "OrderStatus":"Completed",
+                "Prn":"Yes",
+                "Remarks":"<br/>PRN For Fever<div/><div/><div/><div/><div/><div/>",
+                "Route":"PO"
+            },
+            {
+                "Dose":"200",
+                "DoseUnit":"mg",
+                "Duration":"1",
+                "DurationUnit":"weeks",
+                "Frequency":"TDS",
+                "MedicationId":"9000006401700160",
+                "MedicationName":"Ibuprofen Suspension",
+                "OrderBy":{
+                    "MCR":"%Mcr%",
+                    "Name":"Person X"
+                },
+                "OrderDateTime":"2024-03-24T03:46:59",
+                "OrderStatus":"Completed",
+                "Prn":"Yes",
+                "Remarks":"After food; Avoid if vomitting or tummy pain <br/>PRN For Fever<div/><div/><div/><div/><div/><div/>",
+                "Route":"PO"
+            }],
+            "ProcedureOrders":[{
+                "OrderBy":{
+                    "MCR":"%Mcr%",
+                    "Name":"Person X"
+                },
+                "OrderDateTime":"2024-03-24T01:42:00",
+                "OrderStatus":"Completed",
+                "ProcedureName":"Urine Dipstick",
+                "Steps":[{
+                    "Steps_Summary":{
+                        "OrdersPerformBy":{
+                            "Name":"Person A"
+                        },
+                        "OrdersPerformDateTime":"2024-03-24T01:59:00"
+                    }
+                }]
+            }],
+            "Triage":{
+                "HistoryFrom":["Mother<div/><div/><div/><div/><div/><div/>"],
+                "MedicalHistory":["<div/><div/><div/><div/><div/><div/>"],
+                "TriageLanguage":"English",
+                "TriageNotes":[{
+                    "CreateBy":{
+                        "Name": "Person Y"
+                    },
+                    "CreateDateTime":"2024-03-24T00:55:19.700",
+                    "Notes":"Reattendance : No<br/><br/>Have you travelled for the past 14 days? No<br/><br/>Mode of Arrival : Own/ Public Transport<br/><br/>Chief Complaint : fever2/7<br/><br/>General Notes : Alert, Lungs clear and CRT &lt;2s<br/>Other General Notes : austic child<br/>refused blood pressure taking<br/>child restless and fighting to take vital sign<br/> recheck vital sign<br/><br/>Isolation required? No<div/><div/><div/><div/><div/><div/>"
+                }],
+                "TriagePac":"P2."
+            },
+            "VitalSigns":[{
+                "CreateBy":{
+                    "Name": "Person B"
+                },
+                "PulseRate":"98 beats/min",
+                "Remarks":"8<div/><div/><div/><div/><div/><div/>",
+                "RespiratoryRate":"20 bpm",
+                "Route":"Tympanic",
+                "SAO2":"98%",
+                "Stage":"Latest",
+                "TakenDateTime":"2024-03-24T03:04:00",
+                "Temperature":"38.5 deg. C"
+            }]
+        }
+    },
+    "data_extract_end":"2024-04-01",
+    "data_extract_start":"2024-04-01",
+    "documentExtn":"9018270898900270^EDNotes",
+    "documentRoot":"2.16.840.1.113883.2.31.1.2.1.2.3.1",
+    "eventExtn":"yOAfc7JJTXSZkGnHX0wKoQ==",
+    "eventRoot":"2.16.840.1.113883.2.31.1.2.1.2.5.8",
+    "institution":"KKH",
+    "patientExtn":"wcLHmnPEpd+khnv8BGkjFA==",
+    "patientRoot":"2.16.840.1.113883.2.31.1.2.1.2.3.1",
+    "sourceApplication":"SHS-SCM",
+    "versionNumber":"3",
+    "xml_filename":"ED_20240402_CONTENT_1.xml"
+}

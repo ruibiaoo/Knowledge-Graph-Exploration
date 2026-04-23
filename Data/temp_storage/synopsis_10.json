@@ -1,0 +1,30 @@
+{
+  "patient_id": "P90216",
+  "patient_name": "Lee Hock Seng",
+  "patient_age": "69",
+  "patient_gender": "Male",
+  "patient_ethnicity": "Chinese",
+  "medications": [
+    {
+      "medication_id": "M953",
+      "medication_name": "Clopidogrel",
+      "start_date": "14/11/2023",
+      "end_date": "14/11/2026",
+      "condition": "Transient Ischemic Attack (TIA)"
+    },
+    {
+      "medication_id": "M951",
+      "medication_name": "Warfarin",
+      "start_date": "15/04/2021",
+      "end_date": "15/04/2026",
+      "condition": "Atrial Fibrillation (AF)"
+    },
+    {
+      "medication_id": "M2",
+      "medication_name": "Atorvastatin",
+      "start_date": "12/01/2019",
+      "end_date": "12/01/2026",
+      "condition": "Hyperlipidemia"
+    }
+  ]
+}

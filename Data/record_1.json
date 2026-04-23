@@ -1,0 +1,98 @@
+{"ES_created_dtaetime":"2023-07-26",
+    "content":{
+        "contentEDSummary":{
+            "Consultation":{
+                "ConsultationNotes":[{
+                    "CreateBy":{
+                        "Mcr":"%Mcr%",
+                        "Name":"Personx"
+                    },
+                    "CreateDateTime":"2024-04-08T22:28:19.153",
+                    "Notes":"89yo Chi Female<br/>NKDA<br/><br/>=== PMHx ===<br/>1. HTN<br/>2. HLD<br/><br/>Seen in ED 7/4 - abdo pain 2' constipation colic; also reported functional decline  <br/>represents with generalised weakness and functional decline<br/>hx from pt <br/>persistent tremoring of limbs for past 2wks<br/>ever since Moderna vaccine <br/>no unilateral weakness or numbness<br/>no headache<br/>no giddiness<br/>no recent falls or HI <br/>no chest pain or SOB<br/>had abdo pain yest - now pain-free <br/>appetite baseline<br/>no urinary Sx<br/>no diarrhoea or PR bleed; last BO yest in ED <br/><br/>hx from daugher<br/>functional decline for 2wks since Moderna vaccine <br/>baseline ADL-I, can ambulate independently; goes out of house frequently, independent; volunteers with charity<br/>however noted for past 2wks, not as active<br/>often unable to walk<br/>no recent falls<br/>no fevers or infective symptoms<br/>appetite also poorer<br/>noted tremoring of limbs as well for past 2wks<br/><br/>OE<br/>Vitals stable <br/>Alert<br/>non toxic<br/>PEARL 3mm <br/><br/>mucosa moist <br/>noted tremoring of jaw<br/>no facial asymmetry <br/><br/>EOM full no nystagmus<br/>Nil pronator drift <br/>     R     L<br/>UL  5    5<br/>LL  5    5<br/>Nil sensory deficits<br/>Nil past pointing<br/>tremoring of bilat UL <br/>?mild cogwheeling in R UL <br/><br/>H S1S2<br/>L clear, equal AE bilat<br/>A soft, non tendet <br/> C supple <br/><br/>IMP<br/>1. Functional decline <br/>2. Tremors <br/>w/ parkinsonism features<br/><br/>PLAN<br/>Bloods<br/>CTB<br/>adm DIM <br/><br/>pt and daugher agreeable for adm<br/><br/><br/><br/>Date/Time: 09-Apr-2024 07:52<br/>Pogress Comments:<br/>Management Plan:<br/><br/>Date/Time:09-Apr-2024 16:41<br/>Progress Comments:<br/>Management Plan:<div/><div/><div/><div/><div/>"
+                }],
+                "ConsultationPac":"P2 +"
+            },
+            "Disposition":{
+                "GeneralCondition":"Stable"
+            },
+            "EventInformation":{
+                "AccidentType":{
+                    "Description":"<div/><div/><div/><div/><div/><div/>"
+                },
+                "CaseNumber":"removed",
+                "CauseOfInjury":{
+                    "Description":"<div/><div/><div/><div/><div/><div/>"
+                },
+                "ConsultationEndDateTime":"2024-04-08T22:26:00",
+                "ConsultationStartDateTime":"2024-04-08T20:54:00",
+                "DischargeDateTime":"2024-04-09T16:47:00",
+                "Emergency":"Emergency",
+                "EndCaseDateTime":"2024-04-09T16:47:00",
+                "PrincipalDiagnosis":{
+                    "Code":"26079004",
+                    "Description":"Tremor"
+                },
+                "PrincipalDisposition":{
+                    "Description":"Admitted"
+                },
+                "PrincipalDoctor":{
+                    "Mcr":"%Mcr%",
+                    "Name":"Personx"
+                },
+                "RegistrationDateTime":"2024-04-08T20:43:58",
+                "Trauma":"Non-Trauma",
+                "TriageStartDateTime":"2024-04-08T20:50:00"
+            },
+            "GCS":[{
+                "E":"4",
+                "M":"6",
+                "TakenDateTime":"2024-04-09T16:16:00",
+                "Total":"15",
+                "V":"5"
+            }],
+            "Patient":{
+                "DOB":"%DOB%",
+                "Gender":"%Gender%",
+                "MRNNumber":"MRNNumber%",
+                "Name":"%Name%",
+                "Race":"%Race%"
+            },
+            "Triage":{
+                "MedicalHistory":["<div/><div/><div/><div/><div/><div/>"],
+                "TriageNotes":[{
+                    "CreateBy":{
+                        "Name": "Persony"
+                    },
+                    "CreateDateTime":"2024-04-08T20:57:25.043",
+                    "Notes":"Chief Complaint : Has been intermittent generalised weakeness for the past 2/52. Onset of worsening generalised weakness since 5pm today. Involuntary tremor for the past 2/52. CFS &lt;6.<div/><div/><div/><div/><div/><div/>"
+                }],
+                "TriagePac":"P2 +"
+            },
+            "VitalSigns":[{
+                "BloodPressure":"124/64 mmHg",
+                "CreateBy":{
+                    "Name": "Personz"
+                },
+                "PainScore":"0",
+                "PulseRate":"73 beats/min",
+                "RespiratoryRate":"18 bpm",
+                "Route":"Tympanic",
+                "SAO2":"95%",
+                "TakenDateTime":"2024-04-09T16:16:00",
+                "Temperature":"36.5 deg. C"
+            }]
+        }
+    },
+    "data_extract_end":"2024-4-09",
+    "data_extract_start":"2024-4-09",
+    "documentExtn":"9018319120100270^EDNotes",
+    "documentRoot":"2.16.840.1.113883.2.31.1.2.1.2.3.7.1",
+    "eventExtn":"83NsrsA31jU1d+GpYgrWlQ==",
+    "eventRoot":"2.16.840.1.113883.2.31.1.2.1.2.5.8",
+    "institution":"SGH",
+    "patientExtn":"avJ8lvSxU5ELfGKtXk7ggg==",
+    "patientRoot":"2.16.840.1.113883.2.31.1.2.1.2.3.1",
+    "sourceApplication":"SHS-SCM",
+    "versionNumber":"2",
+    "xml_filename":"ED_20240410_CONTENT_1.xml"
+}

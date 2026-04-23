@@ -1,0 +1,44 @@
+{
+  "patient_id": "P76124",
+  "patient_name": "Lim Wei Jian",
+  "patient_age": "68",
+  "patient_gender": "Male",
+  "patient_ethnicity": "Chinese",
+  "medications": [
+    {
+      "medication_id": "M184",
+      "medication_name": "Metformin",
+      "start_date": "12/05/2018",
+      "end_date": "20/04/2022",
+      "condition": "Type 2 Diabetes Mellitus (T2DM)"
+    },
+    {
+      "medication_id": "M402",
+      "medication_name": "Empagliflozin",
+      "start_date": "21/04/2022",
+      "end_date": "21/04/2026",
+      "condition": "Type 2 Diabetes Mellitus (T2DM)"
+    },
+    {
+      "medication_id": "M611",
+      "medication_name": "Amlodipine",
+      "start_date": "02/03/2019",
+      "end_date": "02/03/2023",
+      "condition": "Hypertension (HTN)"
+    },
+    {
+      "medication_id": "M784",
+      "medication_name": "Perindopril",
+      "start_date": "03/03/2023",
+      "end_date": "03/03/2027",
+      "condition": "Hypertension (HTN)"
+    },
+    {
+      "medication_id": "M622",
+      "medication_name": "Atorvastatin",
+      "start_date": "10/09/2017",
+      "end_date": "10/09/2027",
+      "condition": "Hyperlipidemia"
+    }
+  ]
+}
