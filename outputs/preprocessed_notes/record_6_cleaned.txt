@@ -1,0 +1,125 @@
+ED Provider Notes
+ED INITIAL CONSULT NOTE
+S/b: Person X
+
+Demographics
+PATIENT NAME
+21 y.o. male
+No Known Allergies
+Premorbid ADL-I, Comm-Amb
+
+Past Medical/Surgical History
+
+1. Asthma
+2. Previously seen at NUH EMD (30/7/18): Noted Dx of autism
+- defaultd REACH and psych TCU
+3. Chest keloids
+4. Myopia, vitreous syneresis
+
+Last admitted in NTFGH in 2019
+1. Drug overdose (Paracetamol) 2' Acute stress reaction
+- SB Psy 4/1/18:
+ > Impression: Acute Stress Reaction to stress of starting school Will require long-term monitoring for mood disorder
+ Underlying Autistic traits diagnosed by NUH
+ > Suggest:
+ 1) Safe for discharge under care of mother from Psy point of view
+ 2) No medications indicated at this time
+ 3) Reschedule earlier NUH Psy TCU (currently on 29 Jan)
+ 4) Memo to NUH Psy with details of current admission
+ 5) Mother may need a memo stating that patient is in hospital, so that she can register at ITE on his behalf - she will request from team if necessary, please provide
+
+Significant chronic meds
+Adapalene 0.1% gel (Differin) ON
+
+Subjective
+History of Presenting Complaint:
+1. Felt faint today at 8.20pm
+- was attending a pre-trial taekwondo class at a hard court near his home; was doing squats when he felt his vision darkening; hearing became muffled
+- pt slowly walked over to the bench to sit down --> did not fall down or hit his head; this dark vision lasted for a few min; but by the time the SCDF staff came, his vision completely returned
+- did not experience headache, chest pain, dizziness or SOB before this darkening of vision occurred
+- denies any pain in the rest of his body
+- says that he was not in extreme stress --> recently felt a little stressed from school, but not especially increased today
+- recently recovered from COVID one week ago --> had 3 days of high fever and myalgia but recovered and only started returning to physical activity today
+- denies reduced oral intake or excessive losses (no diarrhea, no vomiting, no polyuria)
+- previously never had issues with exercise and physical activity
+- no fam hx of cardiac issues or sudden cardiac death
+
+Corroborative hx from mother 81234567
+- her friend accompanying patient for the pre-trial class and saw that pt was not feeling well
+- he was roughly 20min into the class when he started feeling unwell
+- did not see patient LOC or fall down
+-no urinary or bowel incontinence or jerking of limbs
+- verified no previous history of exertional symptoms of chest pains
+- no fam hx cardiac conditions or SCD
+- mom asking if could be due to anxiety which patient previously had --> explained that it's possible but pt reported no sudden increase in anxiety recently
+- explained that will need to do some blood tests to rule out other causes of his condition
+- will keep her updated on the progress
+
+Objective
+Vitals
+Vital signs:
+ 28/11/23 21:00 28/11/23 21:06
+BP: (S) (!) 98/68 (S) (!) 106/57
+Pulse: (S) 75 (S) 78
+Resp: 16
+Temp: 37 Â°C
+TempSrc: Tympanic
+SpO2: 99%
+
+BGM
+Results from last 7 days
+ Lab Units 28/11/23
+21:21
+GLUCOSE (POCT) mmol/L 9.2
+
+O/E
+GCS 15
+Alert and conversant
+No facial droop
+PEARL 3mm, nil nystagmus, EOM full
+Tongue central, moist; no laceration or bleeding seen
+Heart S1S2 nil murmurs, regular
+Lungs clear, nil creps or reduced air entry
+Abdo soft, non-tender
+Calves supple, nil edema
+
+Investigations
+ECG reviewed: sinus rhythm HR 86, nil acute ST-T changes. Nil delta waves.
+
+Impression
+1. Near syncope
+- possible precipitants: recently recovered from COVID; stress from attending pre-trial class
+- however as symptoms occurred exertion/exercise, concerns of underlying cardiac cause
+
+Plan
+Labs: FBC RP trop
+KIV admit for futher monitoring and workup
+
+ED Notes
+Lunch bento served to patient.
+
+ED Notes
+Sandwich and milo served.
+
+ED Update Notes
+RV:
+Felt dizzy & darkening of vision at abt 20:10 hrs whilst doing squats. No chest pain or palpitations . Recalls being helped to the bench & ambulance arrived.
+No recent illness, except for COVID last week. Felt well enough to go to TKD class. No diarrhea.
+OE: Comfortable, alert, Ht S1S2, no murmurs or S3.
+Lungs clear
+No pedal oedema
+PEARL, EOM full, no nystagmus
+CNv IX, X, XII, VII inatct
+No pronator drift or dysmetria
+Gait N
+
+ECG at 21:17 hrs sinus 86, no ac changes, QTc 424ms. No old ECGs
+CXR - no cardiomeg
+Trop at 23:04 hrs 120
+ANION GAP mmol/L 14.4
+
+Trop < 3.2
+
+Plan (d/w Dr D)
+PO K replacement
+Admit gen med to workup exertional syncope TRO cardiogenic cause

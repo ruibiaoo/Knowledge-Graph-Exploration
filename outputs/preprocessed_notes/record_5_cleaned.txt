@@ -1,0 +1,87 @@
+ED Provider Notes
+Person C
+5 y.o.
+Patient has no known allergies.
+
+Past medical history:
+1. Constipation
+2) Inappropriate food textures
+3) Speech/social delay
+- lost to GI/ST followup since May-Jun 19
+Autism on private f/u
+
+Presenting complaint
+Attended with Mother & Father
+
+1.Left gluteal abscess x3/7
+-Noticed as patient was requesting for panadol and pointing to bum
+-Progressively enlarging
+- tender, No overlying skin changes
+- Had some discharge minimal amounts yesterday
+- Not presented with abx
+- No other lumps in body
+- A/w Fever X 3/7, Tmax 39 once then subsequent 38.1-4
+- No constituional symptoms such as LOW LOA
+- Was constipated last week, given fleet
+
+2. Discomfort over genital area x1/7
+Just noticed patient was complaining of some itch
+-parents did not note any complaint of Pain / dysuria throughout the day during PU
+
+Functionality
+- Input At baseline
+- Output
+ PU: at baseline
+> BO: at baseline
+Attends school - mother feels more tired than usual
+
+Physical examination
+
+Vital signs:
+ 24/10/23 21:53
+Pulse: 132
+Resp: 26
+Temp: 37.8 Â°C
+TempSrc: Tympanic
+SpO2: 100%
+Weight: 17.3 kg
+
+Vital signs:
+ 24/10/23 21:53
+weight:17.3 kg
+
+Alert, comfortable
+Non toxic
+Palpable 4x5cm lump
+not fixed to underlying muscle or tethered to overlying skin
+Hardened area of induration, well circumscribed, fluctuant with central punctum
+No discharge expressed
+Slip sign negative
+Penile area not swollen, no erythema
+Unable to fully retract foreskin as patient not compliant
+Scrotum non tender non erythematous, testes palpated
+
+Investigations prior to visit
+Nil
+
+Impressions
+
+1. Infected Sevaceous cyst Gluteal abscess
+
+Plan
+
+Screen urine - UC10 UFEME
+Augmentin x7/7
+TCU paeds surg in 1/52
+Return advice given
+
+Communications
+Updatd parents of the above.
+
+ED Update Notes
+UC10 UFEME clean
+
+Plan (d/w Dr D)
+Discharge with abx and TCU as planned
+Explained above to parents - agreeable, all questions answered
+Red flag advic given

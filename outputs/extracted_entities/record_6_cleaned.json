@@ -1,0 +1,14 @@
+{
+  "patient_id": "X",
+  "patient_name": "",
+  "patient_age": "21",
+  "patient_gender": "male",
+  "patient_ethnicity": "",
+  "medications": [
+    {
+      "medication_id": "Adapalene",
+      "medication_name": "Adapalene 0.1% gel (Differin)",
+      "condition": "COVID"
+    }
+  ]
+}

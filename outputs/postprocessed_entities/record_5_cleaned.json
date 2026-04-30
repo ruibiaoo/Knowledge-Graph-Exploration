@@ -1,0 +1,18 @@
+[
+  {
+    "patient_id": "C",
+    "patient_name": "Unknown",
+    "patient_age": 5,
+    "patient_gender": null,
+    "patient_ethnicity": null,
+    "medications": [
+      {
+        "medication_id": "Augmentin",
+        "medication_name": "Augmentin",
+        "condition": "Infected Sevaceous cyst Gluteal abscess",
+        "start_date": null,
+        "end_date": null
+      }
+    ]
+  }
+]

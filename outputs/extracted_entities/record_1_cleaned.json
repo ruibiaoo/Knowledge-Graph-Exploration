@@ -1,0 +1,12 @@
+{
+  "patient_id": "",
+  "patient_name": "",
+  "patient_age": "89",
+  "patient_gender": "Female",
+  "patient_ethnicity": "Chi",
+  "medications": [
+    {
+      "condition": "parkinsonism features"
+    }
+  ]
+}
