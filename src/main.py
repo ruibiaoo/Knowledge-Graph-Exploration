@@ -1,7 +1,7 @@
 from pathlib import Path
 
-from preprocess.preprocess_txt import preprocess_notes_txt
-from preprocess.preprocess_json import preprocess_notes_json
+from preprocess.preprocess_txt import run_preprocess_notes_txt
+from preprocess.preprocess_json import run_preprocess_notes_json
 from extraction.langextract import run_extraction
 from postprocess.validator import run_postprocessing
 from convert.converter import run_conversion
@@ -20,12 +20,12 @@ def main():
     postprocessed_dir.mkdir(parents=True, exist_ok=True)
     graph_dir.mkdir(parents=True, exist_ok=True)
 
-    print("\n🚀 Starting Clinical Pipeline...\n")
+    print("\n Starting Clinical Pipeline...\n")
 
     # 1. Preprocessing
     print("Step 1: Preprocessing")
-    preprocess_notes_txt(data_dir, preprocessed_dir)
-    preprocess_notes_json(data_dir, preprocessed_dir)
+    run_preprocess_notes_txt(data_dir, preprocessed_dir)
+    run_preprocess_notes_json(data_dir, preprocessed_dir)
 
     # 2. Extraction
     print("Step 2: LLM Extraction")

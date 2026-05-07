@@ -56,7 +56,7 @@ def detect_negated_phrases(text: str) -> set[str]:
     return negated_phrases
 
 # Preprocessing pipeline
-def preprocess_notes_txt(input_dir: Path, output_dir: Path):
+def run_preprocess_notes_txt(input_dir: Path, output_dir: Path):
 
     txt_files = sorted(input_dir.glob("*.txt"))
     for file_path in txt_files:
@@ -74,7 +74,7 @@ def preprocess_notes_txt(input_dir: Path, output_dir: Path):
 
 # Main preprocessing function
 if __name__ == "__main__":
-    preprocess_notes_txt()
+    run_preprocess_notes_txt()
     # project_root = Path(__file__).resolve().parents[2]
     # preprocess_notes_txt(
     #     project_root / "Data",

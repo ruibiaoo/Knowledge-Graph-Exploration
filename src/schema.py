@@ -69,6 +69,7 @@ class MedicationRecord(BaseModel):
     condition: str
     start_date: Optional[str] = None
     end_date: Optional[str] = None
+    confidence: Optional[int] = Field(ge=1, le=7, description="Overall confidence score for the extracted medication record")
 
 # Patient Record Model 
 class PatientRecord(BaseModel):
@@ -78,28 +79,4 @@ class PatientRecord(BaseModel):
     patient_gender: Optional[str] = None
     patient_ethnicity: Optional[str] = None
     medications: List[MedicationRecord] = Field(default_factory=list)
-
-
-
-# =========================
-# Final Container Model
-# =========================
-
-class GraphSchema(BaseModel):
-
-    # Nodes
-    patient_nodes: List[PatientNode] = Field(description="Exactly one patient node")
-    medication_nodes: List[MedicationNode] = Field(description="All medications")
-    condition_nodes: List[ConditionNode] = Field(description="All conditions")
-    ethnicity_nodes: List[EthnicityNode] = Field(description="All ethnicities")
-    gender_nodes: List[GenderNode] = Field(description="All genders")
-
-    # Edges
-    prescribed_edges: List[PrescribedEdge] = Field(description="Patient → Medication with dates")
-    diagnosed_edges: List[DiagnosedWithEdge] = Field(description="Patient → Condition")
-    treats_edges: List[TreatedWithEdge] = Field(description="Medication → Condition")
-    ethnicity_edges: List[HasEthnicityEdge] = Field(description="Patient → Ethnicity")
-    gender_edges: List[HasGenderEdge] = Field(description="Patient → Gender")
-
-    # Metadata
-    confidence: int = Field(ge=1, le=7, description="Confidence score")
+    confidence: Optional[int] = Field(ge=1, le=7, description="Overall confidence score for the extracted patient record")

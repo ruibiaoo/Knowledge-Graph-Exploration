@@ -88,7 +88,7 @@ def detect_negated_phrases(text: str) -> set[str]:
     return negated_phrases
 
 # Preprocessing pipeline
-def preprocess_notes_json(input_dir: Path, output_dir: Path):
+def run_preprocess_notes_json(input_dir: Path, output_dir: Path):
 
     json_files = sorted(input_dir.glob("*.json"))
     for file_path in json_files:
@@ -107,7 +107,7 @@ def preprocess_notes_json(input_dir: Path, output_dir: Path):
 
 # Main preprocessing function
 if __name__ == "__main__":
-    preprocess_notes_json()
+    run_preprocess_notes_json()
     # project_root = Path(__file__).resolve().parents[2]
     # preprocess_notes_txt(
     #     project_root / "Data",
